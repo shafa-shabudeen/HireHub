@@ -46,21 +46,8 @@ if ( ! class_exists( 'Astra_Sites_Zipwp_Images' ) ) :
 		 * @since 1.0.0
 		 */
 		private function __construct() {
-			add_filter( 'zipwp_images_tab_title', array( $this, 'update_image_library_title'), 10, 1 );
 			$this->version_check();
 			add_action( 'init', array( $this, 'load' ) );
-		}
-
-		/**
-		 * Update Tab title
-		 * 
-		 * @param string $title tab title.
-		 *
-		 * @return string
-		 */
-		public function update_image_library_title( $title ){
-			$title = __( 'Free Images', 'astra-sites' );
-			return $title;
 		}
 
 		/**

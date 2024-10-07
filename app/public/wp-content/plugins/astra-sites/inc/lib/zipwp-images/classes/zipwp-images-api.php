@@ -302,7 +302,7 @@ class Zipwp_Images_Api {
 			}
 
 			$saved_images[] = $photo_id;
-			update_option( 'zipwp-images-saved-images', $saved_images, 'no' );
+			update_option( 'zipwp-images-saved-images', $saved_images, false );
 		}
 
 		$result['updated-saved-images'] = get_option( 'zipwp-images-saved-images', array() );

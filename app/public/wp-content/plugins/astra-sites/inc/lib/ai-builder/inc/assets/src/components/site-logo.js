@@ -1,4 +1,4 @@
-import { useEffect, useState } from '@wordpress/element';
+import { useEffect } from '@wordpress/element';
 import { useSelect, useDispatch } from '@wordpress/data';
 import { PhotoIcon, TrashIcon } from '@heroicons/react/24/outline';
 import { __ } from '@wordpress/i18n';
@@ -13,8 +13,6 @@ import { STORE_KEY } from '../store';
 
 const SiteLogo = () => {
 	const replaceMediaUpload = () => MediaUpload;
-	const [ showTitle, setShowTitle ] = useState( true ),
-		toggleTitle = () => setShowTitle( ( prev ) => ! prev );
 
 	addFilter(
 		'editor.MediaUpload',
@@ -22,14 +20,19 @@ const SiteLogo = () => {
 		replaceMediaUpload
 	);
 
-	const { siteLogo: aiSiteLogo } = useSelect( ( select ) => {
-		const { getSiteLogo } = select( STORE_KEY );
+	const { siteLogo: aiSiteLogo, siteTitleVisible } = useSelect(
+		( select ) => {
+			const { getSiteLogo, getSiteTitleVisible } = select( STORE_KEY );
 
-		return {
-			siteLogo: getSiteLogo(),
-		};
-	}, [] );
-	const { setWebsiteLogo } = useDispatch( STORE_KEY );
+			return {
+				siteLogo: getSiteLogo(),
+				siteTitleVisible: getSiteTitleVisible(),
+			};
+		},
+		[]
+	);
+
+	const { setWebsiteLogo, setSiteTitleVisible } = useDispatch( STORE_KEY );
 
 	const onSelectImage = ( media ) => {
 		const mediaData = {
@@ -78,8 +81,8 @@ const SiteLogo = () => {
 	};
 
 	const handleOnChangeToggleTitle = () => {
-		dispatchPostMessage( 'siteTitle', ! showTitle );
-		toggleTitle();
+		setSiteTitleVisible( ! siteTitleVisible );
+		dispatchPostMessage( 'siteTitle', ! siteTitleVisible );
 	};
 
 	/* const resetLogoWidth = ( event ) => {
@@ -173,7 +176,7 @@ const SiteLogo = () => {
 									{ __( 'Show site title', 'ai-builder' ) }
 								</span>
 								<ToggleSwitch
-									value={ showTitle }
+									value={ siteTitleVisible }
 									onChange={ handleOnChangeToggleTitle }
 								/>
 							</div>

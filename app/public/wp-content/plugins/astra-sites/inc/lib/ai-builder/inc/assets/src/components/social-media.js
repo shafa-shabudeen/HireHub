@@ -71,7 +71,7 @@ const SocialMediaItem = ( { socialMedia, onRemove, onEdit } ) => {
 	return (
 		<div
 			key={ socialMedia.id }
-			className="relative h-[50px] pl-[23px] pr-[25px] rounded-[25px] bg-white flex items-center gap-3 shadow-sm border border-zip-light-border-primary"
+			className="relative max-w-[500px] h-[50px] pl-[23px] pr-[25px] rounded-[25px] bg-white flex items-center gap-3 shadow-sm border border-zip-light-border-primary"
 			onDoubleClick={ handleDoubleClick }
 		>
 			{ ! isEditing && (
@@ -106,9 +106,11 @@ const SocialMediaItem = ( { socialMedia, onRemove, onEdit } ) => {
 					onKeyDown={ handleKeyDown }
 				/>
 			) : (
-				<p className="text-base font-medium text-body-text">
-					{ socialMedia.url }
-				</p>
+				<div className="w-full overflow-x-auto scrollbar-hide">
+					<p className="text-base font-medium text-body-text whitespace-nowrap">
+						{ socialMedia.url }
+					</p>
+				</div>
 			) }
 		</div>
 	);
