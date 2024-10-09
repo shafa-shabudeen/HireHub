@@ -1,0 +1,1 @@
+[09-Oct-2024 12:06:51 UTC] Cron unschedule event error for hook: spectra_regenerate_post_assets, Error code: could_not_set, Error message: The cron event list could not be saved., Data: {"schedule":false,"args":[650]}
