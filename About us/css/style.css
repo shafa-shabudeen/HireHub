@@ -82,6 +82,9 @@ img{
 }
 
 
+
+
+
 body{
     background-color: #f0f0f0;
 
@@ -148,6 +151,86 @@ body{
 
 
 
+
+.contact{
+    position: relative;
+    min-height: 100vh;
+    padding: 50px 100px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    background-color: #f6f1f1;
+
+}
+
+
+.contact .content{
+    max-width: 800px;
+    text-align: center;
+}
+
+
+
+.contact .content h2{
+    text-align: center;
+    margin: 50px 0px;
+    color: #115314;
+    font-size: 55px;
+}
+
+.contact .content p{
+    font-weight: 300;
+    color: #e01919;
+}
+
+
+.container{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 30px;
+}
+
+.container .contactInfo{
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+}
+
+.container .contactInfo .box{
+    position: relative;
+    padding:20px 0;
+    display: flex;
+
+}
+
+.container .contactInfo .box .icon{
+    min-width: 60px;
+    height: 60px;
+    background: #fffbfb;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 50%;
+    font-size: 22px;
+
+}
+
+.container .contactInfo .box .text{
+    display: flex;
+    margin-left: 20px;
+    font-size: 16px;
+    color: #050404;
+    flex-direction: column;
+    font-weight: 300;
+}
+
+.container .contactInfo .box .text h3{
+    font-weight: 500;
+    color: #e01919;
+}
 @media screen and (max-width: 768px) {
     .heading h1{
         font-size: 45px;
