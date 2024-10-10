@@ -231,6 +231,141 @@ body{
     font-weight: 500;
     color: #e01919;
 }
+
+
+.contactForm{
+    width: 40%;
+    padding: 40px;
+    background: #fff;
+
+
+}
+
+.contactForm h2{
+    font-size: 30px;
+    color: #333;
+    font-weight: 500;
+}
+
+.contactForm .inputBox{
+    position: relative;
+    width: 100%;
+    margin-top: 10px;
+}
+
+
+.contactForm .inputBox input,
+.contactForm .inputBox textarea
+{
+    width: 100%;
+    padding: 5px 0;
+    font-size: 16px;
+    margin: 10px;
+    border: none;
+    border-bottom: 2px solid #333;
+    outline: none;
+    resize: none;
+
+
+}
+
+
+.contactForm .inputBox span{
+
+      
+      transition: 0.5s;
+      color:#666;
+  
+  }
+  
+  
+  .contactForm .inputBox input:focus ~ span,
+  .contactForm .inputBox input:valid ~ span,
+  .contactForm .inputBox textarea:focus ~ span,
+  .contactForm .inputBox textarea:valid ~ span
+  {
+      color: #e91e63;
+      font-size: 12px;
+      transform: translateY(-20px);
+  }
+  
+  .contactForm .inputBox input[type="submit"]
+  {
+      width: 100px;
+      background: #68c7d4;
+      color: #fff;
+      border: none;
+      cursor: pointer;
+      padding: 10px;
+      font-size: 18px;
+  }
+  
+
+.footerContainer{
+    background-color: #111;
+
+}
+
+.footerContainer{
+    width: 100%;
+    padding: 70px 30px 20px;
+}
+
+
+
+.socialIcons{
+    display: flex;
+    justify-content: center;
+}
+
+
+
+.socialIcons a{
+    text-decoration: none;
+    padding: 10px;
+    background-color: white;
+    margin: 10px;
+    border-radius: 50%;
+}
+
+
+.socialIcons a i{
+    font-size: 2em;
+    color: black;
+    opacity: 0.9;
+}
+
+.socialIcons a:hover{
+    background-color: #111;
+    transition: 0.5s;
+}
+
+.socialIcons a:hover i{
+    color: white;
+    transition: 0.5s;
+}
+
+
+
+.footerBottom{
+    background-color: #000;
+    padding: 20px;
+    text-align: center;
+}
+
+.footerBottom p{
+    color: white;
+
+}
+
+.designer{
+    opacity: 0.7;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    font-weight: 400;
+    margin: 0px 5px;
+}
+
 @media screen and (max-width: 768px) {
     .heading h1{
         font-size: 45px;
@@ -267,6 +402,23 @@ body{
         padding: 8px 16px;
     }
     .hero-image{
+        width: 100%;
+    }
+
+    .contact{
+        padding: 50px;
+    }
+
+    .container{
+        flex-direction: column;
+    }
+     
+    .container .contactInfo{
+        margin-bottom: 40px;
+    }
+    
+
+    .container .contactInfo{
         width: 100%;
     }
 
