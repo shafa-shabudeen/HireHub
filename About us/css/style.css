@@ -81,6 +81,73 @@ img{
     border-radius: 10px;
 }
 
+
+body{
+    background-color: #f0f0f0;
+
+}
+
+.headingser h1{
+    text-align: center;
+    margin: 50px 0px;
+    color: #1467b5;
+    font-size: 55px;
+
+
+}
+
+.services{
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.service{
+    width: 350px;
+    padding: 20px;
+    margin: 20px;
+    background-color: #f4f4f4;
+    text-align: center;
+    border-radius: 10px;
+    box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.1);
+    cursor: pointer;
+    transition: 0.3s ease;
+
+}
+
+
+.service:hover{
+    transform:translateY(-5px);
+}
+
+.service i{
+    font-size: 36px;
+    color: #e01919;
+    margin-bottom: 18px;
+}
+
+.service h3{
+    font-size: 26px;
+    margin-bottom: 10px;
+
+}
+
+.service p{
+    font-size: 17px;
+    line-height: 1.4;
+    color: #666;
+    margin-bottom: 10px;
+}
+
+
+.service a{
+    text-decoration: none;
+    font-size: 17px;
+    color: #e01919;
+}
+
+
+
 @media screen and (max-width: 768px) {
     .heading h1{
         font-size: 45px;
