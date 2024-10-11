@@ -1,3 +1,23 @@
+v1.2.6 - 20-September-2024
+- New: Added a filter to hide premium templates.
+- Improvement: Added a validation on Image upload to check if the image URL is valid.
+
+v1.2.5 - 13-September-2024
+- Fix: Console error for starter templates onboarding plugin.
+
+v1.2.4 - 13-September-2024
+- Improvement: Added sanitization for display site title value.
+
+v1.2.3 - 09-September-2024
+- New: Added functionality to save failed site creations and allow reimporting them.
+- New: Displaying users ZipWP plan information.
+- New: Displaying alert notice when AI site generation count is nearing its limit.
+- New: Added an option to choose the type of store when the Ecommerce feature is selected.
+- Improvement: Resume Session popup will now restore the step where the user left off.
+- Improvement: Improved images upload process for better performance and user experience.
+- Improvement: Showing Premium template notice on customizer screen if user has free plan.
+- Fix: Customizer 'Show site title' option was not applied correctly during site import.
+
 v1.2.2 - 30-August-2024
 - New: Added filter to update the default website language.
 

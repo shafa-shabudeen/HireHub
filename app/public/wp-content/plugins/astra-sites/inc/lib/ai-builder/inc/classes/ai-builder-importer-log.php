@@ -236,7 +236,7 @@ class Ai_Builder_Importer_Log {
 		self::$log_file = $upload_path . 'import-' . gmdate( 'd-M-Y-h-i-s' ) . '-' . wp_hash( 'starter-templates-log' ) . '.log';
 
 		if ( ! get_option( 'ai_builder_recent_import_log_file', false ) ) {
-			update_option( 'ai_builder_recent_import_log_file', self::$log_file, 'no' );
+			update_option( 'ai_builder_recent_import_log_file', self::$log_file, false );
 		}
 	}
 

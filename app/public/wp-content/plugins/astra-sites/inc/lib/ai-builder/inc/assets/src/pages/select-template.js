@@ -162,6 +162,21 @@ const SelectTemplate = () => {
 		return businessName;
 	};
 
+	const maybeHidePremiumTemplates = ( result ) => {
+		if ( ! aiBuilderVars?.show_premium_templates ) {
+			result = result.map( ( item ) => {
+				return {
+					...item,
+					designs: item?.designs?.filter(
+						( template ) => ! template.is_premium
+					),
+				};
+			} );
+		}
+
+		return result;
+	};
+
 	const fetchTemplates = async ( keyword = getInitialUserKeyword() ) => {
 		if ( ! keyword ) {
 			return;
@@ -200,8 +215,10 @@ const SelectTemplate = () => {
 					},
 					signal: abortController.signal,
 				} );
+				let result = response?.data?.data || [];
 
-				const result = response?.data?.data || [];
+				// Filter out premium templates if `show_premium_template` is false.
+				result = maybeHidePremiumTemplates( result );
 
 				if ( results.length === 0 ) {
 					results = result;
@@ -280,8 +297,11 @@ const SelectTemplate = () => {
 				);
 			}
 
-			const result = response?.data?.data?.result || [];
+			let result = response?.data?.data?.result || [];
 			const lastPage = response?.data?.data?.lastPage || 1;
+
+			// Filter out premium templates if `show_premium_template` is false.
+			result = maybeHidePremiumTemplates( result );
 
 			const updatedAllTemplates = [
 				...allTemplates,

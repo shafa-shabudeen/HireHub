@@ -13,6 +13,7 @@ import { useNavigateSteps } from '../router';
 import { z as zod } from 'zod';
 import Heading from '../components/heading';
 import Container from '../components/container';
+import AISitesNotice from '../components/ai-sites-notice';
 
 const EMAIL_VALIDATION_REGEX =
 	/^[a-z0-9!'#$%&*+\/=?^_`{|}~-]+(?:\.[a-z0-9!'#$%&*+\/=?^_`{|}~-]+)*@(?:[a-z0-9](?:[a-z0-9-]*[a-z0-9])?\.)+[a-zA-Z]{2,}$/i;
@@ -148,6 +149,7 @@ const BusinessContact = () => {
 			action="#"
 			onSubmit={ handleSubmit( handleSubmitForm ) }
 		>
+			<AISitesNotice />
 			<Heading
 				heading={ getTitle() }
 				subHeading={ __(

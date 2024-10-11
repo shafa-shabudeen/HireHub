@@ -22,6 +22,47 @@ export const siteLogoDefault = {
 
 export const initialState = {
 	siteFeatures: [
+		// {
+		// 	title: __( 'Blog', 'astra-sites' ),
+		// 	id: 'blog',
+		// 	description: __(
+		// 		'Display a well-designed blog on your website',
+		// 		'astra-sites'
+		// 	),
+		// 	enabled: false,
+		// 	compulsory: false,
+		// 	icon: 'blog',
+		// },
+		{
+			title: __( 'Page Builder', 'astra-sites' ),
+			id: 'page-builder',
+			description: __(
+				'Design pages with visual website builder',
+				'astra-sites'
+			),
+			enabled: true,
+			compulsory: true,
+			icon: 'page-builder',
+		},
+		{
+			title: __( 'Contact Form', 'astra-sites' ),
+			id: 'contact-form',
+			description: __(
+				'Allow your visitors to get in touch with you',
+				'astra-sites'
+			),
+			enabled: true,
+			compulsory: true,
+			icon: 'contact-form',
+		},
+		{
+			title: __( 'eCommerce', 'astra-sites' ),
+			id: 'ecommerce',
+			description: __( 'Sell your products online', 'astra-sites' ),
+			enabled: false,
+			compulsory: false,
+			icon: 'ecommerce',
+		},
 		{
 			title: __( 'Donations', 'astra-sites' ),
 			id: 'donations',
@@ -30,6 +71,7 @@ export const initialState = {
 				'astra-sites'
 			),
 			enabled: false,
+			compulsory: false,
 			icon: 'heart',
 		},
 		{
@@ -37,6 +79,7 @@ export const initialState = {
 			id: 'automation-integrations',
 			description: __( 'Automate your website & tasks', 'astra-sites' ),
 			enabled: false,
+			compulsory: false,
 			icon: 'squares-plus',
 		},
 		{
@@ -47,6 +90,7 @@ export const initialState = {
 				'astra-sites'
 			),
 			enabled: false,
+			compulsory: false,
 			icon: 'funnel',
 		},
 		{
@@ -57,6 +101,7 @@ export const initialState = {
 				'astra-sites'
 			),
 			enabled: false,
+			compulsory: false,
 			icon: 'play-circle',
 		},
 		{
@@ -67,6 +112,7 @@ export const initialState = {
 				'astra-sites'
 			),
 			enabled: false,
+			compulsory: false,
 			icon: 'live-chat',
 		},
 	],
@@ -77,6 +123,8 @@ export const initialState = {
 		build_website_for: '',
 		opt_in: true,
 	},
+	selectedEcommercePlugin: 'surecart',
+	isEcommerce: false,
 	allSitesData: astraSitesVars.all_sites || {},
 	allCategories: astraSitesVars.allCategories || [],
 	allCategoriesAndTags: astraSitesVars.allCategoriesAndTags || [],

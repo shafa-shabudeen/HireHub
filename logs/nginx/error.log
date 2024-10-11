@@ -1,4 +1,9 @@
+<<<<<<< Updated upstream
 2024/10/04 19:03:59 [alert] 7868#5388: the event "ngx_master_7868" was not signaled for 5s
 2024/10/04 19:20:52 [alert] 11492#16836: OpenEvent("ngx_master_7476") failed (2: The system cannot find the file specified)
 2024/10/04 19:28:48 [alert] 7000#13568: the event "ngx_master_7000" was not signaled for 5s
 2024/10/04 20:44:20 [error] 6080#13144: *900 FastCGI sent in stderr: "PHP Fatal error:  Maximum execution time of 300 seconds exceeded in C:\Users\Admin\Local Sites\hirehub\app\public\wp-includes\Requests\src\Transport\Curl.php on line 510" while reading response header from upstream, client: 127.0.0.1, server: , request: "POST /wp-admin/admin-ajax.php HTTP/1.0", upstream: "fastcgi://127.0.0.1:10015", host: "hirehub.local", referrer: "http://hirehub.local/wp-admin/themes.php?page=starter-templates&ci=4&s=dental+clinic"
+=======
+2024/10/07 10:25:10 [error] 5804#11824: *12290 connect() failed (10061: No connection could be made because the target machine actively refused it) while connecting to upstream, client: 127.0.0.1, server: , request: "POST /wp-admin/admin-ajax.php HTTP/1.0", upstream: "fastcgi://127.0.0.1:10014", host: "hirehub.local", referrer: "http://hirehub.local/wp-admin/post.php?post=646&action=elementor"
+>>>>>>> Stashed changes
+2024/10/10 23:00:50 [alert] 16764#13232: OpenEvent("ngx_master_15920") failed (2: The system cannot find the file specified)

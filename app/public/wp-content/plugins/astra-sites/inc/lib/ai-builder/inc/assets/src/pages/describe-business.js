@@ -20,6 +20,7 @@ import StyledText from '../components/styled-text';
 import { __, sprintf } from '@wordpress/i18n';
 import { useNavigateSteps } from '../router';
 import Container from '../components/container';
+import AISitesNotice from '../components/ai-sites-notice';
 
 const DescribeBusiness = () => {
 	const { nextStep, previousStep } = useNavigateSteps();
@@ -364,6 +365,7 @@ const DescribeBusiness = () => {
 			action="#"
 			onSubmit={ handleSubmit( handleFormSubmit ) }
 		>
+			<AISitesNotice />
 			<Heading
 				heading={ getTitle( categoryKey ) || getTitle( 'unknown' ) }
 				subHeading={

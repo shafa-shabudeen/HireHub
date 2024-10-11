@@ -1,17 +1,21 @@
 /* @type {import('tailwindcss').Config} */
 module.exports = {
-	content: [ './inc/lib/onboarding/assets/src/**/*.{jsx,js}' ],
+	content: [
+		'./inc/lib/onboarding/assets/src/**/*.{jsx,js}',
+		'./inc/lib/nps-survey/src/**/*.{jsx,js}',
+	],
 	theme: {
 		extend: {
 			colors: {
+				'browser-bar': '#FAFAFA',
 				'accent-st': '#3D4592',
 				'accent-st-secondary': '#2563EB',
 				'accent-wp-primary': '#0073AA',
 				'accent-wp-primary-alt': '#70CFFF',
 				'accent-wp-secondary': '#00A0D2',
-				'browser-bar': '#FAFAFA',
 				'heading-text': '#030712',
 				'body-text': '#374151',
+				'nps-button-text': '#020617',
 				'secondary-text': '#9CA3AF',
 				'disabled-text': '#D1D5DB',
 				'nav-active': '#111827',
@@ -19,9 +23,14 @@ module.exports = {
 				'background-primary': '#FFFFFF',
 				'background-secondary': '#F3F4F6',
 				'background-tertiary': '#F0F0FF',
+				'container-background': '#F0F4FA',
+				'nps-button-background': '#2271B1',
+				'nps-placeholder-text': '#64748B',
 				'border-primary': '#D1D5DB',
+				'classic-button': '#2463EB',
 				'border-secondary': '#6B7280',
 				'border-tertiary': '#D8DFE9',
+				'border-nps-primary': '#E2E8F0',
 				'icon-primary': '#5A03EF',
 				'icon-secondary': '#374151',
 				'alert-info': '#3B82F6',
@@ -90,6 +99,7 @@ module.exports = {
 				sm: '0px 1px 2px 0px rgba(0, 0, 0, 0.05)',
 				'template-preview': '0px 40px 120px -16px rgba(0, 0, 0, 0.30)',
 				'template-info': '0px -20px 25px -5px rgba(0, 0, 0, 0.10)',
+				nps: '0px 10px 10px -5px rgba(0, 0, 0, 0.04), 0px 20px 25px -5px rgba(0, 0, 0, 0.1)',
 			},
 			gradientColorStopPositions: {
 				0: '0%',
