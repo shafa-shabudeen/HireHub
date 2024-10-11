@@ -4,7 +4,11 @@ Tags: page builder, editor, landing page, drag-and-drop, elementor,
 Requires at least: 6.3
 Tested up to: 6.6
 Requires PHP: 7.4
+<<<<<<< HEAD
 Stable tag: 3.24.5
+=======
+Stable tag: 3.24.6
+>>>>>>> ruvais
 Beta tag: 3.24.0-beta3
 License: GPLv3
 License URI: https://www.gnu.org/licenses/gpl-3.0.html
@@ -316,6 +320,14 @@ You can also add a new language via [translate.wordpress.org](https://go.element
 
 == Changelog ==
 
+<<<<<<< HEAD
+=======
+= 3.24.6 - 2024-10-09 =
+
+* Security Fix: Improved code security enforcement in Notices
+* Security Fix: Improved code security enforcement in Media control
+
+>>>>>>> ruvais
 = 3.24.5 - 2024-10-01 =
 
 * Fix: Responsive styles not loading properly for Apple WebKit

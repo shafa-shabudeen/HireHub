@@ -1,4 +1,8 @@
+<<<<<<< HEAD
 /*! elementor - v3.24.0 - 01-10-2024 */
+=======
+/*! elementor - v3.24.0 - 09-10-2024 */
+>>>>>>> ruvais
 (self["webpackChunkelementor"] = self["webpackChunkelementor"] || []).push([["modules_nested-elements_assets_js_editor_module_js"],{
 
 /***/ "../modules/nested-elements/assets/js/editor/component.js":

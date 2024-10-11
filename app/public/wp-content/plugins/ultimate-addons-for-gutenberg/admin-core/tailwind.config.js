@@ -10,8 +10,15 @@ module.exports = {
 		extend: {
 			colors: {
 				spectra: {
+<<<<<<< HEAD
 					DEFAULT: '#6104FF',
 					hover: '#5300E0',
+=======
+					DEFAULT: '#6104ff',
+					hover: '#5300e0',
+					light: '#ece1fe',
+					verylight: '#f5f0ff'
+>>>>>>> ruvais
 				},
 			},
 			fontFamily: {

@@ -3,7 +3,11 @@
  * Plugin Name: Gutenberg Starter Templates
  * Plugin URI: https://wpastra.com/
  * Description: Gutenberg single page templates, and blocks library to imported your website easily.
+<<<<<<< HEAD
  * Version: 2.4.2
+=======
+ * Version: 2.4.3
+>>>>>>> ruvais
  * Author: Brainstorm Force
  * Author URI: https://www.brainstormforce.com
  * Text Domain: ast-block-templates
@@ -27,7 +31,11 @@ if ( ! defined( 'AST_BLOCK_TEMPLATES_LIBRARY_URL' ) ) {
 	define( 'AST_BLOCK_TEMPLATES_LIBRARY_URL', trailingslashit( apply_filters( 'ast_block_templates_library_url', 'https://websitedemos.net/' ) ) );
 }
 
+<<<<<<< HEAD
 define( 'AST_BLOCK_TEMPLATES_VER', '2.4.2' );
+=======
+define( 'AST_BLOCK_TEMPLATES_VER', '2.4.3' );
+>>>>>>> ruvais
 define( 'AST_BLOCK_TEMPLATES_FILE', __FILE__ );
 define( 'AST_BLOCK_TEMPLATES_BASE', plugin_basename( AST_BLOCK_TEMPLATES_FILE ) );
 define( 'AST_BLOCK_TEMPLATES_DIR', plugin_dir_path( AST_BLOCK_TEMPLATES_FILE ) );

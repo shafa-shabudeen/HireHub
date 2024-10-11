@@ -1,4 +1,8 @@
+<<<<<<< HEAD
 /*! elementor - v3.24.0 - 01-10-2024 */
+=======
+/*! elementor - v3.24.0 - 09-10-2024 */
+>>>>>>> ruvais
 (self["webpackChunkelementor"] = self["webpackChunkelementor"] || []).push([["vendors-node_modules_react-query_devtools_index_js"],{
 
 /***/ "../node_modules/match-sorter/dist/match-sorter.esm.js":

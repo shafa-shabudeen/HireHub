@@ -1,4 +1,8 @@
+<<<<<<< HEAD
 /*! elementor - v3.24.0 - 01-10-2024 */
+=======
+/*! elementor - v3.24.0 - 09-10-2024 */
+>>>>>>> ruvais
 "use strict";
 (self["webpackChunkelementor"] = self["webpackChunkelementor"] || []).push([["modules_styleguide_assets_js_frontend_app_js"],{
 
