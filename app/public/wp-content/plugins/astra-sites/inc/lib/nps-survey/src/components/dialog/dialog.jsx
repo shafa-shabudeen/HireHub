@@ -1,15 +1,22 @@
 import { NpsRating, Comment, PluginRating } from '../steps';
 import useStore from '../../store/store.js';
 import { XMarkIcon } from '@heroicons/react/20/solid';
-import { handleCloseNpsSurvey } from '../../utils/helper.js';
+import {
+	handleCloseNpsSurvey,
+	handleNpsSurveyApi,
+} from '../../utils/helper.js';
+import { useState } from 'react';
 
 const NpsDialog = function () {
-	const { showNps, currentStep } = useStore( ( state ) => ( {
+	const { showNps, currentStep, npsRating } = useStore( ( state ) => ( {
 		showNps: state.showNps,
 		currentStep: state.currentStep,
+		npsRating: state.npsRating,
 	} ) );
 
 	const { dispatch } = useStore();
+
+	const [ processing, setProcessing ] = useState( false );
 
 	if ( ! showNps ) {
 		return;
@@ -30,6 +37,20 @@ const NpsDialog = function () {
 	};
 
 	const closeNpsSurvey = function () {
+		if ( processing ) {
+			return;
+		}
+
+		if ( npsRating && currentStep === 'plugin-rating' ) {
+			handleNpsSurveyApi(
+				npsRating,
+				'',
+				'plugin-rating',
+				dispatch,
+				setProcessing
+			);
+		}
+
 		handleCloseNpsSurvey( dispatch, currentStep );
 	};
 

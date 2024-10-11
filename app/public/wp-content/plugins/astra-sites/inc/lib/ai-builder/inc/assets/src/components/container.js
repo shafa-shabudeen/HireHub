@@ -9,7 +9,7 @@ const Container = ( {
 	return (
 		<Element
 			className={ classNames(
-				'max-w-container w-full bg-white p-8 flex flex-col gap-8 rounded-xl shadow-md',
+				'max-w-container w-full bg-white p-7 flex flex-col gap-[26px] rounded-xl shadow-md',
 				className
 			) }
 			{ ...props }

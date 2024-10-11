@@ -36,6 +36,14 @@ const actions = {
 			payload: apiErrorModal,
 		};
 	},
+
+	setPlanInformationModal( planInformationModal ) {
+		return {
+			type: actionsTypes.SET_PLAN_INFORMATION_MODAL,
+			payload: planInformationModal,
+		};
+	},
+
 	setContinueProgressModal( continueProgressModal ) {
 		return {
 			type: actionsTypes.SET_CONTINUE_PROGRESS_MODAL,
@@ -174,6 +182,13 @@ const actions = {
 		};
 	},
 
+	setSiteFeaturesData( payload ) {
+		return {
+			type: actionsTypes.SET_SITE_FEATURES_DATA,
+			payload,
+		};
+	},
+
 	setDynamicContent( dynamicContent ) {
 		return {
 			type: actionsTypes.SET_DYNAMIC_CONTENT,
@@ -185,6 +200,13 @@ const actions = {
 		return {
 			type: actionsTypes.SET_WEBSITE_LOGO,
 			payload: logo,
+		};
+	},
+
+	setSiteTitleVisible( toggle ) {
+		return {
+			type: actionsTypes.SET_SITE_TITLE_VISIBLE,
+			payload: toggle,
 		};
 	},
 
@@ -219,6 +241,13 @@ const actions = {
 	setLoadingNextStep( payload ) {
 		return {
 			type: actionsTypes.LOADING_NEXT_STEP,
+			payload,
+		};
+	},
+
+	setFullOnboardingState( payload ) {
+		return {
+			type: actionsTypes.SET_FULL_ONBOARDING_STATE,
 			payload,
 		};
 	},

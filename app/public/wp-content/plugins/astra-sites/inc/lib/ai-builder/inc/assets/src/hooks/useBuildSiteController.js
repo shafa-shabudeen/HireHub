@@ -26,12 +26,14 @@ const useBuildSiteController = () => {
 			selectedTemplateIsPremium,
 			templateList,
 		},
+		siteFeaturesData,
 	} = useSelect( ( select ) => {
-		const { getSiteFeatures, getAIStepData } = select( STORE_KEY );
-
+		const { getSiteFeaturesData, getSiteFeatures, getAIStepData } =
+			select( STORE_KEY );
 		return {
 			siteFeatures: getSiteFeatures(),
 			stepsData: getAIStepData(),
+			siteFeaturesData: getSiteFeaturesData(),
 		};
 	}, [] );
 
@@ -50,8 +52,8 @@ const useBuildSiteController = () => {
 		),
 		setPrevErrorAlertOpen = ( value ) =>
 			setPrevErrorAlert( { open: value } );
-	const selectedTemplateData = templateList.find(
-			( item ) => item.uuid === selectedTemplate
+	const selectedTemplateData = templateList?.find(
+			( item ) => item?.uuid === selectedTemplate
 		),
 		isEcommarceSite = selectedTemplateData?.features?.ecommerce === 'yes';
 
@@ -117,6 +119,7 @@ const useBuildSiteController = () => {
 		language,
 		images,
 		features,
+		featuresData,
 	} ) =>
 		await apiFetch( {
 			path: 'zipwp/v1/site',
@@ -134,6 +137,9 @@ const useBuildSiteController = () => {
 				language,
 				images,
 				site_features: features,
+				site_features_data: features?.includes( 'ecommerce' )
+					? featuresData
+					: {},
 			},
 		} );
 
@@ -252,8 +258,8 @@ const useBuildSiteController = () => {
 				language: siteLanguage,
 				images: selectedImages,
 				features: enabledFeatures,
+				featuresData: siteFeaturesData,
 			};
-
 			const previousError = await previousErrors();
 			if ( previousError && Object.values( previousError ).length > 0 ) {
 				setPrevErrorAlert( {

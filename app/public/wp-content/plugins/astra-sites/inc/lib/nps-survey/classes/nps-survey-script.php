@@ -66,9 +66,10 @@ class Nps_Survey_Script {
 
         $screen          = get_current_screen();
 		$screen_id       = $screen ? $screen->id : '';
-		$allowed_screens = array(
-			'dashboard',
-		);
+		$allowed_screens = [ 
+			// TODO: Add plugins screen when CSS conflict issues will be solved
+			'dashboard', 'themes', 'options-general', 'plugins'
+		];
 
 		if ( ! in_array( $screen_id, $allowed_screens, true ) ) {
 			return;
