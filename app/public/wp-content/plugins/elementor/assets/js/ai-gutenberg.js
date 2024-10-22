@@ -1,4 +1,12 @@
+<<<<<<< HEAD
 /*! elementor - v3.24.0 - 09-10-2024 */
+=======
+<<<<<<< HEAD
+/*! elementor - v3.24.0 - 01-10-2024 */
+=======
+/*! elementor - v3.24.0 - 09-10-2024 */
+>>>>>>> ruvais
+>>>>>>> bd06bd206965cc56e0274c0dcf857ad87f3e6bf4
 /******/ (() => { // webpackBootstrap
 /******/ 	var __webpack_modules__ = ({
 
@@ -25247,8 +25255,13 @@ try {
 
 var _regeneratorRuntime = runtime.exports;
 
+<<<<<<< HEAD
 /**
  * Generate SVG Path tag from the given points
+=======
+/**
+ * Generate SVG Path tag from the given points
+>>>>>>> bd06bd206965cc56e0274c0dcf857ad87f3e6bf4
  */
 
 var SvgPath = function SvgPath(_ref) {
@@ -25621,7 +25634,11 @@ var Canvas = /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.forwardRef(function
       }
     };
   });
+<<<<<<< HEAD
   /* Add event listener to Mouse up and Touch up to
+=======
+  /* Add event listener to Mouse up and Touch up to
+>>>>>>> bd06bd206965cc56e0274c0dcf857ad87f3e6bf4
   release drawing even when point goes out of canvas */
 
   react__WEBPACK_IMPORTED_MODULE_0__.useEffect(function () {

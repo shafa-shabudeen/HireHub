@@ -29,6 +29,10 @@ if ( ! defined( 'ABSPATH' ) ) {
 
 define( 'ELEMENTOR_VERSION', '3.24.6' );
 
+<<<<<<< HEAD
+=======
+
+>>>>>>> bd06bd206965cc56e0274c0dcf857ad87f3e6bf4
 define( 'ELEMENTOR__FILE__', __FILE__ );
 define( 'ELEMENTOR_PLUGIN_BASE', plugin_basename( ELEMENTOR__FILE__ ) );
 define( 'ELEMENTOR_PATH', plugin_dir_path( ELEMENTOR__FILE__ ) );

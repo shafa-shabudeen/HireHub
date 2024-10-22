@@ -15,7 +15,11 @@ if ( ! defined( 'ABSPATH' ) ) {
 /**
  * Define Constants
  */
+<<<<<<< HEAD
 define( 'ASTRA_THEME_VERSION', '4.8.3' );
+=======
+define( 'ASTRA_THEME_VERSION', '4.8.2' );
+>>>>>>> bd06bd206965cc56e0274c0dcf857ad87f3e6bf4
 define( 'ASTRA_THEME_SETTINGS', 'astra-settings' );
 define( 'ASTRA_THEME_DIR', trailingslashit( get_template_directory() ) );
 define( 'ASTRA_THEME_URI', trailingslashit( esc_url( get_template_directory_uri() ) ) );
@@ -183,6 +187,7 @@ require_once ASTRA_THEME_DIR . 'inc/core/markup/class-astra-markup.php';
 require_once ASTRA_THEME_DIR . 'inc/core/deprecated/deprecated-filters.php';
 require_once ASTRA_THEME_DIR . 'inc/core/deprecated/deprecated-hooks.php';
 require_once ASTRA_THEME_DIR . 'inc/core/deprecated/deprecated-functions.php';
+<<<<<<< HEAD
 
 function create_custom_post_type() {
     $labels = array(
@@ -234,3 +239,5 @@ function create_custom_post_type() {
 add_action('init', 'create_custom_post_type');
 
 
+=======
+>>>>>>> bd06bd206965cc56e0274c0dcf857ad87f3e6bf4
