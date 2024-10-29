@@ -1,0 +1,268 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+body {
+    min-height: 100vh;
+    background: #f1f1f1;
+}
+
+h1, h2 {
+    color: #444;
+}
+
+h3 {
+    color: #999;
+}
+
+.btn {
+    background: #5ABCB8;
+    color: white;
+    padding: 5px 10px;
+    text-align: center;
+    border-radius: 5px;
+}
+
+.btn:hover {
+    color: #5ABCB8;
+    background: white;
+    padding: 3px 8px;
+    border: 2px solid #5ABCB8;
+}
+
+/* Sidebar Styles */
+.side-menu {
+    position: fixed;
+    background: #5ABCB8;
+    width: 20vw;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    transition: width 0.3s;
+}
+
+.side-menu .brand-name {
+    height: 10vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+}
+
+.side-menu ul {
+    padding: 0;
+    flex-grow: 1;
+}
+
+.side-menu li {
+    font-size: 16px;
+    padding: 15px 20px;
+    color: white;
+    display: flex;
+    align-items: center;
+    gap: 10px; 
+    transition: background 0.3s;
+}
+
+.side-menu li:hover {
+    background: white;
+    color: #5ABCB8;
+}
+
+/* Main Container Styles */
+.container {
+    margin-left: 20vw;
+    padding: 20px;
+    min-height: 100vh;
+    background: #f1f1f1;
+}
+
+.container .header {
+    background: white;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 10px 20px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    position: sticky;
+    top: 0;
+    z-index: 10;
+}
+
+.container .header .search {
+    flex-grow: 1;
+    display: flex;
+    justify-content: center;
+}
+
+.container .header .search input[type="text"] {
+    border: 1px solid #ddd;
+    padding: 10px;
+    width: 300px;
+}
+
+.container .header .user {
+    display: flex;
+    align-items: center;
+    gap: 10px; 
+}
+
+.container .content {
+    margin-top: 20px;
+    display: flex;
+    flex-direction: column;
+}
+
+.container .content .cards {
+    padding: 20px 15px;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    flex-wrap: wrap;
+}
+
+.container .content .cards .card {
+    width: 250px;
+    height: 150px;
+    background: white;
+    margin: 20px 10px;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    flex-direction: column;
+    text-align: center;
+}
+
+.container .content .content-2 {
+    display: flex;
+    margin-top: 20px;
+    flex-wrap: wrap;
+}
+
+.container .content .content-2 .recent-applications,
+.container .content .content-2 .new-employers {
+    flex: 1;
+    margin-right: 10px;
+}
+
+.container .content .content-2 .recent-applications h2,
+.container .content .content-2 .new-employers h2 {
+    margin-bottom: 15px;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse; /* Ensures proper table spacing */
+    margin-top: 10px;
+}
+
+table th,
+table td {
+    padding: 10px;
+    border: 1px solid #ddd; /* Ensure borders are visible */
+    text-align: left;
+}
+
+.button-container {
+    display: flex; /* Align buttons horizontally */
+    gap: 10px; /* Space between buttons */
+}
+
+.view-btn {
+    background: #5ABCB8;
+    color: white;
+    border: none;
+    padding: 5px 10px;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.delete-btn {
+    background: #e74c3c;
+    color: white;
+    border: none;
+    padding: 5px 10px;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.view-btn:hover {
+    background: #b1c0bf;
+}
+
+.delete-btn:hover {
+    background: #c0392b;
+}
+
+/* Media Queries for Responsiveness */
+@media (max-width: 1024px) {
+    .side-menu {
+        width: 25vw; /* Increase sidebar width for medium screens */
+    }
+
+    .container {
+        margin-left: 25vw; /* Adjust container margin */
+    }
+
+    .container .header .search input[type="text"] {
+        width: 200px; /* Reduce search input width */
+    }
+}
+
+@media (max-width: 768px) {
+    .side-menu {
+        width: 100%; /* Full width sidebar on small screens */
+        position: relative; /* Change position to relative */
+        height: auto; /* Allow auto height */
+    }
+
+    .container {
+        margin-left: 0; /* Remove left margin */
+        padding: 10px; /* Reduce padding */
+    }
+
+    .container .header {
+        flex-direction: column; /* Stack header elements */
+        align-items: flex-start; /* Align items to the start */
+    }
+
+    .container .header .user {
+        margin-top: 10px; /* Add margin above user section */
+    }
+
+    .container .content .cards .card {
+        width: 100%; /* Full width cards on small screens */
+        margin: 10px 0; /* Adjust margin */
+    }
+
+    .container .content .content-2 {
+        flex-direction: column; /* Stack content sections */
+    }
+
+    .container .content .content-2 .recent-applications,
+    .container .content .content-2 .new-employers {
+        margin-right: 0; /* Remove right margin */
+        margin-bottom: 20px; /* Add bottom margin */
+    }
+}
+
+@media (max-width: 480px) {
+    .container .header .search input[type="text"] {
+        width: 100%; /* Full width search input */
+    }
+
+    .side-menu li {
+        font-size: 14px; /* Smaller font size for sidebar items */
+        padding: 10px 15px; /* Adjust padding */
+    }
+
+    .container .content .cards {
+        flex-direction: column; /* Stack cards vertically */
+        align-items: stretch; /* Stretch cards to full width */
+    }
+}
+.uag-blocks-common-selector{z-index:var(--z-index-desktop) !important}@media (max-width: 976px){.uag-blocks-common-selector{z-index:var(--z-index-tablet) !important}}@media (max-width: 767px){.uag-blocks-common-selector{z-index:var(--z-index-mobile) !important}}
