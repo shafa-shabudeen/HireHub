@@ -1,7 +1,6 @@
 import useStore from '../../store/store.js';
 import HeadingContent from '../dialog/heading-content.jsx';
 import HeadingTitle from '../dialog/heading-title.jsx';
-import { handleNpsSurveyApi } from '../../utils/helper.js';
 import { __ } from '@wordpress/i18n';
 import { useState } from '@wordpress/element';
 const { imageDir } = npsSurvey;
@@ -9,7 +8,6 @@ const { imageDir } = npsSurvey;
 const NpsRating = function () {
 	const { dispatch } = useStore();
 	const ratings = Array.from( { length: 10 }, ( _, i ) => i + 1 );
-	const [ processing, setProcessing ] = useState( false );
 	const [ selectedRating, setSelectedRating ] = useState( null );
 
 	const handleRatingResponse = async function ( number ) {
@@ -23,13 +21,10 @@ const NpsRating = function () {
 		} );
 
 		if ( number >= 8 ) {
-			handleNpsSurveyApi(
-				number,
-				'',
-				'plugin-rating',
-				dispatch,
-				setProcessing
-			);
+			dispatch( {
+				type: 'SET_CURRENT_STEP',
+				payload: 'plugin-rating',
+			} );
 		} else {
 			dispatch( {
 				type: 'SET_CURRENT_STEP',
@@ -39,7 +34,7 @@ const NpsRating = function () {
 	};
 
 	return (
-		<div className={ processing && 'opacity-50 cursor-progress' }>
+		<div>
 			<div className="flex items-center justify-start gap-2">
 				<img
 					className="size-6"

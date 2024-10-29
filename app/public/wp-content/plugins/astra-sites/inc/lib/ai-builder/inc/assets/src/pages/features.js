@@ -1,4 +1,4 @@
-import { useEffect, useState } from '@wordpress/element';
+import { useEffect, useState, useMemo } from '@wordpress/element';
 import {
 	FunnelIcon,
 	HeartIcon,
@@ -11,6 +11,7 @@ import {
 	Squares2X2Icon,
 	QueueListIcon,
 	ShoppingCartIcon,
+	ChevronUpIcon,
 } from '@heroicons/react/24/outline';
 import { __ } from '@wordpress/i18n';
 import { useDispatch, useSelect } from '@wordpress/data';
@@ -22,11 +23,113 @@ import { useNavigateSteps } from '../router';
 import withBuildSiteController from '../hoc/withBuildSiteController';
 import Container from '../components/container';
 import Heading from '../components/heading';
+import Dropdown from '../components/dropdown';
+import AISitesNotice from '../components/ai-sites-notice';
+import { WooCommerceIcon, SureCartIcon } from '../ui/icons';
 
 const fetchStatus = {
 	fetching: 'fetching',
 	fetched: 'fetched',
 	error: 'error',
+};
+
+const getPluginProps = ( id ) => {
+	switch ( id ) {
+		case 'surecart':
+			return {
+				title: 'SureCart',
+				icon: <SureCartIcon className="w-3 h-3" />,
+			};
+		case 'woocommerce':
+			return {
+				title: 'WooCommerce',
+				icon: <WooCommerceIcon className="w-3 h-3" />,
+			};
+		default:
+			return {
+				title: 'SureCart',
+				icon: <SureCartIcon className="w-3 h-3" />,
+			};
+	}
+};
+
+const EcommerceOptions = ( { ecomSupported, selectedEcom, onChange } ) => {
+	const { setSiteFeaturesData } = useDispatch( STORE_KEY );
+	const [ open, setOpen ] = useState( false );
+
+	const isOnlyOneEcom = ecomSupported.length === 1;
+	const handleDropdownClick = ( event ) => {
+		event.stopPropagation();
+		setOpen( ! open );
+	};
+	const handleOptionClick = ( id, event ) => {
+		event.stopPropagation();
+		onChange( id );
+		setOpen( false );
+		setSiteFeaturesData( { ecommerce_type: id } );
+	};
+	return (
+		<div className="bg-[#F6FAFE] z-50 py-1 px-2 shadow-sm rounded-md items-center justify-center w-fit">
+			<Dropdown
+				width="w-36"
+				trigger={
+					<div
+						className={ classNames(
+							'flex items-center  cursor-pointer gap-1.5',
+							isOnlyOneEcom ? 'pointer-events-none' : ''
+						) }
+						onClick={ handleDropdownClick }
+					>
+						<div className="flex items-center ">
+							{ getPluginProps( selectedEcom ).icon }
+							<div className="ml-2">
+								<p className="text-xs leading-3 text-app-text">
+									{ getPluginProps( selectedEcom ).title }
+								</p>
+							</div>
+						</div>
+						<span>
+							{ ! isOnlyOneEcom && ( // Hide the chevron if there is only one ecom option
+								<ChevronUpIcon
+									className={ classNames(
+										'w-3 h-3 text-app-active-icon ',
+										open ? 'transform rotate-180' : ''
+									) }
+								/>
+							) }
+						</span>
+					</div>
+				}
+				onOpenChange={ setOpen }
+			>
+				<div className="py-0.5 px-2 mx-auto bg-white rounded-md">
+					{ ecomSupported?.map( ( id, index ) => {
+						const { icon, title } = getPluginProps( id );
+						return (
+							<Dropdown.Item
+								key={ index }
+								onClick={ ( event ) =>
+									handleOptionClick( id, event )
+								}
+								className={ classNames(
+									'flex items-center px-2 py-1 hover:bg-container-background rounded-md cursor-pointer'
+								) }
+							>
+								<div className="flex items-center">
+									{ icon }
+									<div className="ml-2">
+										<p className="text-xs leading-5 text-app-text">
+											{ title }
+										</p>
+									</div>
+								</div>
+							</Dropdown.Item>
+						);
+					} ) }
+				</div>
+			</Dropdown>
+		</div>
+	);
 };
 
 const ICON_SET = {
@@ -53,6 +156,32 @@ const Features = ( { handleClickStartBuilding, isInProgress } ) => {
 			loadingNextStep: getLoadingNextStep(),
 		};
 	}, [] );
+	const {
+		stepsData: { selectedTemplate, templateList },
+	} = useSelect( ( select ) => {
+		const { getAIStepData } = select( STORE_KEY );
+
+		return {
+			stepsData: getAIStepData(),
+		};
+	}, [] );
+	const selectedTemplateData = templateList.find(
+		( item ) => item.uuid === selectedTemplate
+	);
+	// const enabledFeatures = siteFeatures
+	// 	.filter( ( feature ) => feature.enabled )
+	// 	.map( ( feature ) => feature.id );
+
+	// const uniqueSiteFeatures = [ ...new Set( enabledFeatures ) ];
+	// const ecommerceEnabled = uniqueSiteFeatures.includes( 'ecommerce' );
+	const [ ecomSupported, defaultEcom ] = useMemo( () => {
+		return [
+			selectedTemplateData?.features_data?.ecommerce_supported || [],
+			selectedTemplateData?.features_data?.ecommerce_type,
+		];
+	}, [] );
+	const [ selectedEcom, setSelectedEcom ] = useState( defaultEcom );
+
 	const [ isFetchingStatus, setIsFetchingStatus ] = useState(
 		fetchStatus.fetching
 	);
@@ -92,6 +221,7 @@ const Features = ( { handleClickStartBuilding, isInProgress } ) => {
 
 	return (
 		<Container className="grid grid-cols-1 gap-8 auto-rows-auto !max-w-[55rem] w-full mx-auto">
+			<AISitesNotice />
 			<div className="space-y-4">
 				<Heading
 					heading={ __( 'Select features', 'ai-builder' ) }
@@ -101,20 +231,24 @@ const Features = ( { handleClickStartBuilding, isInProgress } ) => {
 					) }
 				/>
 			</div>
-
 			{ /* Feature Cards */ }
+
 			<div className="grid grid-cols-1 lg:grid-cols-2 auto-rows-auto gap-x-8 gap-y-5 w-full">
 				{ isFetchingStatus === fetchStatus.fetched &&
 					siteFeatures.map( ( feature ) => {
+						const isEcommerce = feature.id === 'ecommerce';
+
 						const FeatureIcon = ICON_SET?.[ feature.icon ];
 						return (
 							<div
 								key={ feature.id }
 								className={ classNames(
 									'relative py-4 pl-4 pr-5 rounded-md shadow-sm border border-solid bg-white border-button-disabled transition-colors duration-150 ease-in-out',
-									feature.enabled && 'border-accent-st'
+									feature.enabled && 'border-accent-st',
+									'cursor-pointer'
 								) }
 								data-disabled={ loadingNextStep }
+								onClick={ handleToggleFeature( feature ) }
 							>
 								<div className="flex items-start justify-start gap-3">
 									<div className="p-0.5 shrink-0">
@@ -125,16 +259,38 @@ const Features = ( { handleClickStartBuilding, isInProgress } ) => {
 											<WrenchIcon className="text-zip-body-text w-7 h-7" />
 										) }
 									</div>
-									<div className="space-y-1 mr-5">
+									<div className="space-y-1 mr-0 w-full">
 										<p className="p-0 m-0 !text-base !font-semibold !text-zip-app-heading">
 											{ feature.title }
 										</p>
-										<p className="p-0 m-0 !text-sm !font-normal !text-zip-body-text">
-											{ feature.description }
-										</p>
+										<div className="flex justify-between items-start w-full">
+											<p className="p-0 m-0 !text-sm !font-normal !text-zip-body-text">
+												{ feature.description }
+											</p>
+											<div
+												onClick={ ( e ) =>
+													e.stopPropagation()
+												}
+											>
+												{ isEcommerce && (
+													<EcommerceOptions
+														ecomSupported={
+															ecomSupported
+														}
+														selectedEcom={
+															selectedEcom
+														}
+														onChange={
+															setSelectedEcom
+														}
+													/>
+												) }
+											</div>
+										</div>
 									</div>
 								</div>
 								{ /* Check mark */ }
+
 								<span
 									className={ classNames(
 										'inline-flex absolute top-4 right-4 p-[0.1875rem] border border-solid border-zip-app-inactive-icon rounded',
@@ -149,11 +305,6 @@ const Features = ( { handleClickStartBuilding, isInProgress } ) => {
 										strokeWidth={ 4 }
 									/>
 								</span>
-								{ /* Click handler overlay */ }
-								<div
-									className="absolute inset-0 cursor-pointer"
-									onClick={ handleToggleFeature( feature ) }
-								/>
 							</div>
 						);
 					} ) }

@@ -3,7 +3,7 @@
  * Plugin Name: ZipWP Images
  * Description: It is a free image library.
  * Author: Brainstorm Force
- * Version: 1.0.8
+ * Version: 1.0.10
  * License: GPL v2
  * Text Domain: zipwp-images
  *
@@ -21,6 +21,6 @@ define( 'ZIPWP_IMAGES_FILE', __FILE__ );
 define( 'ZIPWP_IMAGES_BASE', plugin_basename( ZIPWP_IMAGES_FILE ) );
 define( 'ZIPWP_IMAGES_DIR', plugin_dir_path( ZIPWP_IMAGES_FILE ) );
 define( 'ZIPWP_IMAGES_URL', plugins_url( '/', ZIPWP_IMAGES_FILE ) );
-define( 'ZIPWP_IMAGES_VER', '1.0.8' );
+define( 'ZIPWP_IMAGES_VER', '1.0.10' );
 
 require_once 'zipwp-images-loader.php';

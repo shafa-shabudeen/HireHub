@@ -12,6 +12,7 @@ import { useForm } from 'react-hook-form';
 import Input from '../components/input';
 import { useNavigateSteps } from '../router';
 import Container from '../components/container';
+import AISitesNotice from '../components/ai-sites-notice';
 
 const BusinessDetails = () => {
 	const { nextStep } = useNavigateSteps();
@@ -82,6 +83,7 @@ const BusinessDetails = () => {
 
 	return (
 		<Container>
+			<AISitesNotice />
 			<Heading
 				heading={ __( "Let's build your website!", 'ai-builder' ) }
 				subHeading={ __(

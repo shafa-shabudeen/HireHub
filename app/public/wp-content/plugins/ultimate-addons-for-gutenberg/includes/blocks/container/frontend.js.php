@@ -25,7 +25,22 @@ if ( ! empty( $attr['UAGPosition'] ) && is_string( $attr['UAGPosition'] ) ) {
 		)
 	);
 
+<<<<<<< HEAD
 	$js = 'UAGBBlockPositioning.init( ' . wp_json_encode( $position_attrs ) . ', "' . esc_attr( $selector ) . '" );';
 }
 
 return $js;
+=======
+	ob_start();
+	?>
+	window.addEventListener("load", function(){
+		UAGBBlockPositioning.init( <?php echo wp_json_encode( $position_attrs ); ?>, "<?php echo esc_attr( $selector ); ?>" );
+	});
+	<?php
+
+	$js = ob_get_clean();
+}
+
+return $js;
+?>
+>>>>>>> ruvais

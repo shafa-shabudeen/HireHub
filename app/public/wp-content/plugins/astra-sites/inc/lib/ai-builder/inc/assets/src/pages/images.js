@@ -7,29 +7,36 @@ import {
 	SparklesIcon,
 	XMarkIcon,
 } from '@heroicons/react/24/outline';
-import { useForm } from 'react-hook-form';
-import Masonry from 'react-layout-masonry';
+
 import apiFetch from '@wordpress/api-fetch';
-import { useEffect, useState, useCallback, useRef } from '@wordpress/element';
 import { useDispatch, useSelect } from '@wordpress/data';
-import Tile from '../components/tile';
-import SuggestedKeywords from '../components/suggested-keywords';
-import Dropdown from '../components/dropdown';
-import { useDebounce, useDebounceWithCancel } from '../hooks/use-debounce';
-import { AnimatePresence } from 'framer-motion';
-import { STORE_KEY } from '../store';
-import NavigationButtons from '../components/navigation-buttons';
-import Heading from '../components/heading';
-import { classNames } from '../helpers';
-import ImagePreview from '../components/image-preview';
-import { clearSessionStorage } from '../utils/helpers';
-import { USER_KEYWORD } from './select-template';
-import { useNavigateSteps } from '../router';
-import UploadImage from '../components/upload-image';
+import { useCallback, useEffect, useRef, useState } from '@wordpress/element';
+import { __, sprintf } from '@wordpress/i18n';
 import { uploadMedia } from '@wordpress/media-utils';
+
+import { AnimatePresence } from 'framer-motion';
+import { uniqBy } from 'lodash';
 import { useDropzone } from 'react-dropzone';
-import { __ } from '@wordpress/i18n';
+import { useForm } from 'react-hook-form';
+import toast from 'react-hot-toast';
+import Masonry from 'react-layout-masonry';
+
+import Dropdown from '../components/dropdown';
+import Heading from '../components/heading';
+import ImagePreview from '../components/image-preview';
+import NavigationButtons from '../components/navigation-buttons';
+import SuggestedKeywords from '../components/suggested-keywords';
+import Tile from '../components/tile';
+import UploadImage from '../components/upload-image';
+
+import { classNames, toastBody } from '../helpers';
+import { useDebounce, useDebounceWithCancel } from '../hooks/use-debounce';
 import usePopper from '../hooks/use-popper';
+import { useNavigateSteps } from '../router';
+import { STORE_KEY } from '../store';
+import { MB_IN_BYTE } from '../utils/constants';
+import { clearSessionStorage, isValidImageURL } from '../utils/helpers';
+import { USER_KEYWORD } from './select-template';
 
 const ORIENTATIONS = {
 	all: {
@@ -99,16 +106,92 @@ const getImageSkeleton = ( count = SKELETON_COUNT ) => {
 
 const Images = () => {
 	const { nextStep, previousStep } = useNavigateSteps();
+	const [ uploadingImagesCount, setUploadingImagesCount ] = useState( [ 0 ] );
 
 	const { setWebsiteImagesAIStep, setWebsiteTemplateKeywords } =
 		useDispatch( STORE_KEY );
-	const { acceptedFiles, getRootProps, getInputProps } = useDropzone( {
+
+	const [ uploadedImages, setUploadedImages ] = useState( [] );
+
+	const uploadDroppedFiles = ( filesList ) => {
+		setUploadedImages( [] );
+		setUploadingImagesCount( filesList.length );
+		filesList.forEach( async ( file ) => {
+			try {
+				await uploadMedia( {
+					filesList: [ file ],
+					onFileChange: ( files ) => {
+						if ( ! files[ 0 ].id ) {
+							return;
+						}
+						// if NOT a valid image name
+						if ( ! isValidImageURL( files[ 0 ]?.url ) ) {
+							toast.error(
+								toastBody( {
+									message: sprintf(
+										/* translators: %s: file name */
+										__(
+											'Invalid file name! Please avoid special characters. (%s)',
+											'ai-builder'
+										),
+										files[ 0 ].title
+									),
+								} )
+							);
+							setUploadingImagesCount( ( prev ) => prev - 1 );
+							return;
+						}
+						setUploadedImages( ( prevState ) => [
+							...prevState,
+							...files,
+						] );
+						setUploadingImagesCount( ( prev ) => prev - 1 );
+					},
+				} );
+			} catch ( error ) {
+				console.error( error );
+				toast.error(
+					toastBody( {
+						message: error.message.toString(),
+					} )
+				);
+				setUploadingImagesCount( ( prevState ) => prevState - 1 );
+			}
+		} );
+	};
+
+	const onDropRejected = ( rejectedList ) => {
+		if ( rejectedList.length > 20 ) {
+			toast.error(
+				toastBody( {
+					message: __(
+						`You can only upload 20 images at once`,
+						'ai-builder'
+					),
+				} )
+			);
+			return;
+		}
+		rejectedList.forEach( ( { errors, file } ) => {
+			toast.error(
+				toastBody( {
+					message: `${ errors[ 0 ].message } (${ file?.name })`,
+				} )
+			);
+		} );
+	};
+
+	const { getRootProps, getInputProps } = useDropzone( {
 		accept: {
-			'image/jpeg': [],
-			'image/png': [],
+			'image/png': [ '.png' ],
+			'image/jpeg': [ '.jpeg', '.jpg' ],
 		},
 		noClick: true,
 		noKeyboard: true,
+		onDropAccepted: uploadDroppedFiles,
+		maxFiles: 20,
+		maxSize: 5 * MB_IN_BYTE,
+		onDropRejected,
 	} );
 
 	const {
@@ -143,6 +226,31 @@ const Images = () => {
 		};
 	} );
 
+	useEffect( () => {
+		setWebsiteImagesAIStep(
+			uniqBy(
+				[
+					...selectedImages,
+					...uploadedImages.map( ( image ) => ( {
+						id: String( image.id ),
+						url: image?.originalImageURL ?? image.url,
+						optimized_url: image?.sizes?.large?.url ?? image.url,
+						engine: '',
+						description: '',
+						orientation:
+							image?.orientation ??
+							( image?.width > image?.height
+								? 'landscape'
+								: 'portrait' ),
+						author_name: image?.author_name ?? '',
+						author_url: '',
+					} ) ),
+				],
+				'id'
+			)
+		);
+	}, [ uploadedImages.length ] );
+
 	const [ orientation, setOrientation ] = useState( ORIENTATIONS.all );
 	const [ keyword, setKeyword ] = useState(
 		keywords?.length > 0 ? keywords[ 0 ] : ''
@@ -165,7 +273,7 @@ const Images = () => {
 	const scrollContainerRef = useRef( null );
 	const imageRequestCompleted = useRef( false );
 	const blackListedEngines = useRef( new Set() );
-	const previouslySelected = useRef( [ ...selectedImages ] );
+	const previouslySelected = useRef( selectedImages );
 	const uploadImagesBtn = useRef( null );
 
 	const { register, handleSubmit, setValue, reset, setFocus, watch } =
@@ -489,6 +597,13 @@ const Images = () => {
 		);
 	};
 
+	const getUploadingImageSkeleon = () => {
+		if ( ! uploadingImagesCount ) {
+			return [];
+		}
+		return getImageSkeleton( uploadingImagesCount, [ 'aspect-[1/1]' ] );
+	};
+
 	const getRenderItems = () => {
 		switch ( activeTab ) {
 			case TABS[ 0 ].value:
@@ -496,7 +611,10 @@ const Images = () => {
 					? [ ...images, ...getImageSkeleton() ]
 					: images;
 			case TABS[ 1 ].value:
-				return getUploadedImages( selectedImages );
+				return [
+					...getUploadedImages( selectedImages ),
+					...getUploadingImageSkeleon(),
+				];
 			case TABS[ 2 ].value:
 				return getSelectedImages( selectedImages );
 			default:
@@ -563,44 +681,6 @@ const Images = () => {
 		}, 10 );
 	};
 
-	const uploadDroppedFiles = async ( filesList ) => {
-		try {
-			const uploadedImages = [];
-			await uploadMedia( {
-				filesList,
-				allowedTypes: [ 'image' ],
-				onFileChange: ( files ) => {
-					if ( ! files.every( ( file ) => !! file.id ) ) {
-						return;
-					}
-					files.forEach( ( file ) => uploadedImages.push( file ) );
-				},
-				onError: ( error ) => console.error( error ),
-			} );
-
-			setWebsiteImagesAIStep( [
-				...selectedImages,
-				...uploadedImages.map( ( image ) => ( {
-					id: String( image.id ),
-					url: image?.originalImageURL ?? image.url,
-					optimized_url: image?.sizes?.large?.url ?? image.url,
-					engine: '',
-					description: '',
-					orientation:
-						image?.orientation ??
-						( image?.width > image?.height
-							? 'landscape'
-							: 'portrait' ),
-					author_name: image?.author_name ?? '',
-					author_url: '',
-				} ) ),
-			] );
-		} catch ( error ) {
-			// Handle error
-			console.error( error );
-		}
-	};
-
 	const handleClickOutside = ( event ) => {
 		const businessTypesWrapper = document.getElementById(
 			'search-images-wrapper'
@@ -612,13 +692,6 @@ const Images = () => {
 			setOpenSuggestedKeywords( false );
 		}
 	};
-
-	useEffect( () => {
-		if ( ! acceptedFiles?.length ) {
-			return;
-		}
-		uploadDroppedFiles( acceptedFiles );
-	}, [ acceptedFiles ] );
 
 	// handle outside click to close the suggestions.
 	useEffect( () => {
@@ -877,10 +950,16 @@ const Images = () => {
 							<span className="text-accent-st min-w-fit break-keep text-nowrap whitespace-nowrap font-semibold mr-1">
 								{ __( 'Upload images', 'ai-builder' ) }
 							</span>
-							{ __( 'or drop your images here', 'ai-builder' ) }
+							{ __(
+								'or drop your images here (Max 20)',
+								'ai-builder'
+							) }
 						</p>
 						<p className="text-zip-body-text text-base">
 							{ __( 'PNG, JPG, JPEG', 'ai-builder' ) }
+						</p>
+						<p className="text-zip-body-text text-base">
+							{ __( 'Max size: 5 MB per file', 'ai-builder' ) }
 						</p>
 						<div
 							className="absolute inset-0"

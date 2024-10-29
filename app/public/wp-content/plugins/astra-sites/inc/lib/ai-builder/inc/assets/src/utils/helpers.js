@@ -321,3 +321,27 @@ export const socialMediaParser = {
 		return matches;
 	},
 };
+
+export const isValidURL = ( url ) => {
+	try {
+		new URL( url );
+		return true; // If the URL constructor doesn't throw an error, the URL is valid
+	} catch ( _ ) {
+		return false; // Invalid URL
+	}
+};
+
+export const isValidImageURL = ( fileURL ) => {
+	// regex only matches letters, numbers, spaces, dots, underscores, colons, slashes, and hyphens
+	const validPattern = /^[a-zA-Z0-9_\-\. :/]+$/;
+
+	if ( ! isValidURL( fileURL ) ) {
+		return false;
+	}
+
+	if ( ! validPattern.test( fileURL ) ) {
+		return false;
+	}
+
+	return true;
+};

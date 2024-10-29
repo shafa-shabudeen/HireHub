@@ -15,7 +15,11 @@ if ( ! defined( 'ABSPATH' ) ) {
 /**
  * Define Constants
  */
-define( 'ASTRA_THEME_VERSION', '4.8.1' );
+<<<<<<< HEAD
+define( 'ASTRA_THEME_VERSION', '4.8.3' );
+=======
+define( 'ASTRA_THEME_VERSION', '4.8.2' );
+>>>>>>> bd06bd206965cc56e0274c0dcf857ad87f3e6bf4
 define( 'ASTRA_THEME_SETTINGS', 'astra-settings' );
 define( 'ASTRA_THEME_DIR', trailingslashit( get_template_directory() ) );
 define( 'ASTRA_THEME_URI', trailingslashit( esc_url( get_template_directory_uri() ) ) );
@@ -24,7 +28,7 @@ define( 'ASTRA_THEME_URI', trailingslashit( esc_url( get_template_directory_uri(
  * Minimum Version requirement of the Astra Pro addon.
  * This constant will be used to display the notice asking user to update the Astra addon to the version defined below.
  */
-define( 'ASTRA_EXT_MIN_VER', '4.8.1' );
+define( 'ASTRA_EXT_MIN_VER', '4.8.2' );
 
 /**
  * Setup helper functions of Astra.
@@ -183,3 +187,57 @@ require_once ASTRA_THEME_DIR . 'inc/core/markup/class-astra-markup.php';
 require_once ASTRA_THEME_DIR . 'inc/core/deprecated/deprecated-filters.php';
 require_once ASTRA_THEME_DIR . 'inc/core/deprecated/deprecated-hooks.php';
 require_once ASTRA_THEME_DIR . 'inc/core/deprecated/deprecated-functions.php';
+<<<<<<< HEAD
+
+function create_custom_post_type() {
+    $labels = array(
+        'name' => 'Job Postings',
+        'singular_name' => 'Job Posting',
+        'menu_name' => 'Job Postings',
+        'name_admin_bar' => 'Job Posting',
+        'add_new' => 'Add New Job',
+        'add_new_item' => 'Add New Job Posting',
+        'edit_item' => 'Edit Job Posting',
+        'new_item' => 'New Job Posting',
+        'view_item' => 'View Job Posting',
+        'search_items' => 'Search Job Postings',
+        'not_found' => 'No Job Postings found',
+        'not_found_in_trash' => 'No Job Postings found in Trash',
+        'parent_item_colon' => 'Parent Job Posting:',
+        'all_items' => 'All Job Postings',
+        'archives' => 'Job Posting Archives',
+        'insert_into_item' => 'Insert into Job Posting',
+        'uploaded_to_item' => 'Uploaded to Job Posting',
+        'featured_media' => 'Featured Media',
+        'set_featured_image' => 'Set featured image',
+        'remove_featured_image' => 'Remove featured image',
+        'use_featured_image' => 'Use as featured image',
+        'send_to_item' => 'Send to Job Posting',
+        'items_list' => 'Job Postings list',
+        'items_list_navigation' => 'Job Postings navigation',
+        'filter_items_list' => 'Filter Job Postings list',
+    );
+
+    $args = array(
+        'labels' => $labels,
+        'public' => true,
+        'exclude_from_search' => false,
+        'publicly_queryable' => true,
+        'show_ui' => true,
+        'show_in_menu' => true,
+        'query_var' => true,
+        'rewrite' => array('slug' => 'job-postings'),
+        'capability_type' => 'post',
+        'has_archive' => true,
+        'hierarchical' => false,
+        'menu_position' => null,
+        'supports' => array('title', 'editor', 'thumbnail')
+    );
+
+    register_post_type('job_posting', $args);
+}
+add_action('init', 'create_custom_post_type');
+
+
+=======
+>>>>>>> bd06bd206965cc56e0274c0dcf857ad87f3e6bf4

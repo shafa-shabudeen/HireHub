@@ -69,11 +69,12 @@ class Importer extends AjaxBase {
 	 * @return void
 	 */
 	public function update_required_options() {
-		update_option( 'astra_sites_import_complete', 'yes', 'no' );
+		update_option( 'astra_sites_import_complete', 'yes', false );
 
 		if ( 'ai' === get_option( 'astra_sites_current_import_template_type' ) ) {
 			update_option( 'astra_sites_batch_process_complete', 'yes' );
 			delete_option( 'ai_import_logger' );
+			delete_option( 'astra_sites_import_failed_sites' );
 		} else {
 			update_option( 'astra_sites_batch_process_complete', 'no' );
 		}
@@ -506,6 +507,28 @@ class Importer extends AjaxBase {
 					$business_name = isset( $_POST['business-name'] ) ? sanitize_text_field( stripslashes( $_POST['business-name'] ) ) : '';
 				if ( ! empty( $business_name ) ) {
 					update_option( 'blogname', $business_name );
+				}
+
+				if ( isset( $_POST['show-site-title'] ) ) {
+					// Get the value of the POST variable.
+					$show_site_title = filter_var( $_POST['show-site-title'], FILTER_VALIDATE_BOOLEAN );
+
+					// Determine the array based on the value of the POST variable.
+					$options_array = $show_site_title
+						? array(
+							'desktop' => true,
+							'tablet'  => true,
+							'mobile'  => true,
+						)
+						: array(
+							'desktop' => false,
+							'tablet'  => false,
+							'mobile'  => false,
+						);
+
+					// Update the option in the database.
+					astra_update_option( 'display-site-title-responsive', $options_array );
+					astra_update_option( 'display-site-title', $show_site_title );
 				}
 
 				break;

@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Job Portal Admin Panel</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css" integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" type="text/css" href="style.css">
+</head>
+
+<body>
+    <div class="side-menu">
+        <div class="brand-name">
+            <h1>AdminHub</h1>
+        </div>
+        <ul>
+            <li><i class="fa-solid fa-clipboard"></i> <span>Dashboard</span></li>
+            <li><i class="fa-solid fa-address-card"></i> <span>Applications</span></li>
+            <li><i class="fa-solid fa-user-tie"></i> <span>Users</span></li>
+            <li><i class="fa-solid fa-briefcase"></i> <span>Jobs</span></li>
+            <li><i class="fa-solid fa-chart-line"></i> <span>Trending Jobs</span></li>
+            <li><i class="fa-solid fa-bell"></i> <span>Notifications</span></li>
+            <li><i class="fa-solid fa-gear"></i> <span>Settings</span></li>
+            <li><i class="fa-solid fa-right-from-bracket"></i> <span>Logout</span></li>
+        </ul>
+    </div>
+
+    <div class="container">
+        <div class="header">
+            <div class="search">
+                <input type="text" placeholder="Search...">
+            </div>
+            <div class="user">
+                <i class="fa-solid fa-user"></i> <span>Admin</span>
+            </div>
+        </div>
+
+        <div class="content">
+            <div class="cards">
+                <div class="card">
+                    <i class="fa-solid fa-users fa-2x"></i>
+                    <h2>5k+</h2>
+                    <h3>Users</h3>
+                </div>
+                <div class="card">
+                    <i class="fa-solid fa-eye fa-2x"></i>
+                    <h2>1k+</h2>
+                    <h3>Views</h3>
+                </div>
+                <div class="card">
+                    <i class="fa-solid fa-briefcase fa-2x"></i>
+                    <h2>150+</h2>
+                    <h3>Jobs Posted</h3>
+                </div>
+                <div class="card">
+                    <i class="fa-solid fa-file-alt fa-2x"></i>
+                    <h2>50+</h2>
+                    <h3>Applications</h3>
+                </div>
+            </div>
+
+            <div class="content-2">
+                <div class="recent-applications">
+                    <h2>Recent Applications</h2>
+                    <table>
+                        <tr>
+                            <th>Job Title</th>
+                            <th>Applicant Name</th>
+                            <th>Status</th>
+                            <th>Action</th>
+                        </tr>
+                        <tr>
+                            <td>Software Developer</td>
+                            <td>John Doe</td>
+                            <td>In Progress</td>
+                            <td class="button-container">
+                                <button class="view-btn">View</button>
+                                <button class="delete-btn">Delete</button>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>Web Designer</td>
+                            <td>Jane Smith</td>
+                            <td>Rejected</td>
+                            <td class="button-container">
+                                <button class="view-btn">View</button>
+                                <button class="delete-btn">Delete</button>
+                            </td>
+                        </tr>
+                    </table>
+                </div>
+
+                <div class="new-employers">
+                    <h2>New Employers</h2>
+                    <table>
+                        <tr>
+                            <th>Company</th>
+                            <th>Contact</th>
+                            <th>Status</th>
+                            <th>Action</th>
+                        </tr>
+                        <tr>
+                            <td>ABC Inc.</td>
+                            <td>abc@company.com</td>
+                            <td>Active</td>
+                            <td class="button-container">
+                                <button class="view-btn">View</button>
+                                <button class="delete-btn">Delete</button>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>XYZ Corp.</td>
+                            <td>xyz@corporate.com</td>
+                            <td>Pending</td>
+                            <td class="button-container">
+                                <button class="view-btn">View</button>
+                                <button class="delete-btn">Delete</button>
+                            </td>
+                        </tr>
+                    </table>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>

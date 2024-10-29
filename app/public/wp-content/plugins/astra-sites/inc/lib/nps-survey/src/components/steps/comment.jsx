@@ -3,7 +3,7 @@ import useStore from '../../store/store.js';
 import { HeadingTitle, HeadingContent } from '../dialog';
 import Button from '../button';
 import LoadingSpinner from '../loading-spinner';
-import { cn, handleNpsSurveyApi } from '../../utils/helper.js';
+import { cn, handleBack, handleNpsSurveyApi } from '../../utils/helper.js';
 import { __ } from '@wordpress/i18n';
 
 const Comment = function () {
@@ -57,7 +57,17 @@ const Comment = function () {
 						/>
 					</div>
 
-					<div className="mt-3 flex justify-start">
+					<div className="mt-3 flex justify-between">
+						<Button
+							className="relative py-2 px-4 font-semibold bg-transparent text-nps-button-background"
+							variant="primary"
+							onClick={ ( event ) =>
+								handleBack( event, dispatch, processing )
+							}
+							size="small"
+						>
+							{ __( 'Back', 'astra-sites' ) }
+						</Button>
 						<Button
 							className="relative py-2 px-4 font-semibold"
 							variant="primary"

@@ -23,7 +23,7 @@ const successMessageDelay = 8000; // 8 seconds delay for fully assets load.
 import { STORE_KEY } from '../store';
 import ErrorModel from '../components/error-model';
 import { TOTAL_STEPS, useNavigateSteps } from '../router';
-import { SITE_CREATION_STATUS_CODES } from '../helpers';
+import { SITE_CREATION_STATUS_CODES, getLocalStorageItem } from '../helpers';
 
 const RANDOM_FINAL_FINISHING_MESSAGES = [
 	__( 'Double-checking for grammar and spelling errors…', 'ai-builder' ),
@@ -61,6 +61,7 @@ const ImportAiSite = () => {
 			siteLanguage,
 		},
 		aiSiteLogo,
+		aiSiteTitleVisible,
 		aiActiveTypography,
 		aiActivePallette,
 	} = useSelect( ( select ) => {
@@ -68,6 +69,7 @@ const ImportAiSite = () => {
 			getWebsiteInfo,
 			getAIStepData,
 			getSiteLogo,
+			getSiteTitleVisible,
 			getActiveTypography,
 			getActiveColorPalette,
 		} = select( STORE_KEY );
@@ -75,6 +77,7 @@ const ImportAiSite = () => {
 			websiteInfo: getWebsiteInfo(),
 			aiStepData: getAIStepData(),
 			aiSiteLogo: getSiteLogo(),
+			aiSiteTitleVisible: getSiteTitleVisible(),
 			aiActiveTypography: getActiveTypography(),
 			aiActivePallette: getActiveColorPalette(),
 		};
@@ -175,6 +178,12 @@ const ImportAiSite = () => {
 		reportErr.append( 'action', 'astra-sites-report_error' );
 		reportErr.append( '_ajax_nonce', aiBuilderVars._ajax_nonce );
 		reportErr.append(
+			'local_storage',
+			JSON.stringify(
+				getLocalStorageItem( 'ai-builder-onboarding-details' )
+			)
+		);
+		reportErr.append(
 			'error',
 			JSON.stringify( {
 				primaryText: primary,
@@ -201,7 +210,7 @@ const ImportAiSite = () => {
 		);
 		await setSiteLogo( aiSiteLogo );
 		await setColorPalettes( JSON.stringify( aiActivePallette ) );
-		await setSiteTitle( businessName );
+		await setSiteTitle( businessName, aiSiteTitleVisible );
 		await saveTypography( aiActiveTypography );
 		await setSiteLanguage( languageItem?.[ 'wordpress-code' ] ?? 'en_US' );
 	};

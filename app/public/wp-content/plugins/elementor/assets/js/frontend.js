@@ -1,4 +1,12 @@
-/*! elementor - v3.24.0 - 23-09-2024 */
+<<<<<<< HEAD
+/*! elementor - v3.24.0 - 09-10-2024 */
+=======
+<<<<<<< HEAD
+/*! elementor - v3.24.0 - 01-10-2024 */
+=======
+/*! elementor - v3.24.0 - 09-10-2024 */
+>>>>>>> ruvais
+>>>>>>> bd06bd206965cc56e0274c0dcf857ad87f3e6bf4
 "use strict";
 (self["webpackChunkelementor"] = self["webpackChunkelementor"] || []).push([["frontend"],{
 
@@ -1480,7 +1488,7 @@ AssetsLoader.assets = {
       parent: 'head'
     },
     'e-lightbox': {
-      src: `${assetsUrl}css/conditionals/lightbox${fileSuffix}.css?ver=${pluginVersion}`
+      src: elementorFrontendConfig?.responsive?.hasCustomBreakpoints ? `${elementorFrontendConfig.urls.uploadUrl}/elementor/css/custom-lightbox.min.css?ver=${pluginVersion}` : `${assetsUrl}css/conditionals/lightbox${fileSuffix}.css?ver=${pluginVersion}`
     },
     dialog: {
       src: `${assetsUrl}css/conditionals/dialog${fileSuffix}.css?ver=${pluginVersion}`,

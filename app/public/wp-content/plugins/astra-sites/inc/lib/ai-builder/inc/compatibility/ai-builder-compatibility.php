@@ -55,6 +55,9 @@ if ( ! class_exists( 'Ai_Builder_Compatibility' ) ) :
 
 			// Plugin - Suretriggers.
 			require_once AI_BUILDER_DIR . 'inc/compatibility/suretriggers/ai-builder-compatibility-suretriggers.php';
+
+			// Plugin - CPSW.
+			require_once AI_BUILDER_DIR . 'inc/compatibility/checkout-plugins-stripe-woo/ai-builder-compatibility-cpsw.php';
 		}
 
 	}

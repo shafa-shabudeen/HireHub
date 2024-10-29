@@ -264,7 +264,7 @@ if ( ! class_exists( 'Astra_Sites_Page' ) ) {
 
 			$stored_data = get_option( 'astra_sites_settings', $defaults );
 
-			return wp_parse_args( $defaults, $stored_data );
+			return wp_parse_args( $stored_data, $defaults );
 		}
 
 		/**

@@ -234,7 +234,7 @@ export const getColorScheme = ( demo ) => {
 };
 
 export const getAllSites = () => {
-	return aiBuilderVars.all_sites;
+	return aiBuilderVars?.all_sites;
 };
 
 export const getSupportLink = ( templateId, subject ) => {
@@ -244,7 +244,7 @@ export const getSupportLink = ( templateId, subject ) => {
 export const getGridItem = ( site ) => {
 	let imageUrl = site[ 'thumbnail-image-url' ] || '';
 	if ( '' === imageUrl && false === whiteLabelEnabled() ) {
-		if ( aiBuilderVars.default_page_builder === 'fse' ) {
+		if ( aiBuilderVars?.default_page_builder === 'fse' ) {
 			imageUrl = `${ imageDir }spectra-placeholder.png`;
 		} else {
 			imageUrl = `${ imageDir }placeholder.png`;

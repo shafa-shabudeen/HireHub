@@ -380,6 +380,15 @@ class Admin_Configurations {
 	 */
 	public function enqueue_styles_and_scripts() {
 
+<<<<<<< HEAD
+=======
+		if ( class_exists( '\UAGB_Admin_Helper' ) && method_exists( '\UAGB_Admin_Helper', 'should_exclude_assets_for_cpt' ) ) {
+			if ( \UAGB_Admin_Helper::should_exclude_assets_for_cpt() ) {
+				return; // Early return to prevent loading assets.
+			}
+		}
+
+>>>>>>> ruvais
 		// Enqueue the admin Google Fonts and WP Components.
 		$admin_slug = 'zip-ai-admin';
 		wp_enqueue_style(

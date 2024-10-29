@@ -2,14 +2,14 @@
 # This file is distributed under the same license as the Starter Templates plugin.
 msgid ""
 msgstr ""
-"Project-Id-Version: Starter Templates 4.4.2\n"
+"Project-Id-Version: Starter Templates 4.4.3\n"
 "Report-Msgid-Bugs-To: https://wordpress.org/support/plugin/astra-sites\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"POT-Creation-Date: 2024-09-03T03:56:18+00:00\n"
+"POT-Creation-Date: 2024-09-23T07:01:46+00:00\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "X-Generator: WP-CLI 2.10.0\n"
 "X-Domain: astra-sites\n"
@@ -20,9 +20,9 @@ msgstr ""
 #: astra-sites.php:107
 #: inc/classes/class-astra-sites.php:2447
 #: inc/lib/onboarding/class-onboarding-loader.php:77
-#: inc/lib/ai-builder/inc/assets/build/main.js:181
+#: inc/lib/ai-builder/inc/assets/build/main.js:187
 #: inc/lib/nps-survey/dist/main.js:1
-#: inc/lib/nps-survey/src/components/steps/nps-rating.jsx:50
+#: inc/lib/nps-survey/src/components/steps/nps-rating.jsx:45
 #: inc/lib/onboarding/assets/dist/main.js:73
 #: inc/lib/onboarding/assets/dist/onboarding/main.js:123
 msgid "Starter Templates"
@@ -142,16 +142,16 @@ msgstr ""
 #: inc/classes/class-astra-sites.php:1341
 #: inc/importers/batch-processing/class-astra-sites-batch-processing.php:967
 #: inc/importers/batch-processing/class-astra-sites-batch-processing.php:985
-#: inc/lib/ai-builder/inc/ajax/importer.php:139
-#: inc/lib/ai-builder/inc/ajax/importer.php:195
-#: inc/lib/ai-builder/inc/ajax/importer.php:218
-#: inc/lib/ai-builder/inc/ajax/importer.php:357
-#: inc/lib/ai-builder/inc/ajax/importer.php:409
-#: inc/lib/ai-builder/inc/ajax/importer.php:441
+#: inc/lib/ai-builder/inc/ajax/importer.php:140
+#: inc/lib/ai-builder/inc/ajax/importer.php:196
+#: inc/lib/ai-builder/inc/ajax/importer.php:219
+#: inc/lib/ai-builder/inc/ajax/importer.php:358
+#: inc/lib/ai-builder/inc/ajax/importer.php:410
+#: inc/lib/ai-builder/inc/ajax/importer.php:442
 #: inc/lib/ai-builder/inc/ajax/plugin.php:120
-#: inc/lib/ai-builder/inc/ajax/plugin.php:313
-#: inc/lib/ai-builder/inc/ajax/plugin.php:342
-#: inc/lib/ai-builder/inc/ajax/plugin.php:347
+#: inc/lib/ai-builder/inc/ajax/plugin.php:335
+#: inc/lib/ai-builder/inc/ajax/plugin.php:364
+#: inc/lib/ai-builder/inc/ajax/plugin.php:369
 #: inc/lib/ai-builder/inc/traits/helper.php:593
 #: inc/lib/ai-builder/inc/traits/helper.php:637
 #: inc/lib/ai-builder/inc/traits/helper.php:677
@@ -234,7 +234,7 @@ msgstr ""
 #: inc/includes/templates.php:200
 #: inc/includes/templates.php:327
 #: inc/includes/templates.php:419
-#: inc/lib/ai-builder/inc/assets/build/main.js:184
+#: inc/lib/ai-builder/inc/assets/build/main.js:191
 #: inc/lib/onboarding/assets/dist/main.js:73
 #: inc/lib/onboarding/assets/dist/onboarding/main.js:73
 msgid "Premium"
@@ -254,7 +254,7 @@ msgid "The default WordPress editor"
 msgstr ""
 
 #: inc/classes/class-astra-sites-page.php:431
-#: inc/lib/ai-builder/inc/assets/build/main.js:181
+#: inc/lib/ai-builder/inc/assets/build/main.js:187
 #: inc/lib/onboarding/assets/dist/main.js:73
 #: inc/lib/onboarding/assets/dist/main.js:83
 #: inc/lib/onboarding/assets/dist/onboarding/main.js:123
@@ -262,7 +262,7 @@ msgid "Elementor"
 msgstr ""
 
 #: inc/classes/class-astra-sites-page.php:436
-#: inc/lib/ai-builder/inc/assets/build/main.js:181
+#: inc/lib/ai-builder/inc/assets/build/main.js:187
 #: inc/lib/onboarding/assets/dist/main.js:73
 #: inc/lib/onboarding/assets/dist/main.js:83
 #: inc/lib/onboarding/assets/dist/onboarding/main.js:123
@@ -1037,24 +1037,24 @@ msgid "Installing..."
 msgstr ""
 
 #. translators: %1$s: team name, %2$s: plan name
-#: inc/lib/ai-builder/ai-builder-plugin-loader.php:423
+#: inc/lib/ai-builder/ai-builder-plugin-loader.php:425
 msgid "Your current active organization is %1$s, which is on the %2$s plan. You have reached the maximum number of sites allowed to be created on %2$s plan."
 msgstr ""
 
 #. translators: %1$s: team name
 #. translators: %s: team name
-#: inc/lib/ai-builder/ai-builder-plugin-loader.php:432
+#: inc/lib/ai-builder/ai-builder-plugin-loader.php:434
 #: inc/lib/onboarding/assets/dist/onboarding/main.js:143
 msgid "Please upgrade the plan for %s in order to create more sites."
 msgstr ""
 
-#: inc/lib/ai-builder/ai-builder-plugin-loader.php:438
+#: inc/lib/ai-builder/ai-builder-plugin-loader.php:440
 #: inc/lib/onboarding/assets/dist/onboarding/main.js:143
 msgid "Unlock Full Power"
 msgstr ""
 
-#: inc/lib/ai-builder/ai-builder-plugin-loader.php:441
-#: inc/lib/ai-builder/inc/assets/build/main.js:184
+#: inc/lib/ai-builder/ai-builder-plugin-loader.php:443
+#: inc/lib/ai-builder/inc/assets/build/main.js:191
 msgid "Contact Support"
 msgstr ""
 
@@ -1072,34 +1072,34 @@ msgstr ""
 msgid "Sorry, something went wrong."
 msgstr ""
 
-#: inc/lib/ai-builder/inc/ajax/importer.php:321
+#: inc/lib/ai-builder/inc/ajax/importer.php:322
 #: inc/lib/ai-builder/inc/traits/helper.php:253
 #: inc/lib/starter-templates-importer/importer/wxr-importer/st-wxr-importer.php:133
 msgid "Permission Denied!"
 msgstr ""
 
-#: inc/lib/ai-builder/inc/ajax/importer.php:345
+#: inc/lib/ai-builder/inc/ajax/importer.php:346
 msgid "There was an error importing the Spectra settings."
 msgstr ""
 
-#: inc/lib/ai-builder/inc/ajax/importer.php:369
+#: inc/lib/ai-builder/inc/ajax/importer.php:370
 msgid "There was an error cloning the surecart store."
 msgstr ""
 
-#: inc/lib/ai-builder/inc/ajax/importer.php:415
-#: inc/lib/ai-builder/inc/ajax/importer.php:447
+#: inc/lib/ai-builder/inc/ajax/importer.php:416
+#: inc/lib/ai-builder/inc/ajax/importer.php:448
 #: inc/lib/ai-builder/inc/ajax/plugin.php:130
 msgid "Required function not found"
 msgstr ""
 
-#: inc/lib/ai-builder/inc/ajax/importer.php:488
+#: inc/lib/ai-builder/inc/ajax/importer.php:489
 #: inc/lib/ai-builder/inc/classes/importer/class-ai-builder-fse-importer.php:44
 #: inc/lib/onboarding/classes/class-astra-sites-onboarding-setup.php:240
 #: inc/lib/onboarding/classes/class-astra-sites-onboarding-setup.php:388
 msgid "You are not authorized to perform this action."
 msgstr ""
 
-#: inc/lib/ai-builder/inc/ajax/importer.php:498
+#: inc/lib/ai-builder/inc/ajax/importer.php:499
 #: inc/lib/ai-builder/inc/classes/importer/class-ai-builder-fse-importer.php:54
 msgid "Received empty parameters."
 msgstr ""
@@ -1110,11 +1110,11 @@ msgstr ""
 msgid "Invalid URL - %s"
 msgstr ""
 
-#: inc/lib/ai-builder/inc/ajax/plugin.php:325
+#: inc/lib/ai-builder/inc/ajax/plugin.php:347
 msgid "Theme Activated"
 msgstr ""
 
-#: inc/lib/ai-builder/inc/ajax/plugin.php:354
+#: inc/lib/ai-builder/inc/ajax/plugin.php:376
 msgid "Failed to set the site language."
 msgstr ""
 
@@ -1133,31 +1133,32 @@ msgstr ""
 #: inc/lib/gutenberg-templates/inc/api/settings.php:92
 #: inc/lib/gutenberg-templates/inc/api/sites.php:70
 #: inc/lib/gutenberg-templates/inc/classes/ast-block-templates-zipwp-api.php:77
-#: inc/lib/nps-survey/classes/nps-survey-script.php:203
+#: inc/lib/nps-survey/classes/nps-survey-script.php:204
 #: inc/lib/onboarding/classes/class-astra-sites-zipwp-api.php:78
 #: inc/lib/onboarding/classes/class-astra-sites-zipwp-integration.php:47
 #: inc/lib/zipwp-images/classes/zipwp-images-api.php:92
 msgid "Sorry, you are not allowed to do that."
 msgstr ""
 
-#: inc/lib/ai-builder/inc/classes/zipwp/class-ai-builder-zipwp-api.php:540
-#: inc/lib/ai-builder/inc/classes/zipwp/class-ai-builder-zipwp-api.php:634
-#: inc/lib/ai-builder/inc/classes/zipwp/class-ai-builder-zipwp-api.php:725
-#: inc/lib/ai-builder/inc/classes/zipwp/class-ai-builder-zipwp-api.php:834
-#: inc/lib/ai-builder/inc/classes/zipwp/class-ai-builder-zipwp-api.php:926
-#: inc/lib/ai-builder/inc/classes/zipwp/class-ai-builder-zipwp-api.php:1018
-#: inc/lib/ai-builder/inc/classes/zipwp/class-ai-builder-zipwp-api.php:1097
-#: inc/lib/ai-builder/inc/classes/zipwp/class-ai-builder-zipwp-api.php:1168
-#: inc/lib/ai-builder/inc/classes/zipwp/class-ai-builder-zipwp-api.php:1244
-#: inc/lib/ai-builder/inc/classes/zipwp/class-ai-builder-zipwp-api.php:1324
-#: inc/lib/ai-builder/inc/classes/zipwp/class-ai-builder-zipwp-api.php:1404
-#: inc/lib/ai-builder/inc/classes/zipwp/class-ai-builder-zipwp-api.php:1486
-#: inc/lib/ai-builder/inc/classes/zipwp/class-ai-builder-zipwp-api.php:1563
-#: inc/lib/ai-builder/inc/classes/zipwp/class-ai-builder-zipwp-api.php:1628
-#: inc/lib/ai-builder/inc/classes/zipwp/class-ai-builder-zipwp-api.php:1693
-#: inc/lib/ai-builder/inc/classes/zipwp/class-ai-builder-zipwp-api.php:1764
-#: inc/lib/ai-builder/inc/classes/zipwp/class-ai-builder-zipwp-api.php:1830
-#: inc/lib/ai-builder/inc/classes/zipwp/class-ai-builder-zipwp-api.php:1857
+#: inc/lib/ai-builder/inc/classes/zipwp/class-ai-builder-zipwp-api.php:558
+#: inc/lib/ai-builder/inc/classes/zipwp/class-ai-builder-zipwp-api.php:600
+#: inc/lib/ai-builder/inc/classes/zipwp/class-ai-builder-zipwp-api.php:694
+#: inc/lib/ai-builder/inc/classes/zipwp/class-ai-builder-zipwp-api.php:788
+#: inc/lib/ai-builder/inc/classes/zipwp/class-ai-builder-zipwp-api.php:897
+#: inc/lib/ai-builder/inc/classes/zipwp/class-ai-builder-zipwp-api.php:989
+#: inc/lib/ai-builder/inc/classes/zipwp/class-ai-builder-zipwp-api.php:1081
+#: inc/lib/ai-builder/inc/classes/zipwp/class-ai-builder-zipwp-api.php:1160
+#: inc/lib/ai-builder/inc/classes/zipwp/class-ai-builder-zipwp-api.php:1231
+#: inc/lib/ai-builder/inc/classes/zipwp/class-ai-builder-zipwp-api.php:1307
+#: inc/lib/ai-builder/inc/classes/zipwp/class-ai-builder-zipwp-api.php:1387
+#: inc/lib/ai-builder/inc/classes/zipwp/class-ai-builder-zipwp-api.php:1467
+#: inc/lib/ai-builder/inc/classes/zipwp/class-ai-builder-zipwp-api.php:1549
+#: inc/lib/ai-builder/inc/classes/zipwp/class-ai-builder-zipwp-api.php:1626
+#: inc/lib/ai-builder/inc/classes/zipwp/class-ai-builder-zipwp-api.php:1691
+#: inc/lib/ai-builder/inc/classes/zipwp/class-ai-builder-zipwp-api.php:1756
+#: inc/lib/ai-builder/inc/classes/zipwp/class-ai-builder-zipwp-api.php:1827
+#: inc/lib/ai-builder/inc/classes/zipwp/class-ai-builder-zipwp-api.php:1893
+#: inc/lib/ai-builder/inc/classes/zipwp/class-ai-builder-zipwp-api.php:1920
 #: inc/lib/gutenberg-templates/inc/api/blocks.php:93
 #: inc/lib/gutenberg-templates/inc/api/category.php:93
 #: inc/lib/gutenberg-templates/inc/api/description.php:107
@@ -1170,20 +1171,20 @@ msgstr ""
 #: inc/lib/gutenberg-templates/inc/api/sites.php:93
 #: inc/lib/gutenberg-templates/inc/classes/ast-block-templates-zipwp-api.php:138
 #: inc/lib/gutenberg-templates/inc/classes/ast-block-templates-zipwp-api.php:197
-#: inc/lib/nps-survey/classes/nps-survey-script.php:224
-#: inc/lib/nps-survey/classes/nps-survey-script.php:304
+#: inc/lib/nps-survey/classes/nps-survey-script.php:225
+#: inc/lib/nps-survey/classes/nps-survey-script.php:305
 #: inc/lib/onboarding/classes/class-astra-sites-zipwp-api.php:159
 #: inc/lib/onboarding/classes/class-astra-sites-zipwp-api.php:232
 #: inc/lib/zipwp-images/classes/zipwp-images-api.php:169
 msgid "Nonce verification failed."
 msgstr ""
 
-#: inc/lib/ai-builder/inc/classes/zipwp/class-ai-builder-zipwp-api.php:785
+#: inc/lib/ai-builder/inc/classes/zipwp/class-ai-builder-zipwp-api.php:848
 #: inc/lib/starter-templates-importer/importer/st-importer.php:228
 msgid "There was an error downloading the XML file."
 msgstr ""
 
-#: inc/lib/ai-builder/inc/classes/zipwp/class-ai-builder-zipwp-api.php:797
+#: inc/lib/ai-builder/inc/classes/zipwp/class-ai-builder-zipwp-api.php:860
 #: inc/lib/ai-builder/inc/traits/helper.php:565
 #: inc/lib/ai-builder/inc/traits/helper.php:601
 #: inc/lib/ai-builder/inc/traits/helper.php:644
@@ -1241,10 +1242,6 @@ msgstr ""
 msgid "Quick Links"
 msgstr ""
 
-#: inc/lib/class-astra-sites-zipwp-images.php:62
-msgid "Free Images"
-msgstr ""
-
 #: inc/lib/gutenberg-templates/inc/api/favorite.php:178
 msgid "Action Completed"
 msgstr ""
@@ -1272,7 +1269,7 @@ msgstr ""
 #: inc/lib/gutenberg-templates/inc/importer/plugin.php:269
 #: inc/lib/gutenberg-templates/inc/importer/plugin.php:273
 #: inc/lib/gutenberg-templates/inc/importer/plugin.php:436
-#: inc/lib/ai-builder/inc/assets/build/main.js:180
+#: inc/lib/ai-builder/inc/assets/build/main.js:183
 msgid "Something went wrong"
 msgstr ""
 
@@ -1280,7 +1277,7 @@ msgstr ""
 msgid "Something wrong"
 msgstr ""
 
-#: inc/lib/gutenberg-templates/inc/importer/plugin.php:982
+#: inc/lib/gutenberg-templates/inc/importer/plugin.php:983
 #: inc/lib/gutenberg-templates/dist/main.js:2
 msgid "Design Library"
 msgstr ""
@@ -1749,7 +1746,7 @@ msgid "Font Pair"
 msgstr ""
 
 #: inc/lib/ai-builder/inc/assets/build/main.js:2
-#: inc/lib/onboarding/assets/dist/onboarding/main.js:129
+#: inc/lib/onboarding/assets/dist/onboarding/main.js:138
 msgid "Use setting"
 msgstr ""
 
@@ -1771,7 +1768,6 @@ msgid "Upload File Here"
 msgstr ""
 
 #: inc/lib/ai-builder/inc/assets/build/main.js:2
-#: inc/lib/onboarding/assets/dist/onboarding/main.js:129
 msgid "Show site title"
 msgstr ""
 
@@ -1851,16 +1847,18 @@ msgid "Enabling this option will maintain your old Starter Templates data, inclu
 msgstr ""
 
 #: inc/lib/ai-builder/inc/assets/build/main.js:3
-#: inc/lib/ai-builder/inc/assets/build/main.js:7
-#: inc/lib/ai-builder/inc/assets/build/main.js:184
+#: inc/lib/ai-builder/inc/assets/build/main.js:10
+#: inc/lib/ai-builder/inc/assets/build/main.js:191
 msgid "Start Building"
 msgstr ""
 
 #: inc/lib/ai-builder/inc/assets/build/main.js:3
 #: inc/lib/ai-builder/inc/assets/build/main.js:4
-#: inc/lib/ai-builder/inc/assets/build/main.js:7
-#: inc/lib/ai-builder/inc/assets/build/main.js:181
-#: inc/lib/ai-builder/inc/assets/build/main.js:184
+#: inc/lib/ai-builder/inc/assets/build/main.js:187
+#: inc/lib/ai-builder/inc/assets/build/main.js:191
+#: inc/lib/nps-survey/dist/main.js:1
+#: inc/lib/nps-survey/src/components/steps/comment.jsx:69
+#: inc/lib/nps-survey/src/components/steps/plugin-rating.jsx:65
 #: inc/lib/onboarding/assets/dist/main.js:73
 #: inc/lib/onboarding/assets/dist/main.js:77
 #: inc/lib/onboarding/assets/dist/main.js:83
@@ -1884,6 +1882,7 @@ msgid "You've chosen a %1$s Access this design and all others when you upgrade."
 msgstr ""
 
 #: inc/lib/ai-builder/inc/assets/build/main.js:4
+#: inc/lib/ai-builder/inc/assets/build/main.js:10
 msgid "Unlock the Access"
 msgstr ""
 
@@ -1892,116 +1891,142 @@ msgid "here"
 msgstr ""
 
 #: inc/lib/ai-builder/inc/assets/build/main.js:4
-msgid "Problem Detected in Site Creation!"
+msgid "Problem Detected in Previous Site Creation!"
 msgstr ""
 
 #: inc/lib/ai-builder/inc/assets/build/main.js:4
-msgid "We encountered the following errors while creating your site:"
+msgid "We encountered the following errors while creating your previous site:"
+msgstr ""
+
+#: inc/lib/ai-builder/inc/assets/build/main.js:4
+msgid "Not enough information to display."
 msgstr ""
 
 #. translators: %s: support link
 #: inc/lib/ai-builder/inc/assets/build/main.js:7
-msgid "If you proceed without fixing these issues, you may encounter the same errors again, which could exhaust your AI site creation attempts. Please fix the errors first. If you need help, feel free to contact us %1$s. Do you still want to continue?"
+msgid "If you want to retry the import, select a saved site below then click on the “Retry Import” button. Or contact our support %1$s."
 msgstr ""
 
-#: inc/lib/ai-builder/inc/assets/build/main.js:7
-msgid "Continue Anyway"
+#. translators: %s: support link
+#: inc/lib/ai-builder/inc/assets/build/main.js:10
+msgid "If you proceed without fixing these issues, you may encounter the same errors again, which could exhaust your AI site creation attempts. If you need help, feel free to contact us %1$s. Do you still want to continue?"
 msgstr ""
 
-#: inc/lib/ai-builder/inc/assets/build/main.js:7
-#: inc/lib/ai-builder/inc/assets/build/main.js:227
+#: inc/lib/ai-builder/inc/assets/build/main.js:10
+msgid "Created On: "
+msgstr ""
+
+#: inc/lib/ai-builder/inc/assets/build/main.js:10
+msgid "Importing saved sites won’t be exhausting your AI site generation count."
+msgstr ""
+
+#: inc/lib/ai-builder/inc/assets/build/main.js:10
+msgid "Retry Import"
+msgstr ""
+
+#: inc/lib/ai-builder/inc/assets/build/main.js:10
+#: inc/lib/ai-builder/inc/assets/build/main.js:235
 msgid "This is just a sneak peek. The actual website and its content will be created in the next step."
 msgstr ""
 
-#: inc/lib/ai-builder/inc/assets/build/main.js:7
-#: inc/lib/ai-builder/inc/assets/build/main.js:181
+#: inc/lib/ai-builder/inc/assets/build/main.js:10
+#: inc/lib/ai-builder/inc/assets/build/main.js:187
 #: inc/lib/onboarding/assets/dist/onboarding/main.js:143
 msgid "Build with AI"
 msgstr ""
 
-#: inc/lib/ai-builder/inc/assets/build/main.js:7
+#: inc/lib/ai-builder/inc/assets/build/main.js:10
+msgid "Premium Design"
+msgstr ""
+
+#: inc/lib/ai-builder/inc/assets/build/main.js:10
+msgid "You've chosen a Premium Design. Access this design and all others with our paid plans starting at just $79."
+msgstr ""
+
+#: inc/lib/ai-builder/inc/assets/build/main.js:10
 #: inc/lib/onboarding/assets/dist/main.js:73
 #: inc/lib/onboarding/assets/dist/onboarding/main.js:129
 #: inc/lib/onboarding/assets/dist/onboarding/main.js:143
 msgid "Continue"
 msgstr ""
 
-#: inc/lib/ai-builder/inc/assets/build/main.js:7
+#: inc/lib/ai-builder/inc/assets/build/main.js:10
 msgid "Back to Other Designs"
 msgstr ""
 
-#: inc/lib/ai-builder/inc/assets/build/main.js:7
+#: inc/lib/ai-builder/inc/assets/build/main.js:10
 msgid "Responsive Preview"
 msgstr ""
 
 #. translators: %s: daily limit
-#: inc/lib/ai-builder/inc/assets/build/main.js:8
+#: inc/lib/ai-builder/inc/assets/build/main.js:11
 #: inc/lib/onboarding/assets/dist/onboarding/main.js:140
 msgid "%s AI sites"
 msgstr ""
 
 #. translators: %s: daily limit
-#: inc/lib/ai-builder/inc/assets/build/main.js:9
+#: inc/lib/ai-builder/inc/assets/build/main.js:12
 #: inc/lib/onboarding/assets/dist/onboarding/main.js:141
 msgid "This plan allows you to generate %s per day, and you have reached this limit."
 msgstr ""
 
-#: inc/lib/ai-builder/inc/assets/build/main.js:9
+#: inc/lib/ai-builder/inc/assets/build/main.js:12
 #: inc/lib/onboarding/assets/dist/onboarding/main.js:141
 msgid "To create more AI websites, you will need to either upgrade your plan or wait until the limit resets."
 msgstr ""
 
-#: inc/lib/ai-builder/inc/assets/build/main.js:9
+#: inc/lib/ai-builder/inc/assets/build/main.js:12
 #: inc/lib/onboarding/assets/dist/onboarding/main.js:143
 msgid "Limit reached"
 msgstr ""
 
-#: inc/lib/ai-builder/inc/assets/build/main.js:9
+#: inc/lib/ai-builder/inc/assets/build/main.js:12
 msgid "Resume your last session?"
 msgstr ""
 
-#: inc/lib/ai-builder/inc/assets/build/main.js:9
+#: inc/lib/ai-builder/inc/assets/build/main.js:12
 msgid "It appears that your previous website building session was interrupted. Would you like to pick up where you left off?"
 msgstr ""
 
-#: inc/lib/ai-builder/inc/assets/build/main.js:9
+#: inc/lib/ai-builder/inc/assets/build/main.js:12
 msgid "Resume Previous Session"
 msgstr ""
 
-#: inc/lib/ai-builder/inc/assets/build/main.js:9
+#: inc/lib/ai-builder/inc/assets/build/main.js:12
 msgid "Start Over"
 msgstr ""
 
-#: inc/lib/ai-builder/inc/assets/build/main.js:179
+#: inc/lib/ai-builder/inc/assets/build/main.js:182
 msgid "Oops , Something went wrong!"
 msgstr ""
 
 #. translators: %1$s: Contact us link
-#: inc/lib/ai-builder/inc/assets/build/main.js:180
+#: inc/lib/ai-builder/inc/assets/build/main.js:183
 msgid "There was a problem processing the request. Please try again. If this error continues please contact our <a href=\"%1$s\">support team</a>."
 msgstr ""
 
-#: inc/lib/ai-builder/inc/assets/build/main.js:180
-#: inc/lib/ai-builder/inc/assets/build/main.js:227
+#: inc/lib/ai-builder/inc/assets/build/main.js:183
+#: inc/lib/ai-builder/inc/assets/build/main.js:235
 #: inc/lib/gutenberg-templates/dist/main.js:2
 msgid "Back to Main Screen"
 msgstr ""
 
-#: inc/lib/ai-builder/inc/assets/build/main.js:180
+#: inc/lib/ai-builder/inc/assets/build/main.js:183
 msgid "Site creation failed due to an unexpected error. Please try again or reach out for assistance if the issue persists."
 msgstr ""
 
-#: inc/lib/ai-builder/inc/assets/build/main.js:180
+#: inc/lib/ai-builder/inc/assets/build/main.js:183
 msgid "Additional technical information:"
 msgstr ""
 
 #. translators: %s: message
-#: inc/lib/ai-builder/inc/assets/build/main.js:181
+#: inc/lib/ai-builder/inc/assets/build/main.js:184
 msgid "Error Message: %1$s"
 msgstr ""
 
-#: inc/lib/ai-builder/inc/assets/build/main.js:181
 #: inc/lib/ai-builder/inc/assets/build/main.js:184
+#: inc/lib/ai-builder/inc/assets/build/main.js:187
+#: inc/lib/ai-builder/inc/assets/build/main.js:191
 #: inc/lib/onboarding/assets/dist/main.js:73
 #: inc/lib/onboarding/assets/dist/main.js:102
 #: inc/lib/onboarding/assets/dist/onboarding/main.js:123
@@ -2010,661 +2035,748 @@ msgstr ""
 msgid "Exit to Dashboard"
 msgstr ""
 
-#: inc/lib/ai-builder/inc/assets/build/main.js:181
+#: inc/lib/ai-builder/inc/assets/build/main.js:184
+msgid "This is the total usage quota"
+msgstr ""
+
+#: inc/lib/ai-builder/inc/assets/build/main.js:184
+msgid "This usage quota will reset monthly"
+msgstr ""
+
+#: inc/lib/ai-builder/inc/assets/build/main.js:184
+msgid "This usage quota will reset daily"
+msgstr ""
+
+#. translators: Reset Type
+#: inc/lib/ai-builder/inc/assets/build/main.js:187
+msgid "This usage quota will reset %s"
+msgstr ""
+
+#: inc/lib/ai-builder/inc/assets/build/main.js:187
+msgid "Plan Usage & Limit"
+msgstr ""
+
+#: inc/lib/ai-builder/inc/assets/build/main.js:187
+msgid "Keep track and monitor how you allocate and use resources in your existing plan."
+msgstr ""
+
+#: inc/lib/ai-builder/inc/assets/build/main.js:187
+msgid "Plan"
+msgstr ""
+
+#: inc/lib/ai-builder/inc/assets/build/main.js:187
+msgid "Manage Plan"
+msgstr ""
+
+#: inc/lib/ai-builder/inc/assets/build/main.js:187
+msgid "Staging Sites"
+msgstr ""
+
+#: inc/lib/ai-builder/inc/assets/build/main.js:187
+msgid "AI Website Generations"
+msgstr ""
+
+#: inc/lib/ai-builder/inc/assets/build/main.js:187
+msgid "Blueprint Sites"
+msgstr ""
+
+#: inc/lib/ai-builder/inc/assets/build/main.js:187
+msgid "Disk Space Utilized"
+msgstr ""
+
+#: inc/lib/ai-builder/inc/assets/build/main.js:187
+msgid "Team members"
+msgstr ""
+
+#: inc/lib/ai-builder/inc/assets/build/main.js:187
+msgid "Upgrade Now"
+msgstr ""
+
+#: inc/lib/ai-builder/inc/assets/build/main.js:187
 #: inc/lib/onboarding/assets/dist/main.js:73
 #: inc/lib/onboarding/assets/dist/main.js:83
 #: inc/lib/onboarding/assets/dist/onboarding/main.js:123
 msgid "Block Editor"
 msgstr ""
 
-#: inc/lib/ai-builder/inc/assets/build/main.js:181
+#: inc/lib/ai-builder/inc/assets/build/main.js:187
 #: inc/lib/onboarding/assets/dist/onboarding/main.js:123
 #: inc/lib/onboarding/assets/dist/onboarding/main.js:143
 msgid "AI Website Builder"
 msgstr ""
 
-#: inc/lib/ai-builder/inc/assets/build/main.js:181
+#: inc/lib/ai-builder/inc/assets/build/main.js:187
 msgid "Next"
 msgstr ""
 
-#: inc/lib/ai-builder/inc/assets/build/main.js:181
+#: inc/lib/ai-builder/inc/assets/build/main.js:187
 msgid "Skip Step"
 msgstr ""
 
-#: inc/lib/ai-builder/inc/assets/build/main.js:181
+#: inc/lib/ai-builder/inc/assets/build/main.js:187
 msgid "Search"
 msgstr ""
 
-#: inc/lib/ai-builder/inc/assets/build/main.js:181
+#: inc/lib/ai-builder/inc/assets/build/main.js:187
 msgid "Nothing found"
 msgstr ""
 
-#: inc/lib/ai-builder/inc/assets/build/main.js:181
+#: inc/lib/ai-builder/inc/assets/build/main.js:187
 msgid "The website will be in:"
 msgstr ""
 
-#: inc/lib/ai-builder/inc/assets/build/main.js:181
+#: inc/lib/ai-builder/inc/assets/build/main.js:187
 msgid "Type to search"
 msgstr ""
 
+#: inc/lib/ai-builder/inc/assets/build/main.js:187
+msgid "Your AI sites are about to finish."
+msgstr ""
+
+#: inc/lib/ai-builder/inc/assets/build/main.js:187
+msgid "You can create more AI sites with add-ons."
+msgstr ""
+
+#: inc/lib/ai-builder/inc/assets/build/main.js:187
+msgid "Buy Add-ons"
+msgstr ""
+
 #. translators: %s: social media name
-#: inc/lib/ai-builder/inc/assets/build/main.js:182
+#: inc/lib/ai-builder/inc/assets/build/main.js:188
 #: inc/lib/gutenberg-templates/dist/main.js:2
 msgid "Enter your %s account URL"
 msgstr ""
 
-#: inc/lib/ai-builder/inc/assets/build/main.js:182
+#: inc/lib/ai-builder/inc/assets/build/main.js:188
 #: inc/lib/gutenberg-templates/dist/main.js:2
 msgid "Enter your Google Business URL"
 msgstr ""
 
-#: inc/lib/ai-builder/inc/assets/build/main.js:182
+#: inc/lib/ai-builder/inc/assets/build/main.js:188
 #: inc/lib/gutenberg-templates/dist/main.js:2
 msgid "Enter your Yelp business URL"
 msgstr ""
 
-#: inc/lib/ai-builder/inc/assets/build/main.js:182
+#: inc/lib/ai-builder/inc/assets/build/main.js:188
 #: inc/lib/gutenberg-templates/dist/main.js:2
 msgid "Enter your account URL"
 msgstr ""
 
-#: inc/lib/ai-builder/inc/assets/build/main.js:182
+#: inc/lib/ai-builder/inc/assets/build/main.js:188
 msgid "Facebook"
 msgstr ""
 
-#: inc/lib/ai-builder/inc/assets/build/main.js:182
+#: inc/lib/ai-builder/inc/assets/build/main.js:188
 msgid "Twitter"
 msgstr ""
 
-#: inc/lib/ai-builder/inc/assets/build/main.js:182
+#: inc/lib/ai-builder/inc/assets/build/main.js:188
 msgid "Instagram"
 msgstr ""
 
-#: inc/lib/ai-builder/inc/assets/build/main.js:182
+#: inc/lib/ai-builder/inc/assets/build/main.js:188
 msgid "LinkedIn"
 msgstr ""
 
-#: inc/lib/ai-builder/inc/assets/build/main.js:182
+#: inc/lib/ai-builder/inc/assets/build/main.js:188
 msgid "YouTube"
 msgstr ""
 
-#: inc/lib/ai-builder/inc/assets/build/main.js:182
+#: inc/lib/ai-builder/inc/assets/build/main.js:188
 msgid "Google My Business"
 msgstr ""
 
-#: inc/lib/ai-builder/inc/assets/build/main.js:182
+#: inc/lib/ai-builder/inc/assets/build/main.js:188
 msgid "Yelp"
 msgstr ""
 
-#: inc/lib/ai-builder/inc/assets/build/main.js:182
+#: inc/lib/ai-builder/inc/assets/build/main.js:188
 #: inc/lib/gutenberg-templates/dist/main.js:2
 msgid "Social Media"
 msgstr ""
 
-#: inc/lib/ai-builder/inc/assets/build/main.js:182
+#: inc/lib/ai-builder/inc/assets/build/main.js:188
 #: inc/lib/gutenberg-templates/dist/main.js:2
 msgid "Please enter a full URL. Eg. https://twitter.com/abcd, https://instagram.com/abcd, https://facebook.com/abcd"
 msgstr ""
 
-#: inc/lib/ai-builder/inc/assets/build/main.js:182
+#: inc/lib/ai-builder/inc/assets/build/main.js:188
 #: inc/lib/gutenberg-templates/dist/main.js:2
 msgid "This might not be a valid URL."
 msgstr ""
 
-#. translators: %s: Option number
-#: inc/lib/ai-builder/inc/assets/build/main.js:183
-msgid "Option %s"
-msgstr ""
-
-#: inc/lib/ai-builder/inc/assets/build/main.js:183
-msgid "Open Design in New Tab"
-msgstr ""
-
-#: inc/lib/ai-builder/inc/assets/build/main.js:183
-msgid "Pages included:"
-msgstr ""
-
-#. translators: %s: Page count
-#: inc/lib/ai-builder/inc/assets/build/main.js:184
-msgid "Page count: %s"
-msgstr ""
-
-#: inc/lib/ai-builder/inc/assets/build/main.js:184
-msgid "Generating preview…"
-msgstr ""
-
-#: inc/lib/ai-builder/inc/assets/build/main.js:184
-#: inc/lib/ai-builder/inc/assets/build/main.js:196
+#: inc/lib/ai-builder/inc/assets/build/main.js:188
+#: inc/lib/ai-builder/inc/assets/build/main.js:204
 #: inc/lib/gutenberg-templates/dist/main.js:2
 msgid "Upload images"
 msgstr ""
 
-#: inc/lib/ai-builder/inc/assets/build/main.js:184
+#. translators: %s: file name
+#: inc/lib/ai-builder/inc/assets/build/main.js:189
+#: inc/lib/ai-builder/inc/assets/build/main.js:204
+msgid "Invalid file name! Please avoid special characters. (%s)"
+msgstr ""
+
+#. translators: %s: Option number
+#: inc/lib/ai-builder/inc/assets/build/main.js:190
+msgid "Option %s"
+msgstr ""
+
+#: inc/lib/ai-builder/inc/assets/build/main.js:190
+msgid "Open Design in New Tab"
+msgstr ""
+
+#: inc/lib/ai-builder/inc/assets/build/main.js:190
+msgid "E-Commerce"
+msgstr ""
+
+#: inc/lib/ai-builder/inc/assets/build/main.js:190
+msgid "Pages included:"
+msgstr ""
+
+#. translators: %s: Page count
+#: inc/lib/ai-builder/inc/assets/build/main.js:191
+msgid "Page count: %s"
+msgstr ""
+
+#: inc/lib/ai-builder/inc/assets/build/main.js:191
+msgid "Generating preview…"
+msgstr ""
+
+#: inc/lib/ai-builder/inc/assets/build/main.js:191
 msgid "All orientations"
 msgstr ""
 
-#: inc/lib/ai-builder/inc/assets/build/main.js:184
+#: inc/lib/ai-builder/inc/assets/build/main.js:191
 msgid "Landscape"
 msgstr ""
 
-#: inc/lib/ai-builder/inc/assets/build/main.js:184
+#: inc/lib/ai-builder/inc/assets/build/main.js:191
 msgid "Portrait"
 msgstr ""
 
-#: inc/lib/ai-builder/inc/assets/build/main.js:184
+#: inc/lib/ai-builder/inc/assets/build/main.js:191
 msgid "Search Results"
 msgstr ""
 
-#: inc/lib/ai-builder/inc/assets/build/main.js:184
-#: inc/lib/ai-builder/inc/assets/build/main.js:196
+#: inc/lib/ai-builder/inc/assets/build/main.js:191
+#: inc/lib/ai-builder/inc/assets/build/main.js:204
 #: inc/lib/gutenberg-templates/dist/main.js:2
 msgid "Upload Your Images"
 msgstr ""
 
-#: inc/lib/ai-builder/inc/assets/build/main.js:184
+#: inc/lib/ai-builder/inc/assets/build/main.js:191
 msgid "Selected Images"
 msgstr ""
 
-#: inc/lib/ai-builder/inc/assets/build/main.js:184
+#: inc/lib/ai-builder/inc/assets/build/main.js:191
 #: inc/lib/onboarding/assets/dist/onboarding/main.js:143
 msgid "Select features"
 msgstr ""
 
-#: inc/lib/ai-builder/inc/assets/build/main.js:184
+#: inc/lib/ai-builder/inc/assets/build/main.js:191
+#: inc/lib/onboarding/assets/dist/onboarding/main.js:143
 msgid "Select the features you want on this website"
 msgstr ""
 
-#: inc/lib/ai-builder/inc/assets/build/main.js:184
+#: inc/lib/ai-builder/inc/assets/build/main.js:191
 msgid "Something went wrong. Please try again later."
 msgstr ""
 
-#: inc/lib/ai-builder/inc/assets/build/main.js:184
+#: inc/lib/ai-builder/inc/assets/build/main.js:191
 msgid "Skip & Start Building"
 msgstr ""
 
-#: inc/lib/ai-builder/inc/assets/build/main.js:184
+#: inc/lib/ai-builder/inc/assets/build/main.js:191
 #: inc/lib/onboarding/assets/dist/main.js:83
 #: inc/lib/onboarding/assets/dist/onboarding/main.js:138
 msgid "Importing Content…"
 msgstr ""
 
-#: inc/lib/ai-builder/inc/assets/build/main.js:184
+#: inc/lib/ai-builder/inc/assets/build/main.js:191
 #: inc/lib/onboarding/assets/dist/main.js:73
 #: inc/lib/onboarding/assets/dist/onboarding/main.js:123
 msgid "Fetching related demo failed."
 msgstr ""
 
-#: inc/lib/ai-builder/inc/assets/build/main.js:184
+#: inc/lib/ai-builder/inc/assets/build/main.js:191
 #: inc/lib/onboarding/assets/dist/main.js:73
 #: inc/lib/onboarding/assets/dist/onboarding/main.js:123
 msgid "Astra Theme Installed."
 msgstr ""
 
-#: inc/lib/ai-builder/inc/assets/build/main.js:184
+#: inc/lib/ai-builder/inc/assets/build/main.js:191
 #: inc/lib/onboarding/assets/dist/main.js:73
 #: inc/lib/onboarding/assets/dist/onboarding/main.js:123
 msgid "Astra theme installation failed."
 msgstr ""
 
-#: inc/lib/ai-builder/inc/assets/build/main.js:184
+#: inc/lib/ai-builder/inc/assets/build/main.js:191
 #: inc/lib/onboarding/assets/dist/main.js:73
 #: inc/lib/onboarding/assets/dist/onboarding/main.js:123
 msgid "Installing Astra Theme…"
 msgstr ""
 
-#: inc/lib/ai-builder/inc/assets/build/main.js:184
+#: inc/lib/ai-builder/inc/assets/build/main.js:191
 msgid "Oops.. Something went wrong"
 msgstr ""
 
-#: inc/lib/ai-builder/inc/assets/build/main.js:184
+#: inc/lib/ai-builder/inc/assets/build/main.js:191
 msgid "What happened?"
 msgstr ""
 
-#: inc/lib/ai-builder/inc/assets/build/main.js:184
+#: inc/lib/ai-builder/inc/assets/build/main.js:191
 msgid "Importing site content has failed. The import process was interrupted."
 msgstr ""
 
-#: inc/lib/ai-builder/inc/assets/build/main.js:184
+#: inc/lib/ai-builder/inc/assets/build/main.js:191
 msgid "Additional technical information from console:"
 msgstr ""
 
-#: inc/lib/ai-builder/inc/assets/build/main.js:184
+#: inc/lib/ai-builder/inc/assets/build/main.js:191
 msgid "Click here to try again"
 msgstr ""
 
-#: inc/lib/ai-builder/inc/assets/build/main.js:184
+#: inc/lib/ai-builder/inc/assets/build/main.js:191
 msgid "Double-checking for grammar and spelling errors…"
 msgstr ""
 
-#: inc/lib/ai-builder/inc/assets/build/main.js:184
+#: inc/lib/ai-builder/inc/assets/build/main.js:191
 msgid "Finalizing setup and configurations…"
 msgstr ""
 
-#: inc/lib/ai-builder/inc/assets/build/main.js:184
+#: inc/lib/ai-builder/inc/assets/build/main.js:191
 msgid "Crossing the t's and dotting the i's…"
 msgstr ""
 
-#: inc/lib/ai-builder/inc/assets/build/main.js:184
+#: inc/lib/ai-builder/inc/assets/build/main.js:191
 msgid "Reviewing for any last-minute tweaks…"
 msgstr ""
 
-#: inc/lib/ai-builder/inc/assets/build/main.js:184
+#: inc/lib/ai-builder/inc/assets/build/main.js:191
 msgid "Almost there! Just a few more finishing touches…"
 msgstr ""
 
-#: inc/lib/ai-builder/inc/assets/build/main.js:184
+#: inc/lib/ai-builder/inc/assets/build/main.js:191
 msgid "Your website is almost ready."
 msgstr ""
 
-#: inc/lib/ai-builder/inc/assets/build/main.js:184
+#: inc/lib/ai-builder/inc/assets/build/main.js:191
 msgid "It's taking longer than usual. Please bear with us!"
 msgstr ""
 
-#: inc/lib/ai-builder/inc/assets/build/main.js:184
+#: inc/lib/ai-builder/inc/assets/build/main.js:191
 msgid "Building a website has never been this easy!"
 msgstr ""
 
-#: inc/lib/ai-builder/inc/assets/build/main.js:184
+#: inc/lib/ai-builder/inc/assets/build/main.js:191
 msgid "Here is how the AI Website Builder works:"
 msgstr ""
 
-#: inc/lib/ai-builder/inc/assets/build/main.js:184
+#: inc/lib/ai-builder/inc/assets/build/main.js:191
 msgid "Create a free account on ZipWP platform."
 msgstr ""
 
-#: inc/lib/ai-builder/inc/assets/build/main.js:184
+#: inc/lib/ai-builder/inc/assets/build/main.js:191
 msgid "Describe your dream website in your own words."
 msgstr ""
 
-#: inc/lib/ai-builder/inc/assets/build/main.js:184
+#: inc/lib/ai-builder/inc/assets/build/main.js:191
 msgid "Watch as AI crafts your WordPress website instantly."
 msgstr ""
 
-#: inc/lib/ai-builder/inc/assets/build/main.js:184
+#: inc/lib/ai-builder/inc/assets/build/main.js:191
 msgid "Refine the website with an easy drag & drop builder."
 msgstr ""
 
-#: inc/lib/ai-builder/inc/assets/build/main.js:184
+#: inc/lib/ai-builder/inc/assets/build/main.js:191
 msgid "Launch."
 msgstr ""
 
-#: inc/lib/ai-builder/inc/assets/build/main.js:184
+#: inc/lib/ai-builder/inc/assets/build/main.js:191
 msgid "Let's Get Started. It's Free"
 msgstr ""
 
-#: inc/lib/ai-builder/inc/assets/build/main.js:184
+#: inc/lib/ai-builder/inc/assets/build/main.js:191
 msgid "Let's build your website!"
 msgstr ""
 
-#: inc/lib/ai-builder/inc/assets/build/main.js:184
+#: inc/lib/ai-builder/inc/assets/build/main.js:191
 msgid "Please share some basic details of the website to get started."
 msgstr ""
 
-#: inc/lib/ai-builder/inc/assets/build/main.js:184
+#: inc/lib/ai-builder/inc/assets/build/main.js:191
 #: inc/lib/gutenberg-templates/dist/main.js:2
 msgid "Name of the website:"
 msgstr ""
 
-#: inc/lib/ai-builder/inc/assets/build/main.js:184
+#: inc/lib/ai-builder/inc/assets/build/main.js:191
 #: inc/lib/gutenberg-templates/dist/main.js:2
 msgid "Enter name or title of the website"
 msgstr ""
 
-#: inc/lib/ai-builder/inc/assets/build/main.js:184
+#: inc/lib/ai-builder/inc/assets/build/main.js:191
 msgid "Name is required"
 msgstr ""
 
-#: inc/lib/ai-builder/inc/assets/build/main.js:184
+#: inc/lib/ai-builder/inc/assets/build/main.js:191
 #: inc/lib/gutenberg-templates/dist/main.js:2
 msgid "This website is for:"
 msgstr ""
 
-#: inc/lib/ai-builder/inc/assets/build/main.js:184
+#: inc/lib/ai-builder/inc/assets/build/main.js:191
 msgid "Let’s Start"
 msgstr ""
 
-#: inc/lib/ai-builder/inc/assets/build/main.js:184
+#: inc/lib/ai-builder/inc/assets/build/main.js:191
 #: inc/lib/gutenberg-templates/dist/main.js:2
 msgid "Name, language & type"
 msgstr ""
 
 #. translators: %s: business name
-#: inc/lib/ai-builder/inc/assets/build/main.js:185
+#: inc/lib/ai-builder/inc/assets/build/main.js:192
 msgid "What is %s? Please describe the business."
 msgstr ""
 
-#: inc/lib/ai-builder/inc/assets/build/main.js:185
+#: inc/lib/ai-builder/inc/assets/build/main.js:192
 msgid "Please be as descriptive as you can. Share details such as services, products, goals, etc."
 msgstr ""
 
 #. translators: %s: person name
-#: inc/lib/ai-builder/inc/assets/build/main.js:186
+#: inc/lib/ai-builder/inc/assets/build/main.js:193
 msgid "Who is %s? Tell us more about the person."
 msgstr ""
 
-#: inc/lib/ai-builder/inc/assets/build/main.js:186
+#: inc/lib/ai-builder/inc/assets/build/main.js:193
 msgid "Please be as descriptive as you can. Share details such as what they do, their expertise, offerings, etc."
 msgstr ""
 
 #. translators: %s: organisation name
-#: inc/lib/ai-builder/inc/assets/build/main.js:187
+#: inc/lib/ai-builder/inc/assets/build/main.js:194
 msgid "What is %s? Please describe the organisation."
 msgstr ""
 
-#: inc/lib/ai-builder/inc/assets/build/main.js:187
+#: inc/lib/ai-builder/inc/assets/build/main.js:194
 msgid "Please be as descriptive as you can. Share details such as services, programs, mission, vision, etc."
 msgstr ""
 
 #. translators: %s: restaurant name
-#: inc/lib/ai-builder/inc/assets/build/main.js:188
+#: inc/lib/ai-builder/inc/assets/build/main.js:195
 msgid "What is %s? Tell us more about the restaurant."
 msgstr ""
 
-#: inc/lib/ai-builder/inc/assets/build/main.js:188
+#: inc/lib/ai-builder/inc/assets/build/main.js:195
 msgid "Please be as descriptive as you can. Share details such as a brief about the restaurant, specialty, menu, etc."
 msgstr ""
 
 #. translators: %s: product name
-#: inc/lib/ai-builder/inc/assets/build/main.js:189
+#: inc/lib/ai-builder/inc/assets/build/main.js:196
 msgid "What is %s? Share more details about the product."
 msgstr ""
 
-#: inc/lib/ai-builder/inc/assets/build/main.js:189
-#: inc/lib/ai-builder/inc/assets/build/main.js:191
+#: inc/lib/ai-builder/inc/assets/build/main.js:196
+#: inc/lib/ai-builder/inc/assets/build/main.js:198
 msgid "Please be as descriptive as you can. Share details such as a brief about the product, features, some USPs, etc."
 msgstr ""
 
 #. translators: %s: event name
-#: inc/lib/ai-builder/inc/assets/build/main.js:190
+#: inc/lib/ai-builder/inc/assets/build/main.js:197
 msgid "Tell us more about %s."
 msgstr ""
 
-#: inc/lib/ai-builder/inc/assets/build/main.js:190
+#: inc/lib/ai-builder/inc/assets/build/main.js:197
 msgid "Please be as descriptive as you can. Share details such as Event information date, venue, some highlights, etc."
 msgstr ""
 
 #. translators: %s: landing page name
-#: inc/lib/ai-builder/inc/assets/build/main.js:191
+#: inc/lib/ai-builder/inc/assets/build/main.js:198
 msgid "Share more details about %s."
 msgstr ""
 
 #. translators: %s: medical facility name
-#: inc/lib/ai-builder/inc/assets/build/main.js:192
+#: inc/lib/ai-builder/inc/assets/build/main.js:199
 msgid "Tell us more about the %s."
 msgstr ""
 
-#: inc/lib/ai-builder/inc/assets/build/main.js:192
+#: inc/lib/ai-builder/inc/assets/build/main.js:199
 msgid "Please be as descriptive as you can. Share details such as treatments, procedures, facilities, etc."
 msgstr ""
 
 #. translators: %s: entity name
-#: inc/lib/ai-builder/inc/assets/build/main.js:193
+#: inc/lib/ai-builder/inc/assets/build/main.js:200
 msgid "Please describe %s in a few words."
 msgstr ""
 
-#: inc/lib/ai-builder/inc/assets/build/main.js:193
+#: inc/lib/ai-builder/inc/assets/build/main.js:200
 #: inc/lib/gutenberg-templates/dist/main.js:2
 msgid "The best way to describe anything is by answering a few WH questions. Who, What, Where, Why, When, etc."
 msgstr ""
 
-#: inc/lib/ai-builder/inc/assets/build/main.js:193
+#: inc/lib/ai-builder/inc/assets/build/main.js:200
 msgid "E.g. Mantra Minds is a yoga studio located in Chino Hills, California. The studio offers a variety of classes such as Hatha yoga, Vinyasa flow, and Restorative yoga. The studio is led by Jane, an experienced and certified yoga instructor with over 10 years of teaching expertise. The welcoming atmosphere and personalized Jane make it a favorite among yoga enthusiasts in the area."
 msgstr ""
 
-#: inc/lib/ai-builder/inc/assets/build/main.js:193
+#: inc/lib/ai-builder/inc/assets/build/main.js:200
 msgid "Write Using AI"
 msgstr ""
 
-#: inc/lib/ai-builder/inc/assets/build/main.js:193
+#: inc/lib/ai-builder/inc/assets/build/main.js:200
 msgid "Improve Using AI"
 msgstr ""
 
-#: inc/lib/ai-builder/inc/assets/build/main.js:193
+#: inc/lib/ai-builder/inc/assets/build/main.js:200
 msgid "Describe"
 msgstr ""
 
-#: inc/lib/ai-builder/inc/assets/build/main.js:193
+#: inc/lib/ai-builder/inc/assets/build/main.js:200
 msgid "Some details please"
 msgstr ""
 
 #. translators: %s: Business name.
-#: inc/lib/ai-builder/inc/assets/build/main.js:196
+#: inc/lib/ai-builder/inc/assets/build/main.js:203
 msgid "How can people get in touch with %1$s?"
 msgstr ""
 
-#: inc/lib/ai-builder/inc/assets/build/main.js:196
+#: inc/lib/ai-builder/inc/assets/build/main.js:203
 msgid "Please provide the contact information below. These will be used on the website."
 msgstr ""
 
-#: inc/lib/ai-builder/inc/assets/build/main.js:196
+#: inc/lib/ai-builder/inc/assets/build/main.js:203
 msgid "Email"
 msgstr ""
 
-#: inc/lib/ai-builder/inc/assets/build/main.js:196
+#: inc/lib/ai-builder/inc/assets/build/main.js:203
 msgid "Your email"
 msgstr ""
 
-#: inc/lib/ai-builder/inc/assets/build/main.js:196
+#: inc/lib/ai-builder/inc/assets/build/main.js:203
 #: inc/lib/gutenberg-templates/dist/main.js:2
 msgid "Please enter a valid email"
 msgstr ""
 
-#: inc/lib/ai-builder/inc/assets/build/main.js:196
+#: inc/lib/ai-builder/inc/assets/build/main.js:203
 msgid "Phone Number"
 msgstr ""
 
-#: inc/lib/ai-builder/inc/assets/build/main.js:196
+#: inc/lib/ai-builder/inc/assets/build/main.js:203
 msgid "Your phone number"
 msgstr ""
 
-#: inc/lib/ai-builder/inc/assets/build/main.js:196
+#: inc/lib/ai-builder/inc/assets/build/main.js:203
 msgid "Address"
 msgstr ""
 
-#: inc/lib/ai-builder/inc/assets/build/main.js:196
+#: inc/lib/ai-builder/inc/assets/build/main.js:203
 msgid "Contact"
 msgstr ""
 
-#: inc/lib/ai-builder/inc/assets/build/main.js:196
+#: inc/lib/ai-builder/inc/assets/build/main.js:203
 msgid "How can people get in touch"
 msgstr ""
 
-#: inc/lib/ai-builder/inc/assets/build/main.js:196
+#: inc/lib/ai-builder/inc/assets/build/main.js:204
+msgid "You can only upload 20 images at once"
+msgstr ""
+
+#: inc/lib/ai-builder/inc/assets/build/main.js:204
 msgid "Select the Images"
 msgstr ""
 
-#: inc/lib/ai-builder/inc/assets/build/main.js:196
+#: inc/lib/ai-builder/inc/assets/build/main.js:204
 msgid "Add more relevant keywords…"
 msgstr ""
 
-#: inc/lib/ai-builder/inc/assets/build/main.js:196
+#: inc/lib/ai-builder/inc/assets/build/main.js:204
 #: inc/lib/gutenberg-templates/dist/main.js:2
 msgid "Suggested Keywords"
 msgstr ""
 
-#: inc/lib/ai-builder/inc/assets/build/main.js:196
+#: inc/lib/ai-builder/inc/assets/build/main.js:204
 #: inc/lib/gutenberg-templates/dist/main.js:2
 msgid "Clear"
 msgstr ""
 
-#: inc/lib/ai-builder/inc/assets/build/main.js:196
-#: inc/lib/gutenberg-templates/dist/main.js:2
-msgid "or drop your images here"
+#: inc/lib/ai-builder/inc/assets/build/main.js:204
+msgid "or drop your images here (Max 20)"
 msgstr ""
 
-#: inc/lib/ai-builder/inc/assets/build/main.js:196
+#: inc/lib/ai-builder/inc/assets/build/main.js:204
 #: inc/lib/gutenberg-templates/dist/main.js:2
 msgid "PNG, JPG, JPEG"
 msgstr ""
 
-#: inc/lib/ai-builder/inc/assets/build/main.js:196
+#: inc/lib/ai-builder/inc/assets/build/main.js:204
+msgid "Max size: 5 MB per file"
+msgstr ""
+
+#: inc/lib/ai-builder/inc/assets/build/main.js:204
 msgid "You have not selected any images yet."
 msgstr ""
 
-#: inc/lib/ai-builder/inc/assets/build/main.js:196
+#: inc/lib/ai-builder/inc/assets/build/main.js:204
 msgid "We couldn't find anything with your keyword."
 msgstr ""
 
-#: inc/lib/ai-builder/inc/assets/build/main.js:196
+#: inc/lib/ai-builder/inc/assets/build/main.js:204
 msgid "Try to refine your search."
 msgstr ""
 
-#: inc/lib/ai-builder/inc/assets/build/main.js:196
+#: inc/lib/ai-builder/inc/assets/build/main.js:204
 msgid "Find the perfect images for your website by entering a keyword or selecting from the suggested options."
 msgstr ""
 
-#: inc/lib/ai-builder/inc/assets/build/main.js:196
+#: inc/lib/ai-builder/inc/assets/build/main.js:204
 msgid "End of the search results"
 msgstr ""
 
-#: inc/lib/ai-builder/inc/assets/build/main.js:196
+#: inc/lib/ai-builder/inc/assets/build/main.js:204
 msgid "Save & Exit"
 msgstr ""
 
-#: inc/lib/ai-builder/inc/assets/build/main.js:196
+#: inc/lib/ai-builder/inc/assets/build/main.js:204
 msgid "Images"
 msgstr ""
 
-#: inc/lib/ai-builder/inc/assets/build/main.js:196
+#: inc/lib/ai-builder/inc/assets/build/main.js:204
 msgid "Select relevant images as needed"
 msgstr ""
 
-#: inc/lib/ai-builder/inc/assets/build/main.js:196
+#: inc/lib/ai-builder/inc/assets/build/main.js:204
 msgid "Choose the Design"
 msgstr ""
 
-#: inc/lib/ai-builder/inc/assets/build/main.js:196
+#: inc/lib/ai-builder/inc/assets/build/main.js:204
 msgid "Add a keyword"
 msgstr ""
 
-#: inc/lib/ai-builder/inc/assets/build/main.js:196
+#: inc/lib/ai-builder/inc/assets/build/main.js:204
 msgid "Error while fetching templates"
 msgstr ""
 
-#: inc/lib/ai-builder/inc/assets/build/main.js:196
+#: inc/lib/ai-builder/inc/assets/build/main.js:204
 msgid "Load More Designs"
 msgstr ""
 
-#: inc/lib/ai-builder/inc/assets/build/main.js:196
+#: inc/lib/ai-builder/inc/assets/build/main.js:204
 msgid "Design"
 msgstr ""
 
-#: inc/lib/ai-builder/inc/assets/build/main.js:196
+#: inc/lib/ai-builder/inc/assets/build/main.js:204
 msgid "Choose a structure for your website"
 msgstr ""
 
-#: inc/lib/ai-builder/inc/assets/build/main.js:196
+#: inc/lib/ai-builder/inc/assets/build/main.js:204
 msgid "Features"
 msgstr ""
 
-#: inc/lib/ai-builder/inc/assets/build/main.js:196
+#: inc/lib/ai-builder/inc/assets/build/main.js:204
 msgid "Select features as you need"
 msgstr ""
 
-#: inc/lib/ai-builder/inc/assets/build/main.js:196
+#: inc/lib/ai-builder/inc/assets/build/main.js:204
 #: inc/lib/onboarding/assets/dist/main.js:84
 #: inc/lib/onboarding/assets/dist/onboarding/main.js:147
 msgid "Resetting posts."
 msgstr ""
 
-#: inc/lib/ai-builder/inc/assets/build/main.js:196
+#: inc/lib/ai-builder/inc/assets/build/main.js:204
 #: inc/lib/onboarding/assets/dist/main.js:84
 #: inc/lib/onboarding/assets/dist/onboarding/main.js:147
 msgid "Resetting posts failed."
 msgstr ""
 
-#: inc/lib/ai-builder/inc/assets/build/main.js:196
+#: inc/lib/ai-builder/inc/assets/build/main.js:204
 #: inc/lib/onboarding/assets/dist/main.js:84
 #: inc/lib/onboarding/assets/dist/onboarding/main.js:147
 msgid "Taking settings backup."
 msgstr ""
 
-#: inc/lib/ai-builder/inc/assets/build/main.js:196
+#: inc/lib/ai-builder/inc/assets/build/main.js:204
 #: inc/lib/onboarding/assets/dist/main.js:84
 #: inc/lib/onboarding/assets/dist/onboarding/main.js:147
 msgid "Taking settings backup failed."
 msgstr ""
 
-#: inc/lib/ai-builder/inc/assets/build/main.js:196
+#: inc/lib/ai-builder/inc/assets/build/main.js:204
 #: inc/lib/onboarding/assets/dist/main.js:84
 #: inc/lib/onboarding/assets/dist/onboarding/main.js:147
 msgid "Resetting customizer."
 msgstr ""
 
-#: inc/lib/ai-builder/inc/assets/build/main.js:196
+#: inc/lib/ai-builder/inc/assets/build/main.js:204
 #: inc/lib/onboarding/assets/dist/main.js:84
 #: inc/lib/onboarding/assets/dist/onboarding/main.js:147
 msgid "Resetting customizer failed."
 msgstr ""
 
-#: inc/lib/ai-builder/inc/assets/build/main.js:196
+#: inc/lib/ai-builder/inc/assets/build/main.js:204
 #: inc/lib/onboarding/assets/dist/main.js:84
 #: inc/lib/onboarding/assets/dist/onboarding/main.js:147
 msgid "Resetting site options."
 msgstr ""
 
-#: inc/lib/ai-builder/inc/assets/build/main.js:196
+#: inc/lib/ai-builder/inc/assets/build/main.js:204
 #: inc/lib/onboarding/assets/dist/main.js:84
 #: inc/lib/onboarding/assets/dist/onboarding/main.js:147
 msgid "Resetting site options Failed."
 msgstr ""
 
-#: inc/lib/ai-builder/inc/assets/build/main.js:196
+#: inc/lib/ai-builder/inc/assets/build/main.js:204
 #: inc/lib/onboarding/assets/dist/main.js:84
 #: inc/lib/onboarding/assets/dist/onboarding/main.js:147
 msgid "Resetting widgets."
 msgstr ""
 
-#: inc/lib/ai-builder/inc/assets/build/main.js:196
+#: inc/lib/ai-builder/inc/assets/build/main.js:204
 #: inc/lib/onboarding/assets/dist/main.js:84
 #: inc/lib/onboarding/assets/dist/onboarding/main.js:147
 msgid "Resetting widgets JSON parse failed."
 msgstr ""
 
-#: inc/lib/ai-builder/inc/assets/build/main.js:196
+#: inc/lib/ai-builder/inc/assets/build/main.js:204
 #: inc/lib/onboarding/assets/dist/main.js:84
 #: inc/lib/onboarding/assets/dist/onboarding/main.js:147
 msgid "Resetting widgets failed."
 msgstr ""
 
-#: inc/lib/ai-builder/inc/assets/build/main.js:196
+#: inc/lib/ai-builder/inc/assets/build/main.js:204
 #: inc/lib/onboarding/assets/dist/main.js:84
 #: inc/lib/onboarding/assets/dist/onboarding/main.js:147
 msgid "Resetting terms and forms."
 msgstr ""
 
-#: inc/lib/ai-builder/inc/assets/build/main.js:196
+#: inc/lib/ai-builder/inc/assets/build/main.js:204
 #: inc/lib/onboarding/assets/dist/main.js:84
 #: inc/lib/onboarding/assets/dist/onboarding/main.js:147
 msgid "Resetting terms and forms failed."
 msgstr ""
 
-#: inc/lib/ai-builder/inc/assets/build/main.js:196
+#: inc/lib/ai-builder/inc/assets/build/main.js:204
 #: inc/lib/onboarding/assets/dist/main.js:84
 #: inc/lib/onboarding/assets/dist/onboarding/main.js:147
 msgid "Gathering posts for deletions."
 msgstr ""
 
-#: inc/lib/ai-builder/inc/assets/build/main.js:196
+#: inc/lib/ai-builder/inc/assets/build/main.js:204
 #: inc/lib/onboarding/assets/dist/main.js:84
 #: inc/lib/onboarding/assets/dist/onboarding/main.js:147
 msgid "Resetting posts done."
 msgstr ""
 
-#: inc/lib/ai-builder/inc/assets/build/main.js:196
+#: inc/lib/ai-builder/inc/assets/build/main.js:204
 #: inc/lib/onboarding/assets/dist/main.js:84
 #: inc/lib/onboarding/assets/dist/onboarding/main.js:147
 msgid "Importing Site Content Failed. - Import Process Interrupted"
 msgstr ""
 
 #. translators: Response importMessage
-#: inc/lib/ai-builder/inc/assets/build/main.js:199
+#: inc/lib/ai-builder/inc/assets/build/main.js:207
 #: inc/lib/onboarding/assets/dist/main.js:86
 #: inc/lib/onboarding/assets/dist/onboarding/main.js:150
 msgid "Importing - %1$s"
 msgstr ""
 
-#: inc/lib/ai-builder/inc/assets/build/main.js:199
+#: inc/lib/ai-builder/inc/assets/build/main.js:207
 #: inc/lib/onboarding/assets/dist/main.js:84
 #: inc/lib/onboarding/assets/dist/main.js:86
 #: inc/lib/onboarding/assets/dist/onboarding/main.js:129
@@ -2673,221 +2785,221 @@ msgstr ""
 msgid "Are you sure you want to cancel the site import process?"
 msgstr ""
 
-#: inc/lib/ai-builder/inc/assets/build/main.js:199
+#: inc/lib/ai-builder/inc/assets/build/main.js:207
 msgid "Retrying Import."
 msgstr ""
 
-#: inc/lib/ai-builder/inc/assets/build/main.js:199
+#: inc/lib/ai-builder/inc/assets/build/main.js:207
 msgid "Preparing your site for import…"
 msgstr ""
 
-#: inc/lib/ai-builder/inc/assets/build/main.js:199
+#: inc/lib/ai-builder/inc/assets/build/main.js:207
 msgid "Preparing the site…"
 msgstr ""
 
-#: inc/lib/ai-builder/inc/assets/build/main.js:199
+#: inc/lib/ai-builder/inc/assets/build/main.js:207
 msgid "Please wait a moment…"
 msgstr ""
 
-#: inc/lib/ai-builder/inc/assets/build/main.js:199
+#: inc/lib/ai-builder/inc/assets/build/main.js:207
 msgid "Failed to create website"
 msgstr ""
 
-#: inc/lib/ai-builder/inc/assets/build/main.js:199
+#: inc/lib/ai-builder/inc/assets/build/main.js:207
 msgid "The website is created successfully!"
 msgstr ""
 
-#: inc/lib/ai-builder/inc/assets/build/main.js:199
+#: inc/lib/ai-builder/inc/assets/build/main.js:207
 #: inc/lib/onboarding/assets/dist/main.js:86
 #: inc/lib/onboarding/assets/dist/onboarding/main.js:150
 msgid "Starting Import."
 msgstr ""
 
-#: inc/lib/ai-builder/inc/assets/build/main.js:199
+#: inc/lib/ai-builder/inc/assets/build/main.js:207
 msgid "Resetting site."
 msgstr ""
 
-#: inc/lib/ai-builder/inc/assets/build/main.js:199
+#: inc/lib/ai-builder/inc/assets/build/main.js:207
 #: inc/lib/onboarding/assets/dist/main.js:90
 #: inc/lib/onboarding/assets/dist/onboarding/main.js:156
 msgid "Reset for old website is done."
 msgstr ""
 
 #. translators: %s: Image number.
-#: inc/lib/ai-builder/inc/assets/build/main.js:202
+#: inc/lib/ai-builder/inc/assets/build/main.js:210
 msgid "Downloading Image %s"
 msgstr ""
 
-#: inc/lib/ai-builder/inc/assets/build/main.js:202
+#: inc/lib/ai-builder/inc/assets/build/main.js:210
 msgid "Downloading images failed."
 msgstr ""
 
-#: inc/lib/ai-builder/inc/assets/build/main.js:202
+#: inc/lib/ai-builder/inc/assets/build/main.js:210
 #: inc/lib/onboarding/assets/dist/main.js:90
 #: inc/lib/onboarding/assets/dist/onboarding/main.js:156
 msgid "Importing forms."
 msgstr ""
 
-#: inc/lib/ai-builder/inc/assets/build/main.js:202
+#: inc/lib/ai-builder/inc/assets/build/main.js:210
 #: inc/lib/onboarding/assets/dist/main.js:90
 #: inc/lib/onboarding/assets/dist/onboarding/main.js:156
 msgid "Importing Customizer failed due to parse JSON error."
 msgstr ""
 
-#: inc/lib/ai-builder/inc/assets/build/main.js:202
+#: inc/lib/ai-builder/inc/assets/build/main.js:210
 #: inc/lib/onboarding/assets/dist/main.js:90
 #: inc/lib/onboarding/assets/dist/onboarding/main.js:156
 msgid "Importing Customizer Failed."
 msgstr ""
 
-#: inc/lib/ai-builder/inc/assets/build/main.js:202
+#: inc/lib/ai-builder/inc/assets/build/main.js:210
 #: inc/lib/onboarding/assets/dist/main.js:90
 #: inc/lib/onboarding/assets/dist/onboarding/main.js:156
 msgid "Importing Spectra Settings."
 msgstr ""
 
-#: inc/lib/ai-builder/inc/assets/build/main.js:202
+#: inc/lib/ai-builder/inc/assets/build/main.js:210
 #: inc/lib/onboarding/assets/dist/main.js:90
 #: inc/lib/onboarding/assets/dist/onboarding/main.js:156
 msgid "Importing Spectra Settings failed due to parse JSON error."
 msgstr ""
 
-#: inc/lib/ai-builder/inc/assets/build/main.js:202
+#: inc/lib/ai-builder/inc/assets/build/main.js:210
 #: inc/lib/onboarding/assets/dist/main.js:90
 #: inc/lib/onboarding/assets/dist/onboarding/main.js:156
 msgid "Importing Spectra Settings Failed."
 msgstr ""
 
-#: inc/lib/ai-builder/inc/assets/build/main.js:202
+#: inc/lib/ai-builder/inc/assets/build/main.js:210
 #: inc/lib/onboarding/assets/dist/main.js:90
 #: inc/lib/onboarding/assets/dist/onboarding/main.js:156
 msgid "Importing Surecart Settings failed."
 msgstr ""
 
-#: inc/lib/ai-builder/inc/assets/build/main.js:202
+#: inc/lib/ai-builder/inc/assets/build/main.js:210
 #: inc/lib/onboarding/assets/dist/main.js:90
 #: inc/lib/onboarding/assets/dist/onboarding/main.js:156
 msgid "Importing Surecart Settings Failed."
 msgstr ""
 
-#: inc/lib/ai-builder/inc/assets/build/main.js:202
+#: inc/lib/ai-builder/inc/assets/build/main.js:210
 #: inc/lib/onboarding/assets/dist/main.js:90
 #: inc/lib/onboarding/assets/dist/onboarding/main.js:156
 msgid "Importing Site Content."
 msgstr ""
 
-#: inc/lib/ai-builder/inc/assets/build/main.js:202
+#: inc/lib/ai-builder/inc/assets/build/main.js:210
 #: inc/lib/onboarding/assets/dist/main.js:86
 #: inc/lib/onboarding/assets/dist/onboarding/main.js:150
 msgid "Installing Required Plugins."
 msgstr ""
 
 #. translators: Plugin Name.
-#: inc/lib/ai-builder/inc/assets/build/main.js:205
+#: inc/lib/ai-builder/inc/assets/build/main.js:213
 #: inc/lib/onboarding/assets/dist/main.js:88
 #: inc/lib/onboarding/assets/dist/onboarding/main.js:153
 msgid "%1$s plugin installed successfully."
 msgstr ""
 
 #. translators: Plugin Name.
-#: inc/lib/ai-builder/inc/assets/build/main.js:208
+#: inc/lib/ai-builder/inc/assets/build/main.js:216
 #: inc/lib/onboarding/assets/dist/main.js:90
 #: inc/lib/onboarding/assets/dist/onboarding/main.js:156
 msgid "Could not install the plugin - %s"
 msgstr ""
 
-#: inc/lib/ai-builder/inc/assets/build/main.js:208
+#: inc/lib/ai-builder/inc/assets/build/main.js:216
 #: inc/lib/onboarding/assets/dist/main.js:90
 #: inc/lib/onboarding/assets/dist/onboarding/main.js:156
 msgid "Importing Site Options."
 msgstr ""
 
-#: inc/lib/ai-builder/inc/assets/build/main.js:208
+#: inc/lib/ai-builder/inc/assets/build/main.js:216
 #: inc/lib/onboarding/assets/dist/main.js:90
 #: inc/lib/onboarding/assets/dist/onboarding/main.js:156
 msgid "Importing Site Options failed due to parse JSON error."
 msgstr ""
 
-#: inc/lib/ai-builder/inc/assets/build/main.js:208
+#: inc/lib/ai-builder/inc/assets/build/main.js:216
 #: inc/lib/onboarding/assets/dist/main.js:90
 #: inc/lib/onboarding/assets/dist/onboarding/main.js:156
 msgid "Importing Site Options Failed."
 msgstr ""
 
-#: inc/lib/ai-builder/inc/assets/build/main.js:208
+#: inc/lib/ai-builder/inc/assets/build/main.js:216
 #: inc/lib/onboarding/assets/dist/main.js:90
 #: inc/lib/onboarding/assets/dist/onboarding/main.js:156
 msgid "Importing Widgets."
 msgstr ""
 
-#: inc/lib/ai-builder/inc/assets/build/main.js:208
+#: inc/lib/ai-builder/inc/assets/build/main.js:216
 #: inc/lib/onboarding/assets/dist/main.js:90
 #: inc/lib/onboarding/assets/dist/onboarding/main.js:156
 msgid "Importing Widgets failed due to parse JSON error."
 msgstr ""
 
-#: inc/lib/ai-builder/inc/assets/build/main.js:208
+#: inc/lib/ai-builder/inc/assets/build/main.js:216
 #: inc/lib/onboarding/assets/dist/main.js:90
 #: inc/lib/onboarding/assets/dist/onboarding/main.js:156
 msgid "Importing Widgets Failed."
 msgstr ""
 
-#: inc/lib/ai-builder/inc/assets/build/main.js:208
+#: inc/lib/ai-builder/inc/assets/build/main.js:216
 msgid "Processing content for pages."
 msgstr ""
 
-#: inc/lib/ai-builder/inc/assets/build/main.js:208
+#: inc/lib/ai-builder/inc/assets/build/main.js:216
 msgid "Gutenberg batch failed."
 msgstr ""
 
-#: inc/lib/ai-builder/inc/assets/build/main.js:208
+#: inc/lib/ai-builder/inc/assets/build/main.js:216
 msgid "Gutenberg Batch Failed."
 msgstr ""
 
-#: inc/lib/ai-builder/inc/assets/build/main.js:208
+#: inc/lib/ai-builder/inc/assets/build/main.js:216
 msgid "Processing images."
 msgstr ""
 
-#: inc/lib/ai-builder/inc/assets/build/main.js:208
+#: inc/lib/ai-builder/inc/assets/build/main.js:216
 msgid "Image processing failed."
 msgstr ""
 
-#: inc/lib/ai-builder/inc/assets/build/main.js:208
+#: inc/lib/ai-builder/inc/assets/build/main.js:216
 msgid "Final finishing."
 msgstr ""
 
-#: inc/lib/ai-builder/inc/assets/build/main.js:208
+#: inc/lib/ai-builder/inc/assets/build/main.js:216
 msgid "Final finishing failed due to parse JSON error."
 msgstr ""
 
-#: inc/lib/ai-builder/inc/assets/build/main.js:208
+#: inc/lib/ai-builder/inc/assets/build/main.js:216
 msgid "Final finishing Failed."
 msgstr ""
 
 #. translators: Plugin Name.
-#: inc/lib/ai-builder/inc/assets/build/main.js:211
+#: inc/lib/ai-builder/inc/assets/build/main.js:219
 #: inc/lib/onboarding/assets/dist/main.js:92
 #: inc/lib/onboarding/assets/dist/onboarding/main.js:159
 msgid "Activating %1$s plugin."
 msgstr ""
 
 #. translators: Plugin Name.
-#: inc/lib/ai-builder/inc/assets/build/main.js:214
+#: inc/lib/ai-builder/inc/assets/build/main.js:222
 #: inc/lib/onboarding/assets/dist/main.js:94
 #: inc/lib/onboarding/assets/dist/onboarding/main.js:162
 msgid "%1$s activated."
 msgstr ""
 
 #. translators: Plugin name.
-#: inc/lib/ai-builder/inc/assets/build/main.js:217
+#: inc/lib/ai-builder/inc/assets/build/main.js:225
 #: inc/lib/onboarding/assets/dist/main.js:96
 #: inc/lib/onboarding/assets/dist/onboarding/main.js:165
 msgid "JSON_Error: Could not activate the required plugin - %1$s."
 msgstr ""
 
 #. translators: Support article URL.
-#: inc/lib/ai-builder/inc/assets/build/main.js:220
-#: inc/lib/ai-builder/inc/assets/build/main.js:226
+#: inc/lib/ai-builder/inc/assets/build/main.js:228
+#: inc/lib/ai-builder/inc/assets/build/main.js:234
 #: inc/lib/onboarding/assets/dist/main.js:98
 #: inc/lib/onboarding/assets/dist/main.js:102
 #: inc/lib/onboarding/assets/dist/onboarding/main.js:168
@@ -2896,58 +3008,58 @@ msgid "<a href=\"%1$s\">Read article</a> to resolve the issue and continue impor
 msgstr ""
 
 #. translators: Plugin name.
-#: inc/lib/ai-builder/inc/assets/build/main.js:223
+#: inc/lib/ai-builder/inc/assets/build/main.js:231
 #: inc/lib/onboarding/assets/dist/main.js:100
 #: inc/lib/onboarding/assets/dist/onboarding/main.js:171
 msgid "Could not activate the required plugin - %1$s."
 msgstr ""
 
-#: inc/lib/ai-builder/inc/assets/build/main.js:226
+#: inc/lib/ai-builder/inc/assets/build/main.js:234
 #: inc/lib/onboarding/assets/dist/main.js:102
 #: inc/lib/onboarding/assets/dist/onboarding/main.js:174
 msgid "We are building your website…"
 msgstr ""
 
-#: inc/lib/ai-builder/inc/assets/build/main.js:226
+#: inc/lib/ai-builder/inc/assets/build/main.js:234
 msgid "Migrating"
 msgstr ""
 
-#: inc/lib/ai-builder/inc/assets/build/main.js:226
-#: inc/lib/ai-builder/inc/assets/build/main.js:227
+#: inc/lib/ai-builder/inc/assets/build/main.js:234
+#: inc/lib/ai-builder/inc/assets/build/main.js:235
 msgid "Done"
 msgstr ""
 
-#: inc/lib/ai-builder/inc/assets/build/main.js:226
+#: inc/lib/ai-builder/inc/assets/build/main.js:234
 msgid "Your website is ready!"
 msgstr ""
 
 #. translators: %s: line break
-#: inc/lib/ai-builder/inc/assets/build/main.js:227
+#: inc/lib/ai-builder/inc/assets/build/main.js:235
 msgid "Woohoo, your website %1$s is ready!"
 msgstr ""
 
-#: inc/lib/ai-builder/inc/assets/build/main.js:227
+#: inc/lib/ai-builder/inc/assets/build/main.js:235
 msgid "You did it! Your brand new website is all set to shine online."
 msgstr ""
 
-#: inc/lib/ai-builder/inc/assets/build/main.js:227
+#: inc/lib/ai-builder/inc/assets/build/main.js:235
 msgid "See Your Website"
 msgstr ""
 
-#: inc/lib/ai-builder/inc/assets/build/main.js:227
+#: inc/lib/ai-builder/inc/assets/build/main.js:235
 #: inc/lib/onboarding/assets/dist/onboarding/main.js:138
 msgid "Visit Dashboard"
 msgstr ""
 
-#: inc/lib/ai-builder/inc/assets/build/main.js:227
+#: inc/lib/ai-builder/inc/assets/build/main.js:235
 msgid "Congratulations! Your website is ready!"
 msgstr ""
 
-#: inc/lib/ai-builder/inc/assets/build/main.js:227
+#: inc/lib/ai-builder/inc/assets/build/main.js:235
 msgid "The requested URL was not found."
 msgstr ""
 
-#: inc/lib/ai-builder/inc/assets/build/main.js:227
+#: inc/lib/ai-builder/inc/assets/build/main.js:235
 msgid "The URL may have been typed incorrectly. Or it might be a broken or outdated link."
 msgstr ""
 
@@ -3278,6 +3390,10 @@ msgid "You can easily purchase additional AI credits later anytime."
 msgstr ""
 
 #: inc/lib/gutenberg-templates/dist/main.js:2
+msgid "or drop your images here"
+msgstr ""
+
+#: inc/lib/gutenberg-templates/dist/main.js:2
 msgid "Connect"
 msgstr ""
 
@@ -3294,17 +3410,17 @@ msgid "Build using AI"
 msgstr ""
 
 #: inc/lib/nps-survey/dist/main.js:1
-#: inc/lib/nps-survey/src/components/steps/nps-rating.jsx:54
+#: inc/lib/nps-survey/src/components/steps/nps-rating.jsx:49
 msgid "How likely are you to recommend Starter Templates to your friends or colleagues?"
 msgstr ""
 
 #: inc/lib/nps-survey/dist/main.js:1
-#: inc/lib/nps-survey/src/components/steps/nps-rating.jsx:75
+#: inc/lib/nps-survey/src/components/steps/nps-rating.jsx:70
 msgid "Very unlikely"
 msgstr ""
 
 #: inc/lib/nps-survey/dist/main.js:1
-#: inc/lib/nps-survey/src/components/steps/nps-rating.jsx:78
+#: inc/lib/nps-survey/src/components/steps/nps-rating.jsx:73
 msgid "Very likely"
 msgstr ""
 
@@ -3319,28 +3435,28 @@ msgid "We value your input. How can we improve your experience?"
 msgstr ""
 
 #: inc/lib/nps-survey/dist/main.js:1
-#: inc/lib/nps-survey/src/components/steps/comment.jsx:73
+#: inc/lib/nps-survey/src/components/steps/comment.jsx:83
 msgid "Submit"
 msgstr ""
 
 #: inc/lib/nps-survey/dist/main.js:1
-#: inc/lib/nps-survey/src/components/steps/plugin-rating.jsx:27
+#: inc/lib/nps-survey/src/components/steps/plugin-rating.jsx:46
 msgid "Thanks a lot for your feedback! 😍"
 msgstr ""
 
 #: inc/lib/nps-survey/dist/main.js:1
-#: inc/lib/nps-survey/src/components/steps/plugin-rating.jsx:34
+#: inc/lib/nps-survey/src/components/steps/plugin-rating.jsx:53
 msgid "Could you please do us a favor and give us a 5-star rating on WordPress? It would help others choose Starter Templates with confidence. Thank you!"
 msgstr ""
 
 #: inc/lib/nps-survey/dist/main.js:1
-#: inc/lib/nps-survey/src/components/steps/plugin-rating.jsx:48
-msgid "Rate the Plugin"
+#: inc/lib/nps-survey/src/components/steps/plugin-rating.jsx:75
+msgid "I already did!"
 msgstr ""
 
 #: inc/lib/nps-survey/dist/main.js:1
-#: inc/lib/nps-survey/src/components/steps/plugin-rating.jsx:61
-msgid "I already did!"
+#: inc/lib/nps-survey/src/components/steps/plugin-rating.jsx:84
+msgid "Rate the Plugin"
 msgstr ""
 
 #: inc/lib/onboarding/assets/dist/main.js:73
@@ -3918,7 +4034,7 @@ msgid "What's New?"
 msgstr ""
 
 #: inc/lib/onboarding/assets/dist/onboarding/main.js:123
-msgid "What's new"
+msgid "What's New"
 msgstr ""
 
 #: inc/lib/onboarding/assets/dist/onboarding/main.js:123
@@ -4004,6 +4120,30 @@ msgstr ""
 #. translators: %s: support link
 #: inc/lib/onboarding/assets/dist/onboarding/main.js:147
 msgid "By continuing you agree to our %1$s and %2$s."
+msgstr ""
+
+#: inc/lib/onboarding/assets/dist/onboarding/main.js:174
+msgid "Page Builder"
+msgstr ""
+
+#: inc/lib/onboarding/assets/dist/onboarding/main.js:174
+msgid "Design pages with visual website builder"
+msgstr ""
+
+#: inc/lib/onboarding/assets/dist/onboarding/main.js:174
+msgid "Contact Form"
+msgstr ""
+
+#: inc/lib/onboarding/assets/dist/onboarding/main.js:174
+msgid "Allow your visitors to get in touch with you"
+msgstr ""
+
+#: inc/lib/onboarding/assets/dist/onboarding/main.js:174
+msgid "eCommerce"
+msgstr ""
+
+#: inc/lib/onboarding/assets/dist/onboarding/main.js:174
+msgid "Sell your products online"
 msgstr ""
 
 #: inc/lib/onboarding/assets/dist/onboarding/main.js:174

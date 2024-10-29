@@ -19,14 +19,14 @@ export const handleCloseNpsSurvey = async function ( dispatch, step ) {
 		} );
 
 		if ( response.success ) {
-			console.log( 'NPS Survey dismissed!' );
+			console.info( 'NPS Survey dismissed!' );
 			dispatch( {
 				type: 'SET_SHOW_NPS',
 				payload: false,
 			} );
 		}
 	} catch ( error ) {
-		// TODO: Handle error
+		console.error( error );
 	}
 };
 
@@ -66,6 +66,19 @@ export const handleNpsSurveyApi = async function (
 		}
 		setProcessing( false );
 	} catch ( error ) {
-		// TODO: Handle error
+		console.error( error );
 	}
+};
+
+export const handleBack = ( event, dispatch, processing ) => {
+	event.preventDefault();
+
+	if ( processing ) {
+		return;
+	}
+
+	dispatch( {
+		type: 'SET_CURRENT_STEP',
+		payload: 'nps-rating',
+	} );
 };

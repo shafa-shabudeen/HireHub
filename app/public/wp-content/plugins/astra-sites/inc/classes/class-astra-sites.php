@@ -1547,7 +1547,7 @@ if ( ! class_exists( 'Astra_Sites' ) ) :
 						'utm_source' => ! empty( $source ) ? $source : 'elementor-templates',
 						'utm_medium' => 'dashboard',
 						'utm_campaign' => 'Starter-Template-Backend',
-					), 'https://wpastra.com/elementor-starter-templates/'
+					), 'https://wpastra.com/essential-toolkit-pricing/'
 				),
 				'beaver-builder' => add_query_arg(
 					array(
@@ -1561,14 +1561,14 @@ if ( ! class_exists( 'Astra_Sites' ) ) :
 						'utm_source' => ! empty( $source ) ? $source : 'gutenberg-templates',
 						'utm_medium' => 'dashboard',
 						'utm_campaign' => 'Starter-Template-Backend',
-					), 'https://wpastra.com/starter-templates-plans/'
+					), 'https://wpastra.com/essential-toolkit-pricing/'
 				),
 				'brizy' => add_query_arg(
 					array(
 						'utm_source' => ! empty( $source ) ? $source : 'brizy-templates',
 						'utm_medium' => 'dashboard',
 						'utm_campaign' => 'Starter-Template-Backend',
-					), 'https://wpastra.com/starter-templates-plans/'
+					), 'https://wpastra.com/essential-toolkit-pricing/'
 				),
 			);
 		}

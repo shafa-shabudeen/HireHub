@@ -36,7 +36,11 @@ if ( ! class_exists( 'UAGB_Block_Module' ) ) {
 		/**
 		 * Block Assets
 		 *
+<<<<<<< HEAD
 		 * @var block_assets
+=======
+		 * @var array<mixed> block_assets
+>>>>>>> ruvais
 		 */
 		public static $block_assets = null;
 

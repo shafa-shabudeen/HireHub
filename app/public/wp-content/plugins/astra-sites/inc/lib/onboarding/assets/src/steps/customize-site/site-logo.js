@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from 'react';
+import React, { useEffect } from 'react';
 import { PhotoIcon, TrashIcon } from '@heroicons/react/24/outline';
 import { __ } from '@wordpress/i18n';
 import { addFilter } from '@wordpress/hooks';
@@ -7,13 +7,13 @@ import { MediaUpload } from '@wordpress/media-utils';
 import { useStateValue } from '../../store/store';
 import { getDataUri, sendPostMessage } from '../../utils/functions';
 import { initialState } from '../../store/reducer';
-import ToggleSwitch from '../../components/toggle-switch';
+// import ToggleSwitch from '../../components/toggle-switch';
 
 const SiteLogo = () => {
 	const replaceMediaUpload = () => MediaUpload;
 	const [ { siteLogo }, dispatch ] = useStateValue();
-	const [ showTitle, setShowTitle ] = useState( true ),
-		toggleTitle = () => setShowTitle( ( prev ) => ! prev );
+	// const [ showTitle, setShowTitle ] = useState( true ),
+	// 	toggleTitle = () => setShowTitle( ( prev ) => ! prev );
 
 	addFilter(
 		'editor.MediaUpload',
@@ -75,10 +75,10 @@ const SiteLogo = () => {
 		dispatchPostMessage( 'siteLogo', newLogoOptions );
 	};
 
-	const handleOnChangeToggleTitle = () => {
-		dispatchPostMessage( 'siteTitle', ! showTitle );
-		toggleTitle();
-	};
+	// const handleOnChangeToggleTitle = () => {
+	// 	dispatchPostMessage( 'siteTitle', ! showTitle );
+	// 	toggleTitle();
+	// };
 
 	useEffect( () => {
 		if ( !! astraSitesVars.isRTLEnabled ) {
@@ -156,8 +156,8 @@ const SiteLogo = () => {
 								</div>
 							</button>
 						) }
-
-						{ siteLogo.url && (
+						{ /* Enable below code when we add site title in classic templates */ }
+						{ /* { siteLogo.url && (
 							<div className="flex items-center justify-between gap-2">
 								<span className="text-sm font-normal">
 									{ __( 'Show site title', 'astra-sites' ) }
@@ -172,7 +172,7 @@ const SiteLogo = () => {
 									}
 								/>
 							</div>
-						) }
+						) } */ }
 
 						{ siteLogo.url && (
 							<>

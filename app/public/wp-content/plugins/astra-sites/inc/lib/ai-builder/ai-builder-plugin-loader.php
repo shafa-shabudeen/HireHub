@@ -414,7 +414,9 @@ class Ai_Builder_Plugin_Loader {
 			'business_details'         => Ai_Builder_ZipWP_Integration::get_business_details(),
 			'skipFeatures'             => 'yes' === apply_filters( 'ai_builder_skip_features', 'no' ),
 			'show_premium_badge'       => 'yes' === apply_filters( 'ai_builder_show_premium_badge', 'yes' ),
+			'show_premium_templates'   => 'yes' === apply_filters( 'ai_builder_show_premium_templates', 'yes' ),
 			'parent_plugin'            => apply_filters( 'ai_builder_parent_plugin', 'wp-astra-sites' ),
+			'failed_sites'             => $this->get_failed_sites(),
 			'filtered_data'            => apply_filters(
 				'ai_builder_limit_exceeded_popup_strings',
 				array(
@@ -442,7 +444,30 @@ class Ai_Builder_Plugin_Loader {
 				)
 			),
 			'default_website_language' => apply_filters( 'ai_builder_default_website_language', 'en' ),
+			'show_zip_plan'            => apply_filters( 'ai_builder_show_zip_plan_details', true ),
 		);
+	}
+
+	/**
+	 * Get failed sites.
+	 *
+	 * @since 1.2.3
+	 *
+	 * @return array<int, array<string, mixed>>
+	 */
+	public function get_failed_sites() {
+
+		$failed_sites        = get_option( 'astra_sites_import_failed_sites', array() );
+		$active_failed_sites = array();
+		if ( is_array( $failed_sites ) ) {
+			foreach ( $failed_sites as $site ) {
+				if ( ! $site['is_expired'] ) {
+					$active_failed_sites[] = $site;
+				}
+			}
+		}
+
+		return $active_failed_sites;
 	}
 
 	/**

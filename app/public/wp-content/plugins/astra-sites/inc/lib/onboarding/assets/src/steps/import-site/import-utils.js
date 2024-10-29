@@ -17,6 +17,11 @@ export const getDemo = async ( id, storedState ) => {
 		.then( ( response ) => response.json() )
 		.then( ( response ) => {
 			if ( response.success ) {
+				const isEcommerce = response?.data[ 'required-plugins' ]?.some(
+					( plugin ) =>
+						plugin?.slug === 'surecart' ||
+						plugin?.slug === 'woocommerce'
+				);
 				starterTemplates.previewUrl =
 					'https:' + response.data[ 'astra-site-url' ];
 				dispatch( {
@@ -26,6 +31,7 @@ export const getDemo = async ( id, storedState ) => {
 					importErrorMessages: {},
 					importErrorResponse: [],
 					importError: false,
+					isEcommerce,
 				} );
 			} else {
 				let errorMessages = {};
@@ -174,12 +180,16 @@ export const getAiDemo = async (
 };
 
 export const checkRequiredPlugins = async ( storedState ) => {
-	const [ { enabledFeatureIds }, dispatch ] = storedState;
+	const [ { enabledFeatureIds, selectedEcommercePlugin }, dispatch ] =
+		storedState;
 	const reqPlugins = new FormData();
 	reqPlugins.append( 'action', 'astra-sites-required_plugins' );
 	reqPlugins.append( '_ajax_nonce', astraSitesVars._ajax_nonce );
 	if ( enabledFeatureIds.length !== 0 ) {
-		const featurePlugins = getFeaturePluginList( enabledFeatureIds );
+		const featurePlugins = getFeaturePluginList(
+			enabledFeatureIds,
+			selectedEcommercePlugin
+		);
 		reqPlugins.append(
 			'feature_plugins',
 			JSON.stringify( featurePlugins )
@@ -206,12 +216,31 @@ export const checkRequiredPlugins = async ( storedState ) => {
 		} );
 };
 
-function getFeaturePluginList( features ) {
+function getFeaturePluginList( features, selectedEcommercePlugin ) {
 	const requiredPlugins = [];
 
 	features?.forEach( ( feature ) => {
 		switch ( feature ) {
 			case 'ecommerce':
+				if ( selectedEcommercePlugin === 'surecart' ) {
+					requiredPlugins.push( {
+						name: 'SureCart',
+						slug: 'surecart',
+						init: 'surecart/surecart.php',
+					} );
+				} else if ( selectedEcommercePlugin === 'woocommerce' ) {
+					requiredPlugins.push( {
+						name: 'WooCommerce',
+						slug: 'woocommerce',
+						init: 'woocommerce/woocommerce.php',
+					} );
+					requiredPlugins.push( {
+						name: 'Checkout Plugins Stripe Woo',
+						slug: 'checkout-plugins-stripe-woo',
+						init: 'checkout-plugins-stripe-woo/checkout-plugins-stripe-woo.php',
+					} );
+				}
+				break;
 			case 'donations':
 				requiredPlugins.push( {
 					name: 'SureCart',

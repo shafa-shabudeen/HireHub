@@ -43,7 +43,7 @@ const EcommerceSelectionsControls = () => {
 					<ChevronRightIcon className="w-4 h-4 !fill-none" />
 				</Button>
 
-				<PreviousStepLink onClick={ lastStep } before>
+				<PreviousStepLink onClick={ lastStep }>
 					{ __( 'Back', 'astra-sites' ) }
 				</PreviousStepLink>
 			</div>

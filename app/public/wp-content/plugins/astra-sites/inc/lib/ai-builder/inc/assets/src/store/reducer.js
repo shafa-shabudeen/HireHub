@@ -19,7 +19,7 @@ export const defaultOnboardingAIState = {
 	stepData: {
 		tokenExists: aiBuilderVars?.zip_token_exists || '',
 		businessType: '',
-		siteLanguage: aiBuilderVars.default_website_language,
+		siteLanguage: aiBuilderVars?.default_website_language,
 		businessName: '',
 		businessDetails: '',
 		keywords: [],
@@ -40,7 +40,9 @@ export const defaultOnboardingAIState = {
 			currentPage: 0,
 		},
 		siteFeatures: [],
+		sitesFeaturesData: {},
 		siteLogo: siteLogoDefault,
+		siteTitleVisible: true,
 		activeColorPalette: null,
 		activeTypography: null,
 		defaultColorPalette: null,
@@ -56,6 +58,9 @@ export const defaultOnboardingAIState = {
 	continueProgressModal: {
 		open: false,
 	},
+	planInformationModal: {
+		open: false,
+	},
 	importSiteProgressData: {
 		builder: 'gutenberg',
 		templateId: '',
@@ -63,7 +68,7 @@ export const defaultOnboardingAIState = {
 		requiredPlugins: [],
 		tryAgainCount: 0,
 		pluginInstallationAttempts: 0,
-		reset: 'yes' === aiBuilderVars.firstImportStatus ? true : false,
+		reset: 'yes' === aiBuilderVars?.firstImportStatus ? true : false,
 		themeStatus: false,
 		importStatusLog: '',
 		importStatus: '',
@@ -90,11 +95,12 @@ export const defaultOnboardingAIState = {
 		themeActivateFlag: true,
 		widgetImportFlag: true,
 		contentImportFlag: true,
-		analyticsFlag: aiBuilderVars.analytics !== 'yes' ? true : false,
+		analyticsFlag: aiBuilderVars?.analytics !== 'yes' ? true : false,
 		shownRequirementOnce: false,
 		createSiteStatus: false,
 	},
 	loadingNextStep: false,
+	failedSites: aiBuilderVars?.failed_sites,
 };
 
 let updatedInitialValue = cloneDeep( defaultOnboardingAIState );
@@ -104,7 +110,7 @@ updatedInitialValue = {
 		tokenExists: aiBuilderVars?.zip_token_exists || '',
 		businessType: aiStepValues?.business_category_name || '',
 		siteLanguage:
-			aiStepValues?.language || aiBuilderVars.default_website_language,
+			aiStepValues?.language || aiBuilderVars?.default_website_language,
 		businessName: aiStepValues?.business_name || '',
 		businessDetails: aiStepValues?.business_description || '',
 		keywords: aiStepValues?.image_keyword || [],
@@ -130,7 +136,9 @@ updatedInitialValue = {
 			currentPage: 0,
 		},
 		siteFeatures: [],
+		siteFeaturesData: {},
 		siteLogo: siteLogoDefault,
+		siteTitleVisible: true,
 		activeColorPalette: null,
 		activeTypography: null,
 		defaultColorPalette: null,
@@ -183,6 +191,11 @@ const reducer = ( state = initialState, action ) => {
 			return {
 				...state,
 				apiErrorModal: action.payload,
+			};
+		case actionTypes.SET_PLAN_INFORMATION_MODAL:
+			return {
+				...state,
+				planInformationModal: action.payload,
 			};
 		case actionTypes.SET_CONTINUE_PROGRESS_MODAL:
 			return {
@@ -265,6 +278,14 @@ const reducer = ( state = initialState, action ) => {
 				stepData: {
 					...state.stepData,
 					selectedTemplate: action.payload,
+				},
+			};
+		case actionTypes.SET_SITE_FEATURES_DATA:
+			return {
+				...state,
+				stepData: {
+					...state.stepData,
+					siteFeaturesData: action.payload,
 				},
 			};
 		case actionTypes.SET_SELECTED_TEMPLATE_IS_PREMIUM:
@@ -357,6 +378,7 @@ const reducer = ( state = initialState, action ) => {
 				stepData: {
 					...stepData,
 					siteFeatures: merge(
+						stepData?.siteFeatures ?? [],
 						( action?.payload ?? [] ).map( ( feature ) => {
 							const defaultValue =
 								templateData?.features?.[ feature.id ] ===
@@ -366,8 +388,7 @@ const reducer = ( state = initialState, action ) => {
 								enabled: defaultValue,
 								compulsory: defaultValue,
 							};
-						} ),
-						stepData?.siteFeatures ?? []
+						} )
 					),
 				},
 			};
@@ -376,15 +397,17 @@ const reducer = ( state = initialState, action ) => {
 				...state,
 				stepData: {
 					...state.stepData,
-					siteFeatures: state.stepData.siteFeatures.map( ( item ) => {
-						if ( item.id === action.payload ) {
-							return {
-								...item,
-								enabled: ! item.enabled,
-							};
+					siteFeatures: state.stepData?.siteFeatures.map(
+						( item ) => {
+							if ( item.id === action.payload ) {
+								return {
+									...item,
+									enabled: ! item.enabled,
+								};
+							}
+							return item;
 						}
-						return item;
-					} ),
+					),
 				},
 			};
 		case actionTypes.SET_WEBSITE_TEMPLATE_KEYWORDS:
@@ -406,6 +429,14 @@ const reducer = ( state = initialState, action ) => {
 				stepData: {
 					...state.stepData,
 					siteLogo: action.payload,
+				},
+			};
+		case actionTypes.SET_SITE_TITLE_VISIBLE:
+			return {
+				...state,
+				stepData: {
+					...state.stepData,
+					siteTitleVisible: action.payload,
 				},
 			};
 		case actionTypes.SET_WEBSITE_COLOR_PALETTE:
@@ -445,6 +476,11 @@ const reducer = ( state = initialState, action ) => {
 			return {
 				...state,
 				loadingNextStep: action.payload,
+			};
+		case actionTypes.SET_FULL_ONBOARDING_STATE:
+			return {
+				...state,
+				stepData: { ...action.payload.stepData },
 			};
 		default:
 			return state;

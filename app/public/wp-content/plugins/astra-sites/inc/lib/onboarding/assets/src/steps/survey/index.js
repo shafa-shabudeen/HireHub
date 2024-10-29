@@ -459,7 +459,9 @@ const Survey = () => {
 							: false
 					}
 				>
-					{ __( 'Skip & Continue', 'astra-sites' ) }
+					<span className="leading-[15px]">
+						{ __( 'Skip & Continue', 'astra-sites' ) }
+					</span>
 					{ ICONS.arrowRight }
 				</button>
 			</div>

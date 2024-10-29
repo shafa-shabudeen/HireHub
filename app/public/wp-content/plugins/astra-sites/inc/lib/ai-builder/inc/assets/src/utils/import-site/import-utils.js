@@ -115,7 +115,7 @@ export const getDemo = async ( id, storedState ) => {
 						'Fetching related demo failed.',
 						'ai-builder'
 					),
-					secondaryText: aiBuilderVars.ajax_request_failed_secondary,
+					secondaryText: aiBuilderVars?.ajax_request_failed_secondary,
 					errorCode: '',
 					errorText: error,
 					solutionText: '',
@@ -309,7 +309,7 @@ export const setColorPalettes = async ( palette ) => {
 	} );
 };
 
-export const setSiteTitle = async ( businessName ) => {
+export const setSiteTitle = async ( businessName, showSiteTitle ) => {
 	if ( ! businessName ) {
 		return;
 	}
@@ -319,6 +319,7 @@ export const setSiteTitle = async ( businessName ) => {
 	data.append( 'param', 'site-title' );
 	data.append( 'business-name', businessName );
 	data.append( '_ajax_nonce', aiBuilderVars._ajax_nonce );
+	data.append( 'show-site-title', showSiteTitle );
 
 	await fetch( ajaxurl, {
 		method: 'post',

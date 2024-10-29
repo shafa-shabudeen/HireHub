@@ -4,7 +4,11 @@
  * Plugin URI: https://www.brainstormforce.com
  * Author: Brainstorm Force
  * Author URI: https://www.brainstormforce.com
+<<<<<<< HEAD
  * Version: 2.15.3
+=======
+ * Version: 2.16.0
+>>>>>>> ruvais
  * Description: The Spectra extends the Gutenberg functionality with several unique and feature-rich blocks that help build websites faster.
  * Text Domain: ultimate-addons-for-gutenberg
  * Domain Path: /languages

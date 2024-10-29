@@ -54,7 +54,7 @@ const TemplateInfo = ( { template, position } ) => {
 				{ isEcommerceEnabled && (
 					<div className="flex font-medium items-center gap-1 border leading-[14px] border-ecommerce-border text-ecommerce-text bg-ecommerce-badge text-xs px-2 py-0.5 rounded-[6px]">
 						<ShoppingCartIcon className="w-4 h-4" />
-						<span>E-Commerce</span>
+						<span>{ __( 'E-Commerce', 'ai-builder' ) }</span>
 					</div>
 				) }
 				<Menu as="div" className="relative">

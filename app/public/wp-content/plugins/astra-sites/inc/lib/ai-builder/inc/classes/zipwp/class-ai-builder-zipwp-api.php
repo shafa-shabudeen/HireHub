@@ -520,6 +520,66 @@ class Ai_Builder_ZipWP_Api {
 				),
 			)
 		);
+
+		register_rest_route(
+			$namespace,
+			'/set-step-data/',
+			array(
+				array(
+					'methods'             => \WP_REST_Server::CREATABLE,
+					'callback'            => array( $this, 'set_step_data' ),
+					'permission_callback' => array( $this, 'get_item_permissions_check' ),
+					'args'                => array(
+						'business_details' => array(
+							'type'     => 'string',
+							'required' => true,
+						),
+					),
+				),
+			)
+		);
+	}
+
+	/**
+	 * Update onboarding data.
+	 *
+	 * @param \WP_REST_Request $request Full details about the request.
+	 * @return mixed
+	 *
+	 * @since 1.2.3
+	 */
+	public function set_step_data( $request ) {
+
+		$nonce = (string) $request->get_header( 'X-WP-Nonce' );
+		// Verify the nonce.
+		if ( ! wp_verify_nonce( sanitize_text_field( $nonce ), 'wp_rest' ) ) {
+			wp_send_json_error(
+				array(
+					'data'   => __( 'Nonce verification failed.', 'astra-sites' ),
+					'status' => false,
+
+				)
+			);
+		}
+
+		$business_details     = isset( $request['business_details'] ) ? json_decode( $request['business_details'], true ) : array();
+		$old_business_details = get_option( 'zipwp_user_business_details', array() );
+
+		if ( ! is_array( $old_business_details ) ) {
+			$old_business_details = array();
+		}
+
+		if ( is_array( $business_details ) && ! empty( $business_details ) ) {
+			$business_details = array_merge( $old_business_details, array_intersect_key( $business_details, $old_business_details ) );
+		}
+		update_option( 'zipwp_user_business_details', $business_details );
+		delete_option( 'ast_sites_downloaded_images' );
+
+		wp_send_json_success(
+			array(
+				'status' => true,
+			)
+		);
 	}
 
 	/**
@@ -658,6 +718,7 @@ class Ai_Builder_ZipWP_Api {
 			'site_type'              => 'ai',
 			'site_source'            => apply_filters( 'ai_builder_site_source', 'starter-templates' ),
 			'site_features'          => isset( $request['site_features'] ) ? $request['site_features'] : [],
+			'site_features_data'     => isset( $request['site_features_data'] ) ? $request['site_features_data'] : [],
 		);
 
 		if ( empty( $post_data['images'] ) ) {
@@ -689,7 +750,9 @@ class Ai_Builder_ZipWP_Api {
 		if ( 201 === $response_code || 200 === $response_code ) {
 
 			$site_data = is_array( $response_data ) ? $response_data['site'] : array();
-
+			if ( is_array( $site_data ) ) {
+				$site_data['step_data'] = $post_data;
+			}
 			update_option( 'zipwp_import_site_details', $site_data );
 
 			wp_send_json_success(
@@ -785,7 +848,7 @@ class Ai_Builder_ZipWP_Api {
 					wp_send_json_error( __( 'There was an error downloading the XML file.', 'astra-sites' ) );
 				} else {
 
-					update_option( 'astra_sites_imported_wxr_id', $attachment_id, 'no' );
+					update_option( 'astra_sites_imported_wxr_id', $attachment_id, false );
 					$attachment_metadata = wp_generate_attachment_metadata( $attachment_id, $file_path );
 					wp_update_attachment_metadata( $attachment_id, $attachment_metadata );
 

@@ -2,13 +2,18 @@
 # This file is distributed under the same license as the Spectra plugin.
 msgid ""
 msgstr ""
+<<<<<<< HEAD
 "Project-Id-Version: Spectra 2.15.3\n"
+=======
+"Project-Id-Version: Spectra 2.16.0\n"
+>>>>>>> ruvais
 "Report-Msgid-Bugs-To: https://wordpress.org/support/plugin/ultimate-addons-for-gutenberg\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
+<<<<<<< HEAD
 "POT-Creation-Date: 2024-09-18T06:17:42+00:00\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "X-Generator: WP-CLI 2.9.0\n"
@@ -22,20 +27,48 @@ msgstr ""
 #: admin-core/inc/admin-menu.php:171
 #: admin-core/inc/admin-menu.php:182
 #: admin-core/inc/admin-menu.php:261
+=======
+"POT-Creation-Date: 2024-10-08T06:29:45+02:00\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"X-Generator: WP-CLI 2.11.0\n"
+"X-Domain: ultimate-addons-for-gutenberg\n"
+
+#. Plugin Name of the plugin
+#: ultimate-addons-for-gutenberg.php
+#: admin-core/inc/admin-menu.php:147
+#: admin-core/inc/admin-menu.php:148
+#: admin-core/inc/admin-menu.php:159
+#: admin-core/inc/admin-menu.php:169
+#: admin-core/inc/admin-menu.php:183
+#: admin-core/inc/admin-menu.php:194
+#: admin-core/inc/admin-menu.php:274
+>>>>>>> ruvais
 #: classes/class-uagb-init-blocks.php:576
 msgid "Spectra"
 msgstr ""
 
 #. Plugin URI of the plugin
 #. Author URI of the plugin
+<<<<<<< HEAD
+=======
+#: ultimate-addons-for-gutenberg.php
+>>>>>>> ruvais
 msgid "https://www.brainstormforce.com"
 msgstr ""
 
 #. Description of the plugin
+<<<<<<< HEAD
+=======
+#: ultimate-addons-for-gutenberg.php
+>>>>>>> ruvais
 msgid "The Spectra extends the Gutenberg functionality with several unique and feature-rich blocks that help build websites faster."
 msgstr ""
 
 #. Author of the plugin
+<<<<<<< HEAD
+=======
+#: ultimate-addons-for-gutenberg.php
+>>>>>>> ruvais
 msgid "Brainstorm Force"
 msgstr ""
 
@@ -58,7 +91,11 @@ msgid "Successfully saved data!"
 msgstr ""
 
 #: admin-core/ajax/common-settings.php:180
+<<<<<<< HEAD
 #: classes/class-uagb-init-blocks.php:1061
+=======
+#: classes/class-uagb-init-blocks.php:1070
+>>>>>>> ruvais
 msgid "No post data found!"
 msgstr ""
 
@@ -111,12 +148,18 @@ msgstr ""
 msgid "Sorry, you cannot list resources."
 msgstr ""
 
+<<<<<<< HEAD
 #: admin-core/inc/admin-menu.php:97
 #: admin-core/inc/admin-menu.php:183
+=======
+#: admin-core/inc/admin-menu.php:99
+#: admin-core/inc/admin-menu.php:195
+>>>>>>> ruvais
 #: admin-core/assets/build/dashboard-app.js:1
 msgid "Settings"
 msgstr ""
 
+<<<<<<< HEAD
 #: admin-core/inc/admin-menu.php:148
 msgid "Dashboard"
 msgstr ""
@@ -126,12 +169,59 @@ msgid "Blocks"
 msgstr ""
 
 #: admin-core/inc/admin-menu.php:172
+=======
+#: admin-core/inc/admin-menu.php:100
+#: admin-core/assets/build/dashboard-app.js:3
+msgid "Rollback"
+msgstr ""
+
+#: admin-core/inc/admin-menu.php:105
+msgid "Get Spectra Pro"
+msgstr ""
+
+#: admin-core/inc/admin-menu.php:160
+msgid "Dashboard"
+msgstr ""
+
+#: admin-core/inc/admin-menu.php:170
+#: admin-core/assets/build/dashboard-app.js:1
+msgid "Blocks"
+msgstr ""
+
+#: admin-core/inc/admin-menu.php:184
+>>>>>>> ruvais
 #: admin-core/assets/build/dashboard-app.js:1
 msgid "AI Features"
 msgstr ""
 
+<<<<<<< HEAD
 #. translators: %1$s: Opening Strong Tag, %2$s: Closing Strong Tag, %3$s Anchor Tag with Star Symbol Codes.
 #: admin-core/inc/admin-menu.php:502
+=======
+#: admin-core/inc/admin-menu.php:285
+msgid "Installing"
+msgstr ""
+
+#: admin-core/inc/admin-menu.php:286
+msgid "Installed"
+msgstr ""
+
+#: admin-core/inc/admin-menu.php:287
+msgid "Activating"
+msgstr ""
+
+#: admin-core/inc/admin-menu.php:288
+msgid "Activated"
+msgstr ""
+
+#: admin-core/inc/admin-menu.php:289
+#: admin-core/assets/build/dashboard-app.js:5
+msgid "Activate"
+msgstr ""
+
+#. translators: %1$s: Opening Strong Tag, %2$s: Closing Strong Tag, %3$s Anchor Tag with Star Symbol Codes.
+#: admin-core/inc/admin-menu.php:525
+>>>>>>> ruvais
 msgid "Enjoyed %1$sSpectra%2$s? Please leave us a %3$s rating. We really appreciate your support!"
 msgstr ""
 
@@ -235,7 +325,11 @@ msgstr ""
 msgid "Taxonomy Not Available."
 msgstr ""
 
+<<<<<<< HEAD
 #: blocks-config/taxonomy-list/class-uagb-taxonomy-list.php:708
+=======
+#: blocks-config/taxonomy-list/class-uagb-taxonomy-list.php:709
+>>>>>>> ruvais
 #: includes/blocks/forms-select/block.php:15
 msgid "Select"
 msgstr ""
@@ -7623,6 +7717,7 @@ msgstr ""
 msgid "Travel"
 msgstr ""
 
+<<<<<<< HEAD
 #: classes/class-uagb-admin-helper.php:434
 msgid "Full Site Editor's Global Styles"
 msgstr ""
@@ -7650,11 +7745,41 @@ msgstr ""
 
 #: classes/class-uagb-admin.php:174
 #: classes/class-uagb-admin.php:205
+=======
+#: classes/class-uagb-admin-helper.php:464
+msgid "Full Site Editor's Global Styles"
+msgstr ""
+
+#: classes/class-uagb-admin-helper.php:467
+msgid "Filter added through any 3rd Party Theme/Plugin."
+msgstr ""
+
+#: classes/class-uagb-admin-helper.php:471
+msgid "Theme"
+msgstr ""
+
+#: classes/class-uagb-admin.php:88
+msgid "Migration started successfully."
+msgstr ""
+
+#: classes/class-uagb-admin.php:104
+#: classes/class-uagb-admin.php:174
+msgid "You do not have permission to access this page."
+msgstr ""
+
+#: classes/class-uagb-admin.php:121
+msgid "Log file not found."
+msgstr ""
+
+#: classes/class-uagb-admin.php:175
+#: classes/class-uagb-admin.php:206
+>>>>>>> ruvais
 #: admin-core/assets/build/dashboard-app.js:1
 #: admin-core/assets/build/dashboard-app.js:3
 msgid "Rollback to Previous Version"
 msgstr ""
 
+<<<<<<< HEAD
 #: classes/class-uagb-admin.php:187
 msgid "Error occurred, The version selected is invalid. Try selecting different version."
 msgstr ""
@@ -7716,16 +7841,101 @@ msgid "Your Spectra database is now up-to-date. Your website will continue to fu
 msgstr ""
 
 #: classes/class-uagb-admin.php:393
+=======
+#: classes/class-uagb-admin.php:188
+msgid "Error occurred, The version selected is invalid. Try selecting different version."
+msgstr ""
+
+#: classes/class-uagb-admin.php:302
+msgid "Wow! Spectra has helped you build over 5 pages!!"
+msgstr ""
+
+#: classes/class-uagb-admin.php:303
+msgid "We're a small independent team passionate about creating plugins like this one. It would mean the world to us if you could spend just a minute to leave a 5-star review on WordPress' official website. Your support really helps us a lot!"
+msgstr ""
+
+#: classes/class-uagb-admin.php:305
+msgid "Ok, you deserve it"
+msgstr ""
+
+#: classes/class-uagb-admin.php:307
+msgid "Nope, maybe later"
+msgstr ""
+
+#: classes/class-uagb-admin.php:308
+msgid "I already did"
+msgstr ""
+
+#: classes/class-uagb-admin.php:345
+msgid "Spectra database update required"
+msgstr ""
+
+#: classes/class-uagb-admin.php:346
+msgid "We've detected that some of your pages were created with an older version of Spectra. To ensure your designs remain unaffected, we recommend updating the Spectra database now. Updating the Spectra database will not impact any other parts of your website."
+msgstr ""
+
+#: classes/class-uagb-admin.php:347
+msgid "To be on the safer side, please be sure to back up your site before updating."
+msgstr ""
+
+#: classes/class-uagb-admin.php:348
+msgid "Update Spectra Database"
+msgstr ""
+
+#: classes/class-uagb-admin.php:350
+msgid "Learn More About This"
+msgstr ""
+
+#: classes/class-uagb-admin.php:375
+msgid "Spectra database update in progress"
+msgstr ""
+
+#: classes/class-uagb-admin.php:376
+msgid "Great! This should only take a few minutes. Thanks for hanging in there."
+msgstr ""
+
+#: classes/class-uagb-admin.php:401
+msgid "Update Successful!"
+msgstr ""
+
+#: classes/class-uagb-admin.php:402
+msgid "Your Spectra database is now up-to-date. Your website will continue to function as before."
+msgstr ""
+
+#: classes/class-uagb-admin.php:402
+>>>>>>> ruvais
 msgid "View Log"
 msgstr ""
 
 #. translators: %s: html tags
+<<<<<<< HEAD
 #: classes/class-uagb-admin.php:412
 msgid "Spectra requires&nbsp;%3$sBlock Editor%4$s. You can change your editor settings to Block Editor from&nbsp;%1$shere%2$s. Plugin is currently NOT RUNNING."
 msgstr ""
 
 #: classes/class-uagb-fse-fonts-compatibility.php:165
 #: classes/class-uagb-init-blocks.php:717
+=======
+#: classes/class-uagb-admin.php:421
+msgid "Spectra requires&nbsp;%3$sBlock Editor%4$s. You can change your editor settings to Block Editor from&nbsp;%1$shere%2$s. Plugin is currently NOT RUNNING."
+msgstr ""
+
+#: classes/class-uagb-admin.php:466
+msgid "Want to do more with Popup Builder?"
+msgstr ""
+
+#: classes/class-uagb-admin.php:467
+msgid "Maximize your popup potential with Spectra Pro. Unlock enhanced features, intuitive design options, and increased conversions!"
+msgstr ""
+
+#: classes/class-uagb-admin.php:469
+#: admin-core/assets/build/dashboard-app.js:1
+msgid "Upgrade Now"
+msgstr ""
+
+#: classes/class-uagb-fse-fonts-compatibility.php:165
+#: classes/class-uagb-init-blocks.php:726
+>>>>>>> ruvais
 msgid "Default"
 msgstr ""
 
@@ -7818,18 +8028,27 @@ msgstr ""
 msgid "Please select a valid Contact Form 7."
 msgstr ""
 
+<<<<<<< HEAD
 #: classes/class-uagb-init-blocks.php:802
+=======
+#: classes/class-uagb-init-blocks.php:811
+>>>>>>> ruvais
 msgid ""
 "Use custom class added in block's advanced settings to target your desired block. Examples:\n"
 "\t\t.my-class {text-align: center;} // my-class is a custom selector"
 msgstr ""
 
+<<<<<<< HEAD
 #: classes/class-uagb-init-blocks.php:861
+=======
+#: classes/class-uagb-init-blocks.php:870
+>>>>>>> ruvais
 #: classes/class-uagb-rest-api.php:318
 #: classes/class-uagb-rest-api.php:333
 msgid "None"
 msgstr ""
 
+<<<<<<< HEAD
 #: classes/class-uagb-init-blocks.php:890
 #: classes/class-uagb-init-blocks.php:923
 msgid "Select Form"
@@ -7844,6 +8063,22 @@ msgid "You have not added any Gravity Forms yet."
 msgstr ""
 
 #: classes/class-uagb-init-blocks.php:953
+=======
+#: classes/class-uagb-init-blocks.php:899
+#: classes/class-uagb-init-blocks.php:932
+msgid "Select Form"
+msgstr ""
+
+#: classes/class-uagb-init-blocks.php:913
+msgid "You have not added any Contact Form 7 yet."
+msgstr ""
+
+#: classes/class-uagb-init-blocks.php:946
+msgid "You have not added any Gravity Forms yet."
+msgstr ""
+
+#: classes/class-uagb-init-blocks.php:962
+>>>>>>> ruvais
 msgid "Invalid request"
 msgstr ""
 
@@ -8226,6 +8461,10 @@ msgid "Highlight important information using inline notice block."
 msgstr ""
 
 #: includes/blocks/instagram-feed/block.php:16
+<<<<<<< HEAD
+=======
+#: admin-core/assets/build/dashboard-app.js:1
+>>>>>>> ruvais
 msgid "Instagram Feed"
 msgstr ""
 
@@ -8234,6 +8473,10 @@ msgid "This block allows you to add Instagram Feeds."
 msgstr ""
 
 #: includes/blocks/login/block.php:16
+<<<<<<< HEAD
+=======
+#: admin-core/assets/build/dashboard-app.js:1
+>>>>>>> ruvais
 msgid "Login Form"
 msgstr ""
 
@@ -8242,6 +8485,10 @@ msgid "This block lets you add a user login form."
 msgstr ""
 
 #: includes/blocks/loop-builder/block.php:16
+<<<<<<< HEAD
+=======
+#: admin-core/assets/build/dashboard-app.js:1
+>>>>>>> ruvais
 msgid "Loop Builder"
 msgstr ""
 
@@ -8373,6 +8620,10 @@ msgid "Customize your post title."
 msgstr ""
 
 #: includes/blocks/register/block.php:16
+<<<<<<< HEAD
+=======
+#: admin-core/assets/build/dashboard-app.js:1
+>>>>>>> ruvais
 msgid "Registration Form"
 msgstr ""
 
@@ -8614,7 +8865,11 @@ msgstr ""
 #: lib/gutenberg-templates/inc/importer/plugin.php:269
 #: lib/gutenberg-templates/inc/importer/plugin.php:273
 #: lib/gutenberg-templates/inc/importer/plugin.php:436
+<<<<<<< HEAD
 #: lib/zip-ai/classes/sidebar-configurations.php:251
+=======
+#: lib/zip-ai/classes/sidebar-configurations.php:250
+>>>>>>> ruvais
 msgid "Something went wrong"
 msgstr ""
 
@@ -8652,7 +8907,11 @@ msgid "The Zip AI Middleware encountered an error."
 msgstr ""
 
 #. translators: %1$s: HTML link start tag, %2$s: HTML link end tag.
+<<<<<<< HEAD
 #: lib/zip-ai/classes/admin-configurations.php:507
+=======
+#: lib/zip-ai/classes/admin-configurations.php:513
+>>>>>>> ruvais
 msgid "Thank you for using %1$sZip AI.%2$s"
 msgstr ""
 
@@ -8676,11 +8935,19 @@ msgstr ""
 msgid "The message array was not supplied"
 msgstr ""
 
+<<<<<<< HEAD
 #: lib/zip-ai/classes/sidebar-configurations.php:265
 msgid "Invalid auth token."
 msgstr ""
 
 #: lib/zip-ai/classes/sidebar-configurations.php:266
+=======
+#: lib/zip-ai/classes/sidebar-configurations.php:264
+msgid "Invalid auth token."
+msgstr ""
+
+#: lib/zip-ai/classes/sidebar-configurations.php:265
+>>>>>>> ruvais
 msgid "You have no credits left."
 msgstr ""
 
@@ -8700,7 +8967,11 @@ msgid "data object is empty"
 msgstr ""
 
 #: admin-core/assets/build/dashboard-app.js:1
+<<<<<<< HEAD
 msgid "Knowledge Base"
+=======
+msgid "Upgrade To Pro"
+>>>>>>> ruvais
 msgstr ""
 
 #: admin-core/assets/build/dashboard-app.js:1
@@ -8724,19 +8995,34 @@ msgid "Activate Spectra Pro"
 msgstr ""
 
 #: admin-core/assets/build/dashboard-app.js:1
+<<<<<<< HEAD
 msgid "Upgrade to Pro"
 msgstr ""
 
 #: admin-core/assets/build/dashboard-app.js:1
+=======
+>>>>>>> ruvais
 msgid "What's New?"
 msgstr ""
 
 #: admin-core/assets/build/dashboard-app.js:1
+<<<<<<< HEAD
 msgid "Welcome"
 msgstr ""
 
 #: admin-core/assets/build/dashboard-app.js:1
 msgid "Blocks / Extensions"
+=======
+msgid "Unlock Spectra's Full Potential!"
+msgstr ""
+
+#: admin-core/assets/build/dashboard-app.js:1
+msgid " for exclusive features and unbeatable performance."
+msgstr ""
+
+#: admin-core/assets/build/dashboard-app.js:1
+msgid "Free vs Pro"
+>>>>>>> ruvais
 msgstr ""
 
 #: admin-core/assets/build/dashboard-app.js:1
@@ -8752,7 +9038,40 @@ msgid "Create New Page"
 msgstr ""
 
 #: admin-core/assets/build/dashboard-app.js:1
+<<<<<<< HEAD
 msgid "Visit Our Website"
+=======
+msgid "Read Full Guide"
+msgstr ""
+
+#: admin-core/assets/build/dashboard-app.js:1
+msgid "Limitless Design with Spectra Pro!"
+msgstr ""
+
+#: admin-core/assets/build/dashboard-app.js:1
+msgid "Experience design freedom with Spectra Pro. Utilize advanced blocks, extensions, and premium features to create a websites that stands out!"
+msgstr ""
+
+#: admin-core/assets/build/dashboard-app.js:1
+#: admin-core/assets/build/dashboard-app.js:5
+msgid "Dynamic Content"
+msgstr ""
+
+#: admin-core/assets/build/dashboard-app.js:1
+msgid "Advanced Popup Builder"
+msgstr ""
+
+#: admin-core/assets/build/dashboard-app.js:1
+msgid "Instagram Feed Block"
+msgstr ""
+
+#: admin-core/assets/build/dashboard-app.js:1
+msgid "Global Block Styles"
+msgstr ""
+
+#: admin-core/assets/build/dashboard-app.js:1
+msgid "Advanced Animations"
+>>>>>>> ruvais
 msgstr ""
 
 #: admin-core/assets/build/dashboard-app.js:1
@@ -8780,6 +9099,7 @@ msgid "Join Now"
 msgstr ""
 
 #: admin-core/assets/build/dashboard-app.js:1
+<<<<<<< HEAD
 msgid "Rate Us"
 msgstr ""
 
@@ -8797,6 +9117,9 @@ msgstr ""
 
 #: admin-core/assets/build/dashboard-app.js:1
 msgid "Select a tab"
+=======
+msgid "Blocks / Extensions"
+>>>>>>> ruvais
 msgstr ""
 
 #: admin-core/assets/build/dashboard-app.js:1
@@ -8840,11 +9163,14 @@ msgid "Animations"
 msgstr ""
 
 #: admin-core/assets/build/dashboard-app.js:1
+<<<<<<< HEAD
 #: admin-core/assets/build/dashboard-app.js:5
 msgid "Dynamic Content"
 msgstr ""
 
 #: admin-core/assets/build/dashboard-app.js:1
+=======
+>>>>>>> ruvais
 msgid "Documentations"
 msgstr ""
 
@@ -8857,6 +9183,47 @@ msgid "Global Block Style"
 msgstr ""
 
 #: admin-core/assets/build/dashboard-app.js:1
+<<<<<<< HEAD
+=======
+msgid "Dynamic content"
+msgstr ""
+
+#: admin-core/assets/build/dashboard-app.js:1
+msgid "Popup Builder Pro"
+msgstr ""
+
+#: admin-core/assets/build/dashboard-app.js:1
+msgid "Modal Pro"
+msgstr ""
+
+#: admin-core/assets/build/dashboard-app.js:1
+msgid "Countdown Pro"
+msgstr ""
+
+#: admin-core/assets/build/dashboard-app.js:1
+msgid "Slider Pro"
+msgstr ""
+
+#: admin-core/assets/build/dashboard-app.js:1
+msgid "Image Gallery Pro"
+msgstr ""
+
+#: admin-core/assets/build/dashboard-app.js:1
+msgid "Upgrade to Spectra Pro to use this block."
+msgstr ""
+
+#: admin-core/assets/build/dashboard-app.js:1
+msgid "Activate the Pro plugin to enable this block."
+msgstr ""
+
+#: admin-core/assets/build/dashboard-app.js:1
+#: admin-core/assets/build/dashboard-app.js:7
+#: admin-core/assets/build/dashboard-app.js:13
+msgid "Activate Now"
+msgstr ""
+
+#: admin-core/assets/build/dashboard-app.js:1
+>>>>>>> ruvais
 msgid "File Generation"
 msgstr ""
 
@@ -8911,10 +9278,13 @@ msgid "Are you sure you want to rollback to Spectra v%1$s?"
 msgstr ""
 
 #: admin-core/assets/build/dashboard-app.js:3
+<<<<<<< HEAD
 msgid "Rollback"
 msgstr ""
 
 #: admin-core/assets/build/dashboard-app.js:3
+=======
+>>>>>>> ruvais
 #: admin-core/assets/build/dashboard-app.js:5
 #: admin-core/assets/build/dashboard-app.js:9
 #: admin-core/assets/build/dashboard-app.js:13
@@ -9152,10 +9522,13 @@ msgid "Deactivate"
 msgstr ""
 
 #: admin-core/assets/build/dashboard-app.js:5
+<<<<<<< HEAD
 msgid "Activate"
 msgstr ""
 
 #: admin-core/assets/build/dashboard-app.js:5
+=======
+>>>>>>> ruvais
 msgid "Your license is active."
 msgstr ""
 
@@ -9198,6 +9571,13 @@ msgid "Enable the \"Inherit From Theme\" option to make all buttons in Spectra b
 msgstr ""
 
 #: admin-core/assets/build/dashboard-app.js:7
+<<<<<<< HEAD
+=======
+msgid "Upgrade to Pro"
+msgstr ""
+
+#: admin-core/assets/build/dashboard-app.js:7
+>>>>>>> ruvais
 msgid "Unlink User"
 msgstr ""
 
@@ -9339,6 +9719,13 @@ msgid "Enable the \"Collapse Panels\" option if you want to Collapse all other P
 msgstr ""
 
 #: admin-core/assets/build/dashboard-app.js:9
+<<<<<<< HEAD
+=======
+msgid "My Account"
+msgstr ""
+
+#: admin-core/assets/build/dashboard-app.js:9
+>>>>>>> ruvais
 msgid "Editor Options"
 msgstr ""
 
@@ -9371,7 +9758,23 @@ msgid "Theme Fonts"
 msgstr ""
 
 #: admin-core/assets/build/dashboard-app.js:9
+<<<<<<< HEAD
 msgid "License"
+=======
+msgid "Showcase your Instagram feed with Spectra Pro"
+msgstr ""
+
+#: admin-core/assets/build/dashboard-app.js:9
+msgid "Seamlessly integrate your Instagram feed into your site with Spectra Pro. Enhance engagement and showcase your social presence effortlessly!"
+msgstr ""
+
+#: admin-core/assets/build/dashboard-app.js:9
+msgid "Build Better Websites with Spectra Pro"
+msgstr ""
+
+#: admin-core/assets/build/dashboard-app.js:9
+msgid "Unlock a seamless WordPress design experience with Spectra Pro. Enjoy advanced blocks, top-notch support, and endless creative possibilities!"
+>>>>>>> ruvais
 msgstr ""
 
 #: admin-core/assets/build/dashboard-app.js:9
@@ -9572,6 +9975,33 @@ msgid "Disconnect"
 msgstr ""
 
 #: admin-core/assets/build/dashboard-app.js:13
+<<<<<<< HEAD
+=======
+msgid "FREE"
+msgstr ""
+
+#: admin-core/assets/build/dashboard-app.js:13
+msgid "PRO"
+msgstr ""
+
+#: admin-core/assets/build/dashboard-app.js:13
+msgid "Get Spectra Pro Now"
+msgstr ""
+
+#: admin-core/assets/build/dashboard-app.js:13
+msgid "Spectra Free vs Pro"
+msgstr ""
+
+#: admin-core/assets/build/dashboard-app.js:13
+msgid "Do More with Spectra Pro"
+msgstr ""
+
+#: admin-core/assets/build/dashboard-app.js:13
+msgid "Get access to powerful features for painless WordPress designing, without the high costs. With all the time you will save, it’s a product that pays for itself!"
+msgstr ""
+
+#: admin-core/assets/build/dashboard-app.js:13
+>>>>>>> ruvais
 #: lib/zip-ai/admin/dashboard-app/build/dashboard-app.js:3
 msgid "Default route fallback"
 msgstr ""

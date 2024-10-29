@@ -227,6 +227,7 @@ class Plugin extends AjaxBase {
 		$id                = ( isset( $_POST['id'] ) ) ? intval( $_POST['id'] ) : 0;
 		$user_agent_string = isset( $_SERVER['HTTP_USER_AGENT'] ) ? sanitize_text_field( $_SERVER['HTTP_USER_AGENT'] ) : '';
 		$error             = ( isset( $_POST['error'] ) ) ? json_decode( stripslashes( $_POST['error'] ), true ) : array();
+		$local_storage     = ( isset( $_POST['local_storage'] ) ) ? json_decode( stripslashes( $_POST['local_storage'] ), true ) : array();
 
 		$ai_import_logger = get_option( 'ai_import_logger', array() );
 
@@ -268,6 +269,27 @@ class Plugin extends AjaxBase {
 		$request = wp_safe_remote_post( $api_url, $api_args );
 
 		do_action( 'st_after_sending_error_report', $api_args['body'], $request );
+
+		$failed_sites     = get_option( 'astra_sites_import_failed_sites', array() );
+		$last_import_site = get_option( 'zipwp_import_site_details', array() );
+
+		if ( ! is_array( $failed_sites ) ) {
+			$failed_sites = array();
+		}
+
+		$uuids = array_map(
+			function( $site ) {
+				return $site['uuid'];
+			},
+			$failed_sites
+		);
+
+		if ( is_array( $last_import_site ) && ! in_array( $last_import_site['uuid'], $uuids, true ) ) {
+			$last_import_site['template_id']   = $id;
+			$last_import_site['local_storage'] = $local_storage;
+			$failed_sites[]                    = $last_import_site;
+			update_option( 'astra_sites_import_failed_sites', $failed_sites );
+		}
 
 		if ( is_wp_error( $request ) ) {
 			wp_send_json_error( $request );

@@ -853,8 +853,9 @@ class Plugin {
 		if ( ! current_user_can( 'manage_ast_block_templates' ) ) {
 			return;
 		}
-
-		$post_types = get_post_types( array( 'public' => true ), 'names' );
+		
+		$exclude_post_types = apply_filters( 'ast_block_templates_exclude_post_types', array() );
+		$post_types = array_diff( get_post_types( array( 'public' => true ), 'names' ), $exclude_post_types );
 
 		$current_screen = get_current_screen();
 

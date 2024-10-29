@@ -144,17 +144,16 @@ export const getPercent = ( num, den ) => {
 };
 
 export const toastBody = ( { title, message } ) => {
-	if ( !! title && !! message ) {
-		return (
-			<div>
-				<p className="text-sm font-semibold text-app-heading">
-					{ title }
-				</p>
-				<p className="mt-1 text-sm font-normal text-app-text">
-					{ message }
-				</p>
-			</div>
-		);
-	}
-	return <span className="text-app-text text-sm">{ message }</span>;
+	return !! title && !! message ? (
+		<div className="min-w-[224px]">
+			<p className="text-sm font-semibold text-white leading-5">
+				{ title }
+			</p>
+			<p className="mt-1 text-sm font-normal text-white leading-5">
+				{ message }
+			</p>
+		</div>
+	) : (
+		<span className="text-white text-sm min-w-[224px]">{ message }</span>
+	);
 };
